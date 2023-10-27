@@ -36,12 +36,8 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`
 
 #### 4. Начинайте обучение!
 
----
 
-<a href="https://htmlacademy.ru/intensive/htmlcss"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github-2.png"></a>
-
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Профессиональная вёрстка сайтов](https://htmlacademy.ru/intensive/htmlcss)» от [HTML Academy](https://htmlacademy.ru).
-
+#### 5. О чём собстно...
 
 <!-- Ссылка на макет в Фигме -->
 <a href="https://www.figma.com/file/TPfCmseYG5nV6pAuhJV8b9/HTML-1-%2F-Седона-(36)?node-id=33515%3A804&mode=dev"></a>
@@ -51,3 +47,10 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`
 
 <!-- Ссылка на презентацию разметки 2.32 -->
 <a href="https://up.htmlacademy.ru/profession/frontender-individual/1/htmlcss-individual/1/module/2"></a>
+
+
+---
+
+<a href="https://htmlacademy.ru/intensive/htmlcss"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github-2.png"></a>
+
+Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Профессиональная вёрстка сайтов](https://htmlacademy.ru/intensive/htmlcss)» от [HTML Academy](https://htmlacademy.ru).
