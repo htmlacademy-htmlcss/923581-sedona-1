@@ -39,15 +39,11 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`
 
 #### 5. О чём собстно...
 
-<!-- Ссылка на макет в Фигме -->
-<a href="https://www.figma.com/file/TPfCmseYG5nV6pAuhJV8b9/HTML-1-%2F-Седона-(36)?node-id=33515%3A804&mode=dev"></a>
+Ссылка на макет в Фигме(https://www.figma.com/file/TPfCmseYG5nV6pAuhJV8b9/HTML-1-%2F-Седона-(36)?node-id=33515%3A804&mode=dev).
 
-<!-- Ссылка на страницу учебника по вёрстке для продолжения -->
-<a href="https://up.htmlacademy.ru/profession/frontender-individual/1/htmlcss-individual/1/module/2/item/18"></a>
+Ссылка на страницу учебника по вёрстке для продолжения(https://up.htmlacademy.ru/profession/frontender-individual/1/htmlcss-individual/1/module/2/item/18).
 
-<!-- Ссылка на презентацию разметки 2.32 -->
-<a href="https://up.htmlacademy.ru/profession/frontender-individual/1/htmlcss-individual/1/module/2"></a>
-
+Ссылка на презентацию разметки 2.32(https://up.htmlacademy.ru/profession/frontender-individual/1/htmlcss-individual/1/module/2).
 
 ---
 
