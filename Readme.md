@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Алексей Батурин](https://up.htmlacademy.ru/htmlcss-individual/1/user/923581).
-* Наставник: `Неизвестно`.
+* Наставник: [Наталья Зотова].(https://htmlacademy.ru/profile/id1079951)
 
 ---
 
