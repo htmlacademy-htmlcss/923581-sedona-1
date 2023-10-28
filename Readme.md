@@ -41,7 +41,7 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`
 
 Макет в Фигме (https://www.figma.com/file/TPfCmseYG5nV6pAuhJV8b9/HTML-1-%2F-Седона-(36)?node-id=33515%3A804&mode=dev).
 
-Страница учебника по вёрстке для продолжения (https://up.htmlacademy.ru/profession/frontender-individual/1/htmlcss-individual/1/module/2/item/18).
+Страница учебника по вёрстке для продолжения (https://up.htmlacademy.ru/profession/frontender-individual/1/htmlcss-individual/1/module/2/item/24).
 
 Презентация разметки 2.32 (https://up.htmlacademy.ru/profession/frontender-individual/1/htmlcss-individual/1/module/2).
 
