@@ -36,6 +36,15 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`
 
 #### 4. Начинайте обучение!
 
+
+#### 5. О чём собстно...
+
+Макет в Фигме (https://www.figma.com/file/TPfCmseYG5nV6pAuhJV8b9/HTML-1-%2F-Седона-(36)?node-id=33515%3A804&mode=dev).
+
+Страница учебника по вёрстке для продолжения (https://up.htmlacademy.ru/profession/frontender-individual/1/htmlcss-individual/1/module/2/item/27).
+
+Презентация разметки 2.32 (https://up.htmlacademy.ru/profession/frontender-individual/1/htmlcss-individual/1/module/2).
+
 ---
 
 <a href="https://htmlacademy.ru/intensive/htmlcss"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github-2.png"></a>
