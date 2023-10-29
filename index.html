@@ -14,40 +14,45 @@
   </head>
 
   <body>
+    <!---------------- Header ------------------>
     <header class="main-header">
-      <nav class="main-menu">
-        <a class="main-logo"><img src="#" alt="Логотип города Седона"></a>
-        <ul class="main-menu-list">
-          <li class="main-menu-item">
-            <a class="main-menu-link page-current">Главная</a>
+      <!-------------- Главное меню --------------->
+      <nav class="navigation">
+        <a class="header-logo"><img src="#" alt="Логотип города Седона"></a>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link page-current">Главная</a>
           </li>
-          <li class="main-menu-item">
-            <a href="#" class="main-menu-link">О седоне</a>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">О седоне</a>
           </li>
-          <li class="main-menu-item">
-            <a href="#" class="main-menu-link">Гостиницы</a>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">Гостиницы</a>
           </li>
         </ul>
       </nav>
-      <nav class="user-menu">
-        <ul class="user-menu-list">
-          <li class="user-menu-item">
-            <a class="user-menu-link" href="#">
+      <!----------------- Меню пользователя -------------------->
+      <nav class="navigation-user">
+        <ul class="navigation-user-list">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="user-menu-item">
-            <a class="user-menu-link" href="#">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
-          <li class="user-menu-item">
-            <a class="user-menu-link user-menu-button _button" href="#">Хочу сюда!</a>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link navigation-user-button button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="page-main">
+
+    <!------------------- Main ------------------>
+    <main class="main-page">
       <section class="hero">
         <h1 class="hero-logo visually-hidden">Сайт городка Седона.</h1>
         <img class="hero-image" src="#" alt="Welcome to the gorgeous Sedona Because Grand Canyon sucks!">
@@ -57,7 +62,9 @@
           <h2 class="advantages-heder-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
-        <div class="advantages">
+        <!------------------- advantages ------------------>
+        <section class="advantages">
+          <h2 class="advantages-title visually-hidden">Преимущества городка Седона.</h2>
           <ul class="advantages-list">
             <li class="advantages-item triple-item">
               <div class="text-wrapper">
@@ -86,7 +93,7 @@
                 <p>Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
-            <li class="advantages-item triple-item _reverse">
+            <li class="advantages-item triple-item-reverse">
               <div class="text-wrapper">
                 <h3>Там есть мост дьявола</h3>
                 <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -96,8 +103,10 @@
               </div>
             </li>
           </ul>
-        </div>
+        </section>
       </section>
+
+      <!---------------- services ----------------->
       <section class="services">
         <div class="services-heder">
           <h2 class="services-heder-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
@@ -124,36 +133,40 @@
           </li>
         </ul>
       </section>
+      <!---------------- finder ----------------->
       <section class="finder">
         <div class="finder-heder">
           <h2 class="finder-heder-title">Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="finder-heder-button _button" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+          <a class="finder-heder-button button" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
         </div>
       </section>
+      <!---------------- subscribe ----------------->
       <section class="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-          <input type="email" name="email" placeholder="Ваш e-mail">
-          <button class="subscribe-button _button" type="submit">Подписаться</button>
+          <label class="visually-hidden" for="email">Введите Ваш E-mail</label>
+          <input class="subscribe-mail" id="email" type="email" placeholder="Ваш e-mail" required>
+          <button class="subscribe-button button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
+    <!---------------- Footer ------------------>
     <footer class="page-footer">
-      <ul class="footer-cocial-list">
-        <li class="footer-cocial-item">
-          <a class="footer-link" href="https://vk.com/htmlacademy">
+      <ul class="footer-social-list">
+        <li class="footer-social-item">
+          <a class="footer-social-link" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">ВКонтакте</span>
           </a>
         </li>
-        <li class="footer-cocial-item">
-          <a class="footer-link" href="https://t.me/htmlacademy">
+        <li class="footer-social-item">
+          <a class="footer-social-link" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
-        <li class="footer-cocial-item">
-          <a class="footer-link" href="https://www.youtube.com/user/htmlacademyru">
+        <li class="footer-social-item">
+          <a class="footer-social-link" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">YouTube</span>
           </a>
         </li>
