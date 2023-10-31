@@ -3,5 +3,8 @@
     "@linthtml/linthtml": "^0.9.5",
     "htmlhint": "^1.1.4",
     "linthtml-config-htmlacademy": "^1.0.12"
+  },
+  "script": {
+    "lint:html": "linthtml source/*.html --config .linthtmlrc"
   }
 }
