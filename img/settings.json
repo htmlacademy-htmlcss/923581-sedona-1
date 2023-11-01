@@ -1,0 +1,269 @@
+{
+	"sync.gist": "d19c9ffc3ef3b629a392502bf2d5385c",
+	"files.autoSave": "afterDelay",
+	"editor.tabSize": 2,
+	"editor.renderWhitespace": "boundary",
+	"editor.detectIndentation": true,
+	"editor.mouseWheelZoom": true,
+	"workbench.editor.closeEmptyGroups": false,
+	// Форматировать при сохранении
+	"editor.formatOnSave": true,
+	// Форматировать при вставке
+	"editor.formatOnPaste": true,
+	// Управляет тем, как следует переносить строки
+	"editor.wordWrap": "bounded",
+	// Работает с настройкой "editor.wordWrap": "bounded". Текст переносится взависимости от ширины окна
+	"editor.wordWrapColumn": 500,
+	// Активируем раскраску парных скобок. true по умолчанию
+	"editor.bracketPairColorization.enabled": true,
+	// Какой клавишей проставляются несколько курсоров
+	"editor.multiCursorModifier": "ctrlCmd",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	// Контролирует, должны ли появляться быстрые предложения при наборе текста
+	"editor.quickSuggestions": {
+		"other": true,
+		"comments": false,
+		"strings": false
+	},
+	// Добавляет пустую строчку в файлах
+	// "files.insertFinalNewline": true,
+	// Чудо настройки отменяют перенос атрибутов при форматировщике
+	"html.format.wrapLineLength": 0,
+	"html.format.enable": true,
+	// Удаляет пустые строки
+	"html.format.maxPreserveNewLines": 1,
+	// Убирает проверку doctype плагин HtmlHint, приходится дублировать остальные свойства, иначе он их почему то отключает
+	"htmlhint.options": {
+		// Doctype должен быть объявлен первым.
+		"doctype-first": true,
+		// Недопустимый тип документа.
+		"doctype-html5": true,
+		// атрибут HTML lang является обязательным.
+		"html-lang-require": true,
+		// <style>теги использовать нельзя.
+		"style-disabled": true,
+		// <title>должен присутствовать в <head>теге.
+		"title-require": true,
+		// Все имена атрибутов должны быть в нижнем регистре
+		"attr-lowercase": true,
+		// Элементы не могут иметь повторяющиеся атрибуты
+		"attr-no-duplication": true,
+		// Без пробелов между именами атрибутов и значениями.
+		"attr-no-unnecessary-whitespace": true,
+		// значения атрибутов не могут содержать небезопасные символы.
+		"attr-unsafe-chars": true,
+		// значения атрибутов должны быть заключены в двойные кавычки
+		"attr-value-double-quotes": true,
+		// Все атрибуты должны иметь значения.
+		"attr-value-not-empty": false,
+		// Атрибуты отсортированы по порядку: class, id, name, src, for, type, href, value, title, alt, role, aria..
+		// "attr-sorted": false,
+		// Нет начальных или конечных пробелов в значениях атрибутов.
+		// Должен присутствовать атрибут alt элемента, а атрибут alt области [href] и input [type=image] должны иметь значение.
+		"alt-require": true,
+		// Все теги [input] должны иметь соответствующий тег [label]
+		"input-requires-label": true,
+		// Тег должен быть парным.
+		"tag-pair": true,
+		// Пустые теги должны быть самозакрытыми.
+		"tag-self-close": false,
+		// Все имена HTML-элементов должны быть в нижнем регистре.
+		"tagname-lowercase": true,
+		// Атрибут src в img(script,link) должен иметь значение.
+		"src-not-empty": true,
+		// Атрибут href должен быть либо абсолютным, либо относительным.
+		// "href-abs-or-rel": true,
+		// Атрибуты id и class не могут использовать ключевое слово объявления, оно будет заблокировано программным обеспечением для блокировки рекламы.
+		"id-class-ad-disabled": true,
+		// значение атрибутов id должно быть уникальным.
+		"id-unique": true,
+		// нельзя использовать встроенный скрипт.
+		"inline-script-disabled": true,
+		// встроенный стиль использовать нельзя.
+		"inline-style-disabled": true,
+		// не смешивайте табуляции и пробелы для отступов.
+		"space-tab-mixed-disabled": "space",
+		// Специальные символы должны быть экранированы.
+		"spec-char-escape": true,
+	},
+	"html-css-class-completion.enableEmmetSupport": true,
+	"editor.guides.bracketPairs": "active",
+	"liveServer.settings.donotShowInfoMsg": true,
+	"workbench.startupEditor": "newUntitledFile",
+	"js/ts.implicitProjectConfig.experimentalDecorators": true,
+	"js/ts.implicitProjectConfig.checkJs": true,
+	// Чтобы настроить цвет комментариев
+	"editor.semanticTokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": "comment",
+				"settings": {
+					"fontStyle": "italic",
+					"foreground": "#59db26",
+				}
+			}
+		]
+	},
+	"ecsstractor_port.bem_nesting": true,
+	"ecsstractor_port.brackets_newline_after": false,
+	"python.experiments.optInto": [],
+	"python.experiments.enabled": false,
+	"projectManager.git.baseFolders": [
+		"Git-проекты"
+	],
+	"editor.guides.indentation": false,
+	// Форматирование встроенными средствами
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+	},
+	"json.schemas": [],
+	// Форматирование встроенными средствами
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	// Форматирование встроенными средствами
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	// Форматирование встроенными средствами
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+	},
+	"editor.smoothScrolling": true,
+	"workbench.list.smoothScrolling": true,
+	// Размер шрифта в редакторе
+	"editor.fontSize": 15,
+	"files.defaultLanguage": "html",
+	"terminal.integrated.fontSize": 15,
+	"editor.lineHeight": 22,
+	"security.workspace.trust.enabled": false,
+	"editor.insertSpaces": true,
+	// Включена ли поддержка связанного редактирования в редакторе
+	"editor.linkedEditing": true,
+	"ecsstractor_port.empty_line_before_nested_selector": false,
+	// чтобы не было лишних уведомлений и сообщений от liveServer
+	"liveServer.settings.donotVerifyTags": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.minimap.enabled": false,
+	"workbench.iconTheme": "vscode-icons",
+	"emmet.preferences": {
+		"output.reverseAttributes": true
+	},
+	// Должно ли запрашивать разрешение на перемещении файлов и папок
+	"explorer.confirmDragAndDrop": false,
+	"terminal.integrated.defaultProfile.windows": "Git Bash",
+	"path-autocomplete.pathMappings": {
+		"@img": "${folder}/src/images", // псевдоним для папки images
+		"@scss": "${folder}/src/scss", // псевдоним для папки scss
+		"@js": "${folder}/src/js", //  псевдоним для папки js
+	},
+	"workbench.preferredDarkColorTheme": "Visual Studio Dark",
+	"oneDarkPro.editorTheme": "One Dark Pro Flat",
+	"workbench.editor.enablePreview": false,
+	"gitlens.views.repositories.showBranchComparison": false,
+	"gitlens.menus": {
+		"editor": {
+			"blame": false,
+			"clipboard": true,
+			"compare": true,
+			"history": false,
+			"remote": false
+		},
+		"editorGroup": {
+			"blame": true,
+			"compare": true
+		},
+		"editorTab": {
+			"clipboard": true,
+			"compare": true,
+			"history": true,
+			"remote": true
+		},
+		"explorer": {
+			"clipboard": true,
+			"compare": true,
+			"history": true,
+			"remote": true
+		},
+		"scm": {
+			"graph": true
+		},
+		"scmRepositoryInline": {
+			"graph": true
+		},
+		"scmRepository": {
+			"authors": true,
+			"graph": false
+		},
+		"scmGroupInline": {
+			"stash": true
+		},
+		"scmGroup": {
+			"compare": true,
+			"openClose": true,
+			"stash": true
+		},
+		"scmItemInline": {}
+	},
+	"gitlens.views.repositories.files.layout": "list",
+	"files.associations": {
+		"*.sol": "dockerfile"
+	},
+	"git.enableSmartCommit": true,
+	"git.confirmSync": false,
+	"better-comments.tags": [
+		{
+			"tag": "!",
+			"color": "#FF2D00",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "?",
+			"color": "#abdf34",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "#0a5358",
+			"bold": true,
+			"italic": false
+		},
+		{
+			"tag": "//",
+			"color": "#474747",
+			"strikethrough": true,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "todo",
+			"color": "#FF8C00",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "*",
+			"color": "#98C379",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+	]
+}
