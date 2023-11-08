@@ -19,39 +19,37 @@
   <body>
     <div class="wrapper">
       <!---------------- Header ------------------>
-      <header class="main-header">
-        <a class="header-logo" href="/index.html"><img src="#" alt="Логотип города Седона"></a>
-        <!-------------- Главное меню --------------->
-        <nav class="navigation">
+      <header class="page-header">
+        <a class="page-header-logo" href="index.html"><img src="#" width="140" height="70" alt="Логотип города Седона."></a>
+        <!-- Главное меню -->
+        <nav class="navigation" aria-label="Главное меню.">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="/index.html" aria-label="Перейти на страницу.">Главная</a>
+              <a class="navigation-link" href="index.html" aria-label="Вы на странице.">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#" aria-label="Перейти на страницу.">О седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="#" aria-current="page" aria-label="Вы на странице.">Гостиницы</a>
+              <a class="navigation-link navigation-link-current" href="/catalog.html" aria-current="page" aria-label="Перейти на страницу.">Гостиницы</a>
             </li>
           </ul>
         </nav>
-        <!----------------- Меню пользователя -------------------->
-        <nav class="navigation-user">
+        <!-- Меню пользователя -->
+        <nav class="navigation-user" aria-label="Меню пользователя.">
           <ul class="navigation-user-list">
             <li class="navigation-user-item">
-              <a class="navigation-user-link" href="#">
+              <a class="navigation-user-link navigation-user-link-search" href="#" aria-label="Перейти на страницу.">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-user-item">
-              <a class="navigation-user-link" href="#" aria-label="Перейти на страницу.">
+              <a class="navigation-user-link navigation-user-link-favorite" href="#" aria-label="Перейти на страницу.">
                 <span class="visually-hidden">Избранное</span>
               </a>
             </li>
-            <li class="navigation-user-item">
-              <a class="navigation-user-link navigation-user-button button" href="#" aria-label="Открыть форму поиска гостиницы.">Хочу сюда!</a>
-            </li>
           </ul>
+          <a class="navigation-button button" href="#" aria-label="#">Хочу сюда!</a>
         </nav>
       </header>
       <!--------------- Основная часть ---------------->
@@ -62,7 +60,7 @@
           <!----------------- Хлебные крошки ----------------->
           <ol class="breadcrumbs">
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link" href="index.html" aria-label="Перейти на страницу.">
+              <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html" aria-label="Перейти на страницу.">
                 <span class="visually-hidden">Главная</span>
               </a>
             </li>
@@ -140,43 +138,41 @@
         <!---------------- Подписка на новости ----------------->
         <section class="subscribe">
           <h2 class="subscribe-title visually-hidden">Подписаться на новости</h2>
-          <div class="container">
-            <h3 class="subscribe-subtitle">Подпишитесь на рассылку</h3>
-            <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-            <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-              <label class="visually-hidden" for="email">Введите Ваш E-mail</label>
-              <input class="subscribe-mail" id="email" type="email" name="email" placeholder="Ваш e-mail" required>
-              <button class="subscribe-button button" type="submit" aria-label="Подписаться на рассылку.">Подписаться</button>
-            </form>
+          <div class="chapter-holder">
+            <h3 class="subscribe-subtitle page-subtitle">Подпишитесь на рассылку</h3>
+            <p class="subscribe-text page-text">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           </div>
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="email">Введите Ваш E-mail</label>
+            <input class="subscribe-mail" id="email" type="email" name="email" placeholder="Ваш e-mail" required>
+            <button class="subscribe-button button button-light" type="submit" aria-label="Подписаться на рассылку.">Подписаться</button>
+          </form>
         </section>
       </main>
 
       <!---------------- Footer ------------------>
       <footer class="page-footer">
-        <div class="container">
-          <ul class="footer-social-list">
-            <li class="footer-social-item">
-              <a class="footer-social-link" target="_blank" rel="noopener noreferrer" href="https://vk.com/htmlacademy" aria-label="Перейти во.">
-                <span class="visually-hidden">ВКонтакте</span>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="footer-social-link" target="_blank" rel="noopener noreferrer" href="https://t.me/htmlacademy" aria-label="Перейти в.">
-                <span class="visually-hidden">Телеграм</span>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="footer-social-link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/user/htmlacademyru" aria-label="Перейти в.">
-                <span class="visually-hidden">YouTube</span>
-              </a>
-            </li>
-          </ul>
-          <p class="footer-contact"><a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a></p>
-          <a class="copyright" target="_blank" rel="noopener noreferrer" href="https://htmlacademy.ru/" aria-label="Перейти на сайт HTML Academy.">
-            <img src="#" alt="Логотип HTML Academy.">
-          </a>
-        </div>
+        <ul class="page-footer-social social-list">
+          <li class="social-item">
+            <a class="social-link social-link-vk" target="_blank" rel="noopener noreferrer" href="https://vk.com/htmlacademy" aria-label="Перейти во.">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link social-link-tg" target="_blank" rel="noopener noreferrer" href="https://t.me/htmlacademy" aria-label="Перейти в.">
+              <span class="visually-hidden">Телеграм</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link social-link-yt" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/user/htmlacademyru" aria-label="Перейти в.">
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+        </ul>
+        <a class="page-footer-phone contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <a class="page-footer-copyright" target="_blank" rel="noopener noreferrer" href="https://htmlacademy.ru/" aria-label="Перейти на сайт HTML Academy.">
+          <img src="#" width="115" height="33" alt="Логотип HTML Academy.">
+        </a>
       </footer>
     </div>
   </body>
