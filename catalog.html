@@ -31,7 +31,7 @@
               <a class="navigation-link" href="#" aria-label="Перейти на страницу.">О седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="#" aria-label="Вы на странице.">Гостиницы</a>
+              <a class="navigation-link navigation-link-current" href="#" aria-current="page" aria-label="Вы на странице.">Гостиницы</a>
             </li>
           </ul>
         </nav>
@@ -67,7 +67,7 @@
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link breadcrumbs-link-current" aria-current="page" href="#" aria-label="Вы на странице.">Гостиницы</a>
+              <a class="breadcrumbs-link breadcrumbs-link-current" aria-current="page" href="catalog.html" aria-label="Вы на странице.">Гостиницы</a>
             </li>
           </ol>
           <!----------------- Фильтры для поиска ----------------->
@@ -78,21 +78,21 @@
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
-                    <label class="control" for="pool">
+                    <label class="control-label" for="pool">
                       <input class="control-input" id="pool" type="checkbox" name="pool" checked>
-                      <span>Бассейн</span>
+                      <span class="control-text">Бассейн</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
-                    <label class="control" for="parking">
+                    <label class="control-label" for="parking">
                       <input class="control-input" id="parking" type="checkbox" name="parking" checked>
-                      <span>Парковка</span>
+                      <span class="control-text">Парковка</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
-                    <label class="control" for="wi-fi">
-                      <input class="control-input" id="wi-fi" type="checkbox" name="wi-fi">
-                      <span>Wi-Fi</span>
+                    <label class="control-label" for="wifi">
+                      <input class="control-input" id="wifi" type="checkbox" name="wifi">
+                      <span class="control-text">Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -103,19 +103,19 @@
                   <li class="catalog-filter-item">
                     <label class="control" for="hotel">
                       <input class="control-input" id="hotel" type="radio" name="home-group" value="hotel" checked>
-                      <span>Гостиница</span>
+                      <span class="control-text">Гостиница</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control" for="motel">
                       <input class="control-input" id="motel" type="radio" name="home-group" value="motel">
-                      <span>Мотель</span>
+                      <span class="control-text">Мотель</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control" for="apartments">
                       <input class="control-input" id="apartments" type="radio" name="home-group" value="apartments">
-                      <span>Апартаменты</span>
+                      <span class="control-text">Апартаменты</span>
                     </label>
                   </li>
                 </ul>
