@@ -17,8 +17,11 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #fff;
+  background-color: #f2f2f2;
   color: #000;
+}
+.wrapper {
+  background-color: #fff;
 }
 .button {
   font-size: 16px;
@@ -42,8 +45,8 @@ body {
   font-size: 20px;
   line-height: 36px;
 }
-.card-favorite-current{
-  background-color: #7DB54F;
+.card-favorite-current {
+  background-color: #7db54f;
 }
 .page-header {
   background-color: #fff;
@@ -58,11 +61,28 @@ body {
   text-decoration: none;
   text-align: center;
 }
+/* Преимущества городка Седона */
+.advantages-item {
+  background-color: #83b3d31f;
+}
+.advantages-item-full {
+  background-color: #82b3d3;
+  color: #fff;
+}
+.advantages-item:nth-child(3n) {
+  background-color: #83b3d333;
+}
+/* ============================ */
+.services-item:nth-child(2n + 1) {
+  background-color: #83b3d31f;
+}
 
+/* =============================== */
 .subscribe-index {
   background-image: url(../img/background-subscribe.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
+  color: #fff;
 }
 .subscribe-input {
   font-size: 18px;
