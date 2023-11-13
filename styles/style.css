@@ -52,6 +52,12 @@ body {
   background-color: #fff;
   color: #000;
 }
+.navigation-list {
+  list-style: none;
+}
+.navigation-user-list {
+  list-style: none;
+}
 .navigation-link {
   font-size: 20px;
   line-height: 24px;
@@ -64,6 +70,7 @@ body {
 /* Преимущества городка Седона */
 .advantages-item {
   background-color: #83b3d31f;
+  list-style: none;
 }
 .advantages-item-full {
   background-color: #82b3d3;
@@ -71,6 +78,9 @@ body {
 }
 .advantages-item:nth-child(3n) {
   background-color: #83b3d333;
+}
+.services-item {
+  list-style: none;
 }
 /* ============================ */
 .services-item:nth-child(2n + 1) {
@@ -89,6 +99,10 @@ body {
   font-weight: 400;
   line-height: 24px;
   opacity: 0.6;
+  background-color: #f2f2f2;
+}
+.subscribe-index .subscribe-input {
+  background-color: #fff;
 }
 .page-title {
   text-align: center;
@@ -147,6 +161,7 @@ body {
   text-decoration: none;
   color: inherit;
 }
+
 .price-label {
   opacity: 0.3;
   line-height: 24px;
@@ -156,6 +171,15 @@ body {
   font-weight: 700;
   line-height: 24px;
   color: #000;
+}
+.price-item .price-input {
+  background-color: #f2f2f2;
+}
+.price-min {
+  border-radius: 4px 0 0 4px;
+}
+.price-max {
+  border-radius: 0 4px 4px 0;
 }
 .catalog-filter-title {
   font-size: 20px;
@@ -179,6 +203,10 @@ body {
   border: 2px solid #e5e5e5;
   background-color: #fff;
 }
+.catalog-hotels-item {
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+}
 .hotel-card-link {
   text-decoration: none;
 }
@@ -193,6 +221,8 @@ body {
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  background-color: #f2f2f2;
+  border-radius: 4px;
 }
 .pagination-link {
   font-size: 20px;
@@ -210,4 +240,15 @@ body {
 .pagination-link-dots {
   background-color: #fff;
   color: inherit;
+}
+/* чтобы спрятать скрытые элементы */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
