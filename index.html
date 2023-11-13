@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon//favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="stylesheet" href="styles/style.css">
+    <link href="img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link type="image/png" href="img/favicon/favicon-32x32.png" rel="icon" sizes="32x32">
+    <link type="image/png" href="img/favicon//favicon-16x16.png" rel="icon" sizes="16x16">
+    <link href="img/favicon/site.webmanifest" rel="manifest">
+    <link href="img/favicon/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
+    <link href="styles/style.css" rel="stylesheet">
   </head>
 
   <body class="page">
@@ -31,7 +31,7 @@
               <a class="navigation-link" href="#" aria-label="Перейти на страницу.">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="/catalog.html" aria-label="Перейти на страницу.">Гостиницы</a>
+              <a class="navigation-link" href="catalog.html" aria-label="Перейти на страницу.">Гостиницы</a>
             </li>
           </ul>
         </nav>
@@ -56,8 +56,8 @@
       <main class="main">
         <section class="hero">
           <h1 class="hero-headline visually-hidden">Седона - городок в Аризоне.</h1>
-          <img class="hero-wallpaper background" src="img/background-hero.jpg" width="1200" height="485" alt="Горный пейзаж">
-          <img class="hero-welcome" src="img/svg/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona Because Grand Canyon sucks!">
+          <img class="hero-wallpaper background" src="img/background-hero.jpg" alt="Горный пейзаж" width="1200" height="485">
+          <img class="hero-welcome" src="img/svg/welcome.svg" alt="Welcome to the gorgeous Sedona Because Grand Canyon sucks!" width="458" height="352">
         </section>
         <!-- Преимущества городка Седона -->
         <section class="advantages">
@@ -100,7 +100,7 @@
                 <p class="card-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <div class="advantages-image">
-                <img src="img/photo-2.jpg" width="800" height="385" alt="Фотография моста дьявола.">
+                <img src="img/photo-2.jpg" alt="Фотография моста дьявола." width="800" height="385">
               </div>
             </li>
           </ul>
@@ -151,7 +151,7 @@
           </div>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="email">Введите Ваш E-mail</label>
-            <input class="subscribe-input field" id="email" type="email" name="email" placeholder="Ваш e-mail" required>
+            <input class="subscribe-input field" id="email" name="email" type="email" placeholder="Ваш e-mail" required>
             <button class="subscribe-button button button-light" type="submit" aria-label="Подписаться на рассылку.">Подписаться</button>
           </form>
         </section>
@@ -160,24 +160,24 @@
       <footer class="page-footer">
         <ul class="page-footer-social social-list">
           <li class="social-item">
-            <a class="social-link social-link-vk" target="_blank" rel="noopener noreferrer" href="https://vk.com/htmlacademy" aria-label="Перейти во.">
+            <a class="social-link social-link-vk" href="https://vk.com/htmlacademy" target="_blank" rel="noopener noreferrer" aria-label="Перейти во.">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link social-link-tg" target="_blank" rel="noopener noreferrer" href="https://t.me/htmlacademy" aria-label="Перейти в.">
+            <a class="social-link social-link-tg" href="https://t.me/htmlacademy" target="_blank" rel="noopener noreferrer" aria-label="Перейти в.">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link social-link-yt" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/user/htmlacademyru" aria-label="Перейти в.">
+            <a class="social-link social-link-yt" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noopener noreferrer" aria-label="Перейти в.">
               <span class="visually-hidden">YouTube</span>
             </a>
           </li>
         </ul>
         <a class="page-footer-phone contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a class="page-footer-copyright" target="_blank" rel="noopener noreferrer" href="https://htmlacademy.ru/" aria-label="Перейти на сайт HTML Academy.">
-          <img src="img/svg/htmlacademy.svg" width="115" height="33" alt="Логотип HTML Academy.">
+        <a class="page-footer-copyright" href="https://htmlacademy.ru/" target="_blank" rel="noopener noreferrer" aria-label="Перейти на сайт HTML Academy.">
+          <img src="img/svg/htmlacademy.svg" alt="Логотип HTML Academy." width="115" height="33">
         </a>
       </footer>
     </div>

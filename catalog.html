@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon//favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="stylesheet" href="styles/style.css">
+    <link href="img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link type="image/png" href="img/favicon/favicon-32x32.png" rel="icon" sizes="32x32">
+    <link type="image/png" href="img/favicon//favicon-16x16.png" rel="icon" sizes="16x16">
+    <link href="img/favicon/site.webmanifest" rel="manifest">
+    <link href="img/favicon/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Academy: Седона/Гостиницы</title>
+    <title>HTML Academy: Седона</title>
+    <link href="styles/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -31,7 +31,7 @@
               <a class="navigation-link" href="#" aria-label="Перейти на страницу.">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="/catalog.html" aria-current="page" aria-label="Перейти на страницу.">Гостиницы</a>
+              <a class="navigation-link navigation-link-current" href="catalog.html" aria-current="page" aria-label="Перейти на страницу.">Гостиницы</a>
             </li>
           </ul>
         </nav>
@@ -66,7 +66,7 @@
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link breadcrumbs-link-current" aria-current="page" href="catalog.html" aria-label="Вы на странице.">Гостиницы</a>
+              <a class="breadcrumbs-link breadcrumbs-link-current" href="catalog.html" aria-current="page" aria-label="Вы на странице.">Гостиницы</a>
             </li>
           </ol>
 
@@ -79,19 +79,19 @@
                 <ul class="catalog-filter-list control-list">
                   <li class="ccontrol-item">
                     <label class="control-label" for="pool">
-                      <input class="control-input" id="pool" type="checkbox" name="pool" checked>
+                      <input class="control-input" id="pool" name="pool" type="checkbox" checked>
                       <span class="control-text">Бассейн</span>
                     </label>
                   </li>
                   <li class="control-item">
                     <label class="control-label" for="parking">
-                      <input class="control-input" id="parking" type="checkbox" name="parking" checked>
+                      <input class="control-input" id="parking" name="parking" type="checkbox" checked>
                       <span class="control-text">Парковка</span>
                     </label>
                   </li>
                   <li class="control-item">
                     <label class="control-label" for="wifi">
-                      <input class="control-input" id="wifi" type="checkbox" name="wifi">
+                      <input class="control-input" id="wifi" name="wifi" type="checkbox">
                       <span class="control-text">Wi-Fi</span>
                     </label>
                   </li>
@@ -102,19 +102,19 @@
                 <ul class="catalog-filter-list control-list">
                   <li class="control-item">
                     <label class="control-label" for="hotel">
-                      <input class="control-input" id="hotel" type="radio" name="home-group" value="hotel" checked>
+                      <input class="control-input" id="hotel" name="home-group" type="radio" value="hotel" checked>
                       <span class="control-text">Гостиница</span>
                     </label>
                   </li>
                   <li class="control-item">
                     <label class="control-label" for="motel">
-                      <input class="control-input" id="motel" type="radio" name="home-group" value="motel">
+                      <input class="control-input" id="motel" name="home-group" type="radio" value="motel">
                       <span class="control-text">Мотель</span>
                     </label>
                   </li>
                   <li class="control-item">
                     <label class="control-label" for="apartments">
-                      <input class="control-input" id="apartments" type="radio" name="home-group" value="apartments">
+                      <input class="control-input" id="apartments" name="home-group" type="radio" value="apartments">
                       <span class="control-text">Апартаменты</span>
                     </label>
                   </li>
@@ -126,22 +126,16 @@
                 <div class="price-input-container">
                   <div class="price-item">
                     <label class="price-label" for="price-min">от</label>
-                    <input class="price-input price-min field" type="number" id="price-min" name="price-min" value="0">
+                    <input class="price-input price-min field" id="price-min" name="price-min" type="number" value="0">
                   </div>
                   <div class="price-item">
                     <label class="price-label" for="price-max">до</label>
-                    <input class="price-input price-max field" type="number" id="price-max" name="price-max" value="9000">
+                    <input class="price-input price-max field" id="price-max" name="price-max" type="number" value="9000">
                   </div>
                 </div>
                 <div class="price-range-control">
                   <div class="price-range-slider">
                     <div class="price-range-progress"></div>
-                  </div>
-                  <div class="price-range-input">
-                    <label class="range-label" for="range-min"></label>
-                    <input class="range-min" type="range" name="range-min" id="range-min" min="0" max="12000">
-                    <label class="range-label" for="range-max"></label>
-                    <input class="range-max" type="range" name="range-max" id="range-max" min="0" max="12000">
                   </div>
                 </div>
               </fieldset>
@@ -166,13 +160,19 @@
           </select>
           <ul class="outcome-view view-list">
             <li class="view-item">
-              <a class="view-link view-link-tile view-link-current" href="#" aria-label="Плитка."><span class="visually-hidden">Карточки</span></a>
+              <a class="view-link view-link-tile view-link-current" href="#" aria-label="Плитка.">
+                <span class="visually-hidden">Карточки</span>
+              </a>
             </li>
             <li class="view-item">
-              <a class="view-link view-link-slide" href="#" aria-label="Слайды."><span class="visually-hidden">Слайд-шоу</span></a>
+              <a class="view-link view-link-slide" href="#" aria-label="Слайды.">
+                <span class="visually-hidden">Слайд-шоу</span>
+              </a>
             </li>
             <li class="view-item">
-              <a class="view-link view-link-list" href="#" aria-label="Список."><span class="visually-hidden">Списком</span></a>
+              <a class="view-link view-link-list" href="#" aria-label="Список.">
+                <span class="visually-hidden">Списком</span>
+              </a>
             </li>
           </ul>
         </section>
@@ -181,17 +181,13 @@
           <ul class="catalog-hotels-list">
             <li class="catalog-hotels-item hotel-card">
               <a class="hotel-card-link" href="#" aria-label="Карточка отеля.">
-                <img class="hotel-card-image" src="img/catalog/hotel-1.jpg" width="300" height="212" alt="Вид из пещеры на звёздное небо.">
+                <img class="hotel-card-image" src="img/catalog/hotel-1.jpg" alt="Вид из пещеры на звёздное небо." width="300" height="212">
                 <h3 class="hotel-card-title">Amara Resort &amp; Spa</h3>
               </a>
               <p class="catalog-text hotel-card-type">Гостиница</p>
               <p class="catalog-text hotel-card-price">От 4000 &#8381</p>
               <a class="card-more button" href="#" aria-label="#">подробнее</a>
               <a class="card-favorite button button-light" href="#" aria-label="#">в избранное</a>
-              <!-- Если использовать картинку из 4-х звёзд, заменить следующий блок и аналогичные ниже -->
-              <!-- <p class="hotel-card-stars hotel-card-stars-4">
-                        <span class="visually-hidden">4 из 5 звёзд</span>
-                   </p> -->
               <div class="hotel-card-stars">
                 <span class="visually-hidden">4 из 5 звёзд</span>
                 <span class="hotel-card-stars-item"></span>
@@ -199,11 +195,11 @@
                 <span class="hotel-card-stars-item"></span>
                 <span class="hotel-card-stars-item"></span>
               </div>
-              <p class="hotel-card-rating">Рейтинг: 8,5</p>
+              <span class="hotel-card-rating">Рейтинг: 8,5</span>
             </li>
             <li class="catalog-hotels-item hotel-card">
               <a class="hotel-card-link" href="#" aria-label="Карточка отеля.">
-                <img class="hotel-card-image" src="img/catalog/hotel-2.jpg" width="300" height="212" alt="Радуга в горах.">
+                <img class="hotel-card-image" src="img/catalog/hotel-2.jpg" alt="Радуга в горах." width="300" height="212">
                 <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
               </a>
               <p class="catalog-text hotel-card-type">Гостиница</p>
@@ -217,11 +213,11 @@
                 <span class="hotel-card-stars-item"></span>
                 <span class="hotel-card-stars-item"></span>
               </div>
-              <p class="hotel-card-rating">Рейтинг: 9,2</p>
+              <span class="hotel-card-rating">Рейтинг: 9,2</span>
             </li>
             <li class="catalog-hotels-item hotel-card">
               <a class="hotel-card-link" href="#" aria-label="Карточка отеля.">
-                <img class="hotel-card-image" src="img/catalog/hotel-3.jpg" width="300" height="212" alt="Въезд в гостиницу у подножия горы.">
+                <img class="hotel-card-image" src="img/catalog/hotel-3.jpg" alt="Въезд в гостиницу у подножия горы." width="300" height="212">
                 <h3 class="hotel-card-title">Desert Quail Inn</h3>
               </a>
               <p class="catalog-text hotel-card-type">Гостиница</p>
@@ -234,11 +230,11 @@
                 <span class="hotel-card-stars-item"></span>
                 <span class="hotel-card-stars-item"></span>
               </div>
-              <p class="hotel-card-rating">Рейтинг: 6,9</p>
+              <span class="hotel-card-rating">Рейтинг: 6,9</span>
             </li>
             <li class="catalog-hotels-item hotel-card">
               <a class="hotel-card-link" href="#" aria-label="Карточка отеля.">
-                <img class="hotel-card-image" src="img/catalog/hotel-4.jpg" width="300" height="212" alt="Столовая гора на фоне звёздного неба.">
+                <img class="hotel-card-image" src="img/catalog/hotel-4.jpg" alt="Столовая гора на фоне звёздного неба." width="300" height="212">
                 <h3 class="hotel-card-title">GreenTree Inn</h3>
               </a>
               <p class="catalog-text hotel-card-type">Гостиница</p>
@@ -250,7 +246,7 @@
                 <span class="hotel-card-stars-item"></span>
                 <span class="hotel-card-stars-item"></span>
               </div>
-              <p class="hotel-card-rating">Рейтинг: 5,0</p>
+              <span class="hotel-card-rating">Рейтинг: 5,0</span>
             </li>
           </ul>
           <ul class="pagination">
@@ -267,7 +263,7 @@
               <a class="pagination-link" href="#">4</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link pagination-link-dots" aria-label="Показать другие страницы" href="#">...</a>
+              <a class="pagination-link pagination-link-dots" href="#" aria-label="Показать другие страницы">...</a>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">10</a>
@@ -283,7 +279,7 @@
           </div>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="email">Введите Ваш E-mail</label>
-            <input class="subscribe-input field" id="email" type="email" name="email" placeholder="Ваш e-mail" required>
+            <input class="subscribe-input field" id="email" name="email" type="email" placeholder="Ваш e-mail" required>
             <button class="subscribe-button button button-light" type="submit" aria-label="Подписаться на рассылку.">Подписаться</button>
           </form>
         </section>
@@ -292,24 +288,24 @@
       <footer class="page-footer">
         <ul class="page-footer-social social-list">
           <li class="social-item">
-            <a class="social-link social-link-vk" target="_blank" rel="noopener noreferrer" href="https://vk.com/htmlacademy" aria-label="Перейти во.">
+            <a class="social-link social-link-vk" href="https://vk.com/htmlacademy" target="_blank" rel="noopener noreferrer" aria-label="Перейти во.">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link social-link-tg" target="_blank" rel="noopener noreferrer" href="https://t.me/htmlacademy" aria-label="Перейти в.">
+            <a class="social-link social-link-tg" href="https://t.me/htmlacademy" target="_blank" rel="noopener noreferrer" aria-label="Перейти в.">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link social-link-yt" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/user/htmlacademyru" aria-label="Перейти в.">
+            <a class="social-link social-link-yt" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noopener noreferrer" aria-label="Перейти в.">
               <span class="visually-hidden">YouTube</span>
             </a>
           </li>
         </ul>
         <a class="page-footer-phone contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a class="page-footer-copyright" target="_blank" rel="noopener noreferrer" href="https://htmlacademy.ru/" aria-label="Перейти на сайт HTML Academy.">
-          <img src="img/svg/htmlacademy.svg" width="115" height="33" alt="Логотип HTML Academy.">
+        <a class="page-footer-copyright" href="https://htmlacademy.ru/" target="_blank" rel="noopener noreferrer" aria-label="Перейти на сайт HTML Academy.">
+          <img src="img/svg/htmlacademy.svg" alt="Логотип HTML Academy." width="115" height="33">
         </a>
       </footer>
     </div>
