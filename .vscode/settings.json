@@ -23,5 +23,6 @@
 	"githubPullRequests.ignoredPullRequestBranches": [
 		"master"
 	],
-	"C_Cpp.dimInactiveRegions": false
+	"C_Cpp.dimInactiveRegions": false,
+	"svg.preview.background": "transparent"
 }
