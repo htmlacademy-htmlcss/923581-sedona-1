@@ -21,7 +21,7 @@ body {
   background-color: #f2f2f2;
   color: #000000;
 }
-/* чтобы спрятать скрытые элементы */
+/* Скрытые элементы */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -32,10 +32,13 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.wrapper {
-  background-color: #ffffff;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+/* Обнуление списков */
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+/* ============ Общие классы ============ */
 .button {
   font-size: 16px;
   font-weight: 700;
@@ -47,6 +50,7 @@ body {
   border-radius: 4px;
   color: #ffffff;
   border: none;
+  cursor: pointer;
 }
 .button-light {
   background-color: #82b3d3;
@@ -56,6 +60,10 @@ body {
 }
 .field {
   background-color: #f2f2f2;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
 }
 .card {
 }
@@ -77,12 +85,15 @@ body {
 .background {
 }
 .social-list {
-  list-style: none;
 }
 .view-list {
-  list-style: none;
 }
 .navigation-link-current {
+}
+/* ============ wrapper ============ */
+.wrapper {
+  background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 /* ============ Header ============ */
 .page-header {
@@ -95,7 +106,6 @@ body {
 .navigation {
 }
 .navigation-list {
-  list-style: none;
 }
 .navigation-item {
 }
@@ -113,15 +123,24 @@ body {
 .navigation-user {
 }
 .navigation-user-list {
-  list-style: none;
 }
 .navigation-user-item {
 }
 .navigation-user-link {
 }
 .navigation-user-link-search {
+  display: block;
+  background-image: url(../img/svg/nav-search.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
 }
 .navigation-user-link-favorite {
+  display: block;
+  background-image: url(../img/svg/nav-heart.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
 }
 .navigation-button {
 }
@@ -150,11 +169,10 @@ body {
 .advantages-list {
 }
 .advantages-item {
-  background-color: #83b3d31f;
-  list-style: none;
+  background-color: rgba(131, 179, 211, 0.122);
 }
-.advantages-item:nth-child(3n) {
-  background-color: #83b3d333;
+.advantages-item:not(.advantages-item-full):nth-child(2n) {
+  background-color: rgba(131, 179, 211, 0.2);
 }
 .advantages-item-full {
   background-color: #82b3d3;
@@ -188,18 +206,17 @@ body {
 .services-list {
 }
 .services-item {
-  list-style: none;
 }
 .services-item:nth-child(2n + 1) {
-  background-color: #83b3d31f;
+  background-color: rgba(131, 179, 211, 0.122);
 }
 .services-item-home {
-}
-.services-text {
 }
 .services-item-food {
 }
 .services-item-souvenirs {
+}
+.services-text {
 }
 /* ============ Поиск гостиниц ============ */
 .search-form {
@@ -213,36 +230,6 @@ body {
 .search-form-button {
   font-size: 20px;
   line-height: 36px;
-}
-/* ============ Подписка ============ */
-.subscribe {
-}
-.subscribe-index {
-  background-image: url(../img/background-subscribe.jpg);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  color: #ffffff;
-}
-.subscribe-headline {
-}
-.subscribe-title {
-}
-.subscribe-annotation {
-}
-.subscribe-form {
-}
-.subscribe-input {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  border-radius: 4px 0 0 4px;
-  border: none;
-}
-.subscribe-button {
-  font-size: 20px;
-  line-height: 36px;
-  border-radius: 0 4px 4px 0;
-  border: none;
 }
 /* ============ Страница каталога ============ */
 .main-inner {
@@ -266,13 +253,11 @@ body {
   line-height: 21px;
   list-style-type: none;
 }
-.breadcrumbs a {
-  text-decoration: none;
-  color: inherit;
-}
 .breadcrumbs-item {
 }
 .breadcrumbs-link {
+  text-decoration: none;
+  color: inherit;
 }
 .breadcrumbs-link-home {
 }
@@ -295,13 +280,13 @@ body {
   text-transform: capitalize;
 }
 .catalog-filter-list {
-  list-style: none;
 }
 .control-list {
 }
 .ccontrol-item {
 }
 .control-label {
+  cursor: pointer;
 }
 .control-input {
 }
@@ -320,12 +305,6 @@ body {
 .price-input-container {
 }
 .price-item {
-}
-.price-item [value] {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #000000;
 }
 .price-label {
   opacity: 0.3;
@@ -375,10 +354,12 @@ body {
 .outcome-select {
   font-size: 18px;
   line-height: 21px;
+  font-weight: 400;
   color: #333333;
   border-radius: 4px;
   border: 2px solid #e5e5e5;
   background-color: #ffffff;
+  cursor: pointer;
   /* убираем стрелочку у select */
   appearance: none;
   -moz-appearance: none;
@@ -407,7 +388,6 @@ body {
 .catalog-hotels-title {
 }
 .catalog-hotels-list {
-  list-style: none;
 }
 .catalog-hotels-item {
   border-radius: 4px;
@@ -437,8 +417,14 @@ body {
 .card-favorite {
 }
 .hotel-card-stars {
+  display: flex;
 }
 .hotel-card-stars-item {
+  display: block;
+  background-image: url(../img/svg/star.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 17px;
 }
 .hotel-card-rating {
   font-size: 16px;
@@ -453,7 +439,6 @@ body {
 }
 /* ============ Пагинация ============ */
 .pagination {
-  list-style: none;
 }
 .pagination-item {
 }
@@ -473,6 +458,39 @@ body {
 .pagination-link-dots {
   background-color: #ffffff;
   color: inherit;
+  cursor: auto;
+}
+/* ============ Подписка ============ */
+.subscribe {
+}
+.subscribe-index {
+  background-image: url(../img/background-subscribe.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+.subscribe-headline {
+}
+.subscribe-title {
+}
+.subscribe-annotation {
+}
+.subscribe-form {
+}
+.subscribe-form input::placeholder {
+  font-weight: 400;
+  color: #000000;
+  opacity: 0.6;
+}
+.subscribe-input {
+  border-radius: 4px 0 0 4px;
+  border: none;
+}
+.subscribe-button {
+  font-size: 20px;
+  line-height: 36px;
+  border-radius: 0 4px 4px 0;
+  border: none;
 }
 /* ============ Подвал ============ */
 .page-footer {
@@ -488,10 +506,25 @@ body {
 .social-link {
 }
 .social-link-vk {
+  display: block;
+  background-image: url(../img/svg/social-vk.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 14px;
 }
 .social-link-tg {
+  display: block;
+  background-image: url(../img/svg/social-telegram.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 16px;
 }
 .social-link-yt {
+  display: block;
+  background-image: url(../img/svg/social-youtube.svg);
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 17px;
 }
 .page-footer-phone {
   font-size: 40px;
