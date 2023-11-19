@@ -1,0 +1,571 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  background-color: #f2f2f2;
+  color: #000000;
+}
+/* Скрытые элементы */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* Обнуление списков */
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* изменение боксовой модели */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+/* ============ Общие классы ============ */
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+  border-radius: 4px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.button-light {
+  background-color: #82b3d3;
+}
+.button-transparent {
+  background-color: transparent;
+}
+.field {
+  background-color: #f2f2f2;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+.card {
+}
+.page {
+}
+.page-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.page-text {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.background {
+}
+.social-list {
+}
+.view-list {
+}
+.navigation-link-current {
+}
+/* ============ wrapper ============ */
+.wrapper {
+  background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+/* ============ Header ============ */
+.page-header {
+  background-color: #ffffff;
+  color: #000000;
+}
+.page-header-logo {
+}
+/* ============ Главное меню ============ */
+.navigation {
+}
+.navigation-list {
+  display: flex;
+}
+.navigation-item {
+}
+.navigation-link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: inherit;
+  background-color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  text-transform: capitalize;
+}
+/* ============ Меню пользователя ============ */
+.navigation-user {
+  display: flex;
+}
+.navigation-user-list {
+  display: flex;
+}
+.navigation-user-item {
+}
+.navigation-user-link {
+}
+.navigation-user-link-search {
+  display: block;
+  background-image: url(../img/svg/nav-search.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.navigation-user-link-favorite {
+  display: block;
+  background-image: url(../img/svg/nav-heart.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.navigation-button {
+}
+/* ============ Main ============ */
+.main {
+}
+.hero {
+}
+.hero-headline {
+}
+.hero-wallpaper {
+}
+.hero-welcome {
+}
+/* ============ Преимущества ============ */
+.advantages {
+}
+.advantages-headline {
+}
+.chapter-container {
+}
+.advantages-title {
+}
+.advantages-annotation {
+}
+.advantages-list {
+}
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0.122);
+}
+.advantages-item:not(.advantages-item-full):nth-child(2n) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+.advantages-item-full {
+  background-color: #82b3d3;
+  color: #ffffff;
+}
+.advantages-text {
+}
+.card-subtitle {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.card-text {
+  text-align: center;
+}
+.advantages-image {
+}
+.dvantages-item-reverse {
+}
+/* ============ Сервис ============ */
+.services {
+}
+.services-headline {
+}
+.services-title {
+}
+.services-annotation {
+}
+.services-list {
+}
+.services-item {
+}
+.services-item:nth-child(2n + 1) {
+  background-color: rgba(131, 179, 211, 0.122);
+}
+.services-item-home h4::before {
+  content: "";
+  background-image: url(../img/svg/home.svg);
+  width: 75px;
+  height: 72px;
+  display: block;
+  margin: 0 auto;
+}
+.services-item-food h4::before {
+  content: "";
+  background-image: url(../img/svg/food.svg);
+  width: 75px;
+  height: 72px;
+  display: block;
+  margin: 0 auto;
+}
+.services-item-souvenirs h4::before {
+  content: "";
+  background-image: url(../img/svg/souvenir.svg);
+  width: 75px;
+  height: 72px;
+  display: block;
+  margin: 0 auto;
+}
+.services-text {
+}
+/* ============ Поиск гостиниц ============ */
+.search-form {
+}
+.search-form-headline {
+}
+.search-form-title {
+}
+.search-form-annotation {
+}
+.search-form-button {
+  font-size: 20px;
+  line-height: 36px;
+}
+/* ============ Страница каталога ============ */
+.main-inner {
+}
+.inner-header {
+  background-image: url(../img/background-inner.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+/* ============ Хлебные крошки ============ */
+.breadcrumbs {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  list-style-type: none;
+}
+.breadcrumbs-item {
+}
+.breadcrumbs-link {
+  text-decoration: none;
+  color: inherit;
+}
+.breadcrumbs-link-home {
+}
+.breadcrumbs-link-current {
+}
+/* ============ Фильтры ============ */
+.catalog-filters {
+}
+.catalog-filter {
+}
+.catalog-filter-group {
+  border: none;
+}
+.catalog-filter-group-checkbox {
+}
+.catalog-filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.catalog-filter-list {
+}
+.control-list {
+}
+.ccontrol-item {
+}
+.control-label {
+  cursor: pointer;
+}
+.control-input {
+}
+.control-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+}
+.control-item {
+}
+/* ============ Движки ============ */
+.catalog-filter-group-radio {
+}
+.catalog-filter-group-prise {
+}
+.price-input-container {
+}
+.price-item {
+}
+.price-label {
+  opacity: 0.3;
+  line-height: 24px;
+}
+.price-input {
+  border: none;
+}
+.price-min {
+  border-radius: 4px 0 0 4px;
+}
+.price-max {
+  border-radius: 0 4px 4px 0;
+}
+.price-range-control {
+}
+.price-range-slider {
+}
+.price-range-progress {
+}
+.price-range-input {
+}
+.range-label {
+}
+.range-min {
+}
+.range-max {
+}
+.catalog-filter-group-buttons {
+}
+.filter-cubmit {
+}
+.filter-reset {
+}
+/* ============ Результаты ============ */
+.catalog-outcome {
+}
+.outcome {
+}
+.outcome-title {
+}
+.outcome-subtitle {
+  text-align: left;
+}
+.outcome-found {
+}
+.outcome-select {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  border-radius: 4px;
+  border: 2px solid #e5e5e5;
+  background-color: #ffffff;
+  cursor: pointer;
+  /* убираем стрелочку у select */
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.outcome-select-option {
+}
+.outcome-view {
+}
+.view-item {
+}
+.view-link {
+}
+.view-link-tile {
+}
+.view-link-current {
+}
+.view-link-slide {
+}
+.view-link-list {
+}
+/* ============ Каталог гостиниц ============ */
+.catalog-hotels {
+}
+.catalog-hotels-title {
+}
+.catalog-hotels-list {
+}
+.catalog-hotels-item {
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+}
+.hotel-card {
+}
+.hotel-card-link {
+  text-decoration: none;
+}
+.hotel-card-image {
+}
+.hotel-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #000000;
+}
+.catalog-text {
+}
+.hotel-card-type {
+}
+.hotel-card-price {
+}
+.card-more {
+}
+.card-favorite {
+}
+.hotel-card-stars {
+  display: flex;
+}
+.hotel-card-stars-item {
+  display: block;
+  background-image: url(../img/svg/star.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 17px;
+}
+.hotel-card-rating {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+.card-favorite-current {
+  background-color: #7db54f;
+}
+/* ============ Пагинация ============ */
+.pagination {
+}
+.pagination-item {
+}
+.pagination-link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #82b3d3;
+  text-decoration: none;
+}
+.pagination-link-current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+.pagination-link-dots {
+  background-color: #ffffff;
+  color: inherit;
+  cursor: auto;
+}
+/* ============ Подписка ============ */
+.subscribe {
+}
+.subscribe-index {
+  background-image: url(../img/background-subscribe.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+.subscribe-headline {
+}
+.subscribe-title {
+}
+.subscribe-annotation {
+}
+.subscribe-form {
+}
+.subscribe-form input::placeholder {
+  font-weight: 400;
+  color: #000000;
+  opacity: 0.6;
+}
+.subscribe-input {
+  border-radius: 4px 0 0 4px;
+  border: none;
+}
+.subscribe-button {
+  font-size: 20px;
+  line-height: 36px;
+  border-radius: 0 4px 4px 0;
+  border: none;
+}
+/* ============ Подвал ============ */
+.page-footer {
+}
+.page-footer a {
+  text-decoration: none;
+  color: inherit;
+}
+.page-footer-social {
+  display: flex;
+}
+.social-item {
+}
+.social-link {
+}
+.social-link-vk {
+  display: block;
+  background-image: url(../img/svg/social-vk.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 14px;
+}
+.social-link-tg {
+  display: block;
+  background-image: url(../img/svg/social-telegram.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 16px;
+}
+.social-link-yt {
+  display: block;
+  background-image: url(../img/svg/social-youtube.svg);
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 17px;
+}
+.page-footer-phone {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.contacts-phone {
+}
+.page-footer-copyright {
+}
