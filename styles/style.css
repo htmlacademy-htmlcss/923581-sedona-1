@@ -117,7 +117,6 @@ img {
 .navigation {
 }
 .navigation-list {
-  display: flex;
 }
 .navigation-item {
 }
@@ -133,10 +132,8 @@ img {
 }
 /* ============ Меню пользователя ============ */
 .navigation-user {
-  display: flex;
 }
 .navigation-user-list {
-  display: flex;
 }
 .navigation-user-item {
 }
@@ -339,7 +336,7 @@ img {
 .price-item {
 }
 .price-label {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
   line-height: 24px;
 }
 .price-input {
