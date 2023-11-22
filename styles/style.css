@@ -121,15 +121,23 @@ body {
 }
 /* ============ Header ============ */
 .page-header {
+  display: flex;
+  height: 64px;
+  padding: 0px 70px;
 }
 .page-header-logo {
+  z-index: 10;
+  margin-right: 30px;
 }
 /* ============ Главное меню ============ */
 .navigation {
+  margin-right: auto;
 }
 .navigation-list {
+  display: flex;
 }
 .navigation-item {
+  padding: 20px 16px;
 }
 .navigation-link {
   display: inline-block;
@@ -142,8 +150,12 @@ body {
 }
 /* ============ Меню пользователя ============ */
 .navigation-user {
+  display: flex;
+  align-items: center;
 }
 .navigation-user-list {
+  display: flex;
+  margin-right: 20px;
 }
 .navigation-user-item {
 }
@@ -153,6 +165,7 @@ body {
   width: 44px;
   height: 64px;
   padding: 22px 12px;
+  background-position: center;
 }
 .navigation-user-link-search {
   background-image: url("../img/svg/nav-search.svg");
@@ -161,6 +174,7 @@ body {
   background-image: url("../img/svg/nav-heart.svg");
 }
 .navigation-button {
+  height: 36px;
 }
 /* ============ Main ============ */
 .main {
@@ -290,15 +304,24 @@ body {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
+  margin: 0 0 8px 0;
 }
 /* ============ Хлебные крошки ============ */
 .breadcrumbs {
   display: flex;
+  margin-bottom: 40px;
+}
+.breadcrumbs-item {
+  display: flex;
+  align-items: center;
 }
 .breadcrumbs-item:not(:last-child)::after {
   content: url("../img/svg/arrow-right.svg");
   width: 6px;
   height: 10px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 }
 .breadcrumbs-link {
   font-size: 16px;
@@ -306,14 +329,18 @@ body {
   line-height: 21px;
   text-decoration: none;
   color: #ffffff;
+  margin-right: 10px;
 }
+
 .breadcrumbs-link-home {
   display: block;
   background-image: url("../img/svg/house-breadcrumbs.svg");
   width: 13px;
   height: 15px;
+  text-align: center;
 }
 .breadcrumbs-link-current {
+  margin-right: 0;
 }
 /* ============ Фильтры ============ */
 .catalog-filters {
@@ -322,7 +349,11 @@ body {
   display: flex;
 }
 .catalog-filter-group {
+  margin: 0;
+  padding: 0;
   border: none;
+  display: flex;
+  flex-direction: column;
 }
 .catalog-filter-group-checkbox {
 }
@@ -387,6 +418,7 @@ body {
 .catalog-filter-group-buttons {
 }
 .filter-cubmit {
+  margin: 56px 0px 68px 0px;
 }
 .filter-reset {
 }
@@ -419,13 +451,17 @@ body {
   border-radius: 4px;
   border: 2px solid #e5e5e5;
   cursor: pointer;
-  padding: 14px 20px;
+  padding: 14px 50px 11px 20px;
+  background-image: url("../img/svg/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
   /* убираем стрелочку у select */
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
   margin-right: 70px;
 }
+
 .outcome-select-option {
 }
 .outcome-view {
@@ -462,17 +498,29 @@ body {
 .catalog-hotels-title {
 }
 .catalog-hotels-list {
+  padding: 0px 70px;
+}
+.catalog-hotels-list::after {
+  content: "";
+  display: block;
+  width: 1060px;
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 40px 0%;
 }
 .catalog-hotels-item {
-  border-radius: 4px;
-  border: 1px solid #e6e6e6;
 }
 .hotel-card {
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
 }
 .hotel-card-link {
   text-decoration: none;
 }
 .hotel-card-image {
+  display: block;
+  width: 300px;
+  height: 212px;
 }
 .hotel-card-title {
   font-size: 24px;
@@ -493,7 +541,7 @@ body {
 .hotel-card-stars {
 }
 .hotel-card-stars-item {
-  display: block;
+  display: inline-block;
   background-image: url("../img/svg/star.svg");
   background-repeat: no-repeat;
   width: 18px;
@@ -512,10 +560,22 @@ body {
 }
 /* ============ Пагинация ============ */
 .pagination {
+  display: flex;
+  padding: 0px 70px;
+  margin-bottom: 60px;
 }
+
 .pagination-item {
+  margin-right: 8px;
+}
+.pagination-item:last-child {
+  margin-right: 0;
 }
 .pagination-link {
+  display: inline-block;
+  min-width: 60px;
+  max-width: 200px;
+  min-height: 60px;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -523,14 +583,16 @@ body {
   color: #ffffff;
   background-color: #82b3d3;
   text-decoration: none;
+  padding: 12px;
+  text-align: center;
 }
 .pagination-link-current {
   color: #000000;
   background-color: #f2f2f2;
 }
 .pagination-link-dots {
-  background-color: #ffffff;
-  color: inherit;
+  background-color: transparent;
+  color: #000000;
   cursor: auto;
 }
 /* ============ Подписка ============ */
