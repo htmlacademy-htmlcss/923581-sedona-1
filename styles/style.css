@@ -25,6 +25,7 @@ body {
   font-weight: 400;
   background-color: #f2f2f2;
   color: #000000;
+  margin: 0;
 }
 /* ???????????????? */
 /* Скрытые элементы */
@@ -113,7 +114,7 @@ body {
 /* ============ wrapper ============ */
 .wrapper {
   width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
@@ -254,6 +255,7 @@ body {
 }
 .advantages-image img {
   height: 100%;
+  object-fit: cover;
 }
 .advantages-item-reverse {
   flex-direction: row-reverse;
