@@ -55,6 +55,7 @@ body {
   font-weight: 700;
   line-height: 20px;
   color: #ffffff;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   background-color: #756157;
@@ -126,7 +127,7 @@ body {
 }
 .page-header-logo {
   z-index: 10;
-  margin-right: 30px;
+  margin-right: 28px;
 }
 /* ============ Главное меню ============ */
 .navigation {
@@ -137,6 +138,7 @@ body {
 }
 .navigation-item {
   padding: 20px 16px;
+  text-align: center;
 }
 .navigation-link {
   display: inline-block;
@@ -146,6 +148,7 @@ body {
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
+  text-transform: capitalize;
 }
 /* ============ Меню пользователя ============ */
 .navigation-user {
@@ -157,23 +160,30 @@ body {
   margin-right: 20px;
 }
 .navigation-user-item {
+  width: 44px;
+  /* height: 64px; */
+  padding: 22px 12px;
 }
 .navigation-user-link {
   display: block;
   background-repeat: no-repeat;
-  width: 44px;
-  height: 64px;
-  padding: 22px 12px;
+  width: 20px;
+  height: 20px;
   background-position: center;
 }
 .navigation-user-link-search {
   background-image: url("../img/svg/nav-search.svg");
+  padding: 1px 0px 0px 3px;
+  margin-left: 1px;
 }
 .navigation-user-link-favorite {
   background-image: url("../img/svg/nav-heart.svg");
+  padding: 2px 1px 1px;
 }
 .navigation-button {
   height: 36px;
+  width: 160px;
+  padding: 8px 34px;
 }
 /* ============ Main ============ */
 .main {
@@ -200,7 +210,7 @@ body {
   text-align: center;
 }
 .advantages .chapter-container {
-  padding: 69px 0;
+  padding: 69px 0 90px 0;
 }
 .advantages-title {
   margin-bottom: 25px;
@@ -212,10 +222,10 @@ body {
   flex-wrap: wrap;
 }
 .advantages-item {
-  background-color: rgba(131, 179, 211, 0.122);
+  background-color: rgba(131, 179, 211, 0.2);
 }
 .advantages-item:not(.advantages-item-full):nth-child(2n) {
-  background-color: rgba(131, 179, 211, 0.2);
+  background-color: rgba(131, 179, 211, 0.122);
 }
 .advantages-item-full {
   display: flex;
@@ -226,8 +236,11 @@ body {
 .advantages-item-full .card-title {
   color: #ffffff;
 }
+.advantages-item-full .advantages-text {
+  padding: 102px 85px;
+}
 .advantages-text {
-  padding: 103px 85px;
+  padding: 113px 85px;
 }
 .card-title {
   color: #000000;
@@ -236,6 +249,8 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 .advantages .card-title::after {
   content: "";
