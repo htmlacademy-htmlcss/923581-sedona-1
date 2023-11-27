@@ -482,7 +482,7 @@ body {
   margin: 0;
 }
 .filter-cubmit {
-  margin: 56px 0 68px 0;
+  margin: 56px 0 32px 0;
 }
 .filter-reset {
 }
@@ -565,6 +565,7 @@ body {
   padding: 0 70px;
   display: flex;
   flex-wrap: wrap;
+  margin-right: -20px;
 }
 .catalog-hotels-list::after {
   content: "";
@@ -585,7 +586,7 @@ body {
   margin: 0 20px 20px 0;
 }
 .hotel-card:nth-child(3n) {
-  margin-right: 0;
+  /* margin-right: 0; */
 }
 .hotel-card .button {
   width: 140px;
