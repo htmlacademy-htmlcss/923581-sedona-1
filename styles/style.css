@@ -122,26 +122,28 @@ body {
 /* ============ Header ============ */
 .page-header {
   display: flex;
-  height: 64px;
+  flex-wrap: wrap;
+
   padding: 0 70px;
 }
 .page-header-logo {
-  z-index: 10;
   margin-right: 28px;
 }
 /* ============ Главное меню ============ */
 .navigation {
-  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
 }
 .navigation-item {
-  padding: 20px 16px;
-  text-align: center;
 }
 .navigation-link {
-  display: inline-block;
+  padding: 20px 16px;
+  display: block;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -153,22 +155,22 @@ body {
 /* ============ Меню пользователя ============ */
 .navigation-user {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 .navigation-user-list {
   display: flex;
+  flex-wrap: wrap;
   margin-right: 20px;
 }
 .navigation-user-item {
-  width: 44px;
-  /* height: 64px; */
-  padding: 22px 12px;
 }
 .navigation-user-link {
   display: block;
   background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+  width: 44px;
+  height: 64px;
+  padding: 22px 12px;
   background-position: center;
 }
 .navigation-user-link-search {
@@ -191,6 +193,7 @@ body {
 .hero {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .hero-headline {
@@ -230,6 +233,7 @@ body {
 }
 .advantages-item-full {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   background-color: #82b3d3;
   color: #ffffff;
@@ -356,10 +360,12 @@ body {
 /* ============ Хлебные крошки ============ */
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 .breadcrumbs-item {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 .breadcrumbs-item:not(:last-child)::after {
@@ -367,6 +373,7 @@ body {
   width: 6px;
   height: 10px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-right: 10px;
 }
@@ -395,12 +402,14 @@ body {
 }
 .catalog-filter {
   display: flex;
+  flex-wrap: wrap;
 }
 .catalog-filter-group {
   margin: 0 70px 0 0;
   padding: 0;
   border: none;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 .catalog-filter-group-checkbox {
@@ -435,6 +444,7 @@ body {
 }
 .price-input-container {
   display: flex;
+  flex-wrap: wrap;
 }
 .price-item {
   position: relative;
@@ -489,6 +499,7 @@ body {
 /* ============ Результаты ============ */
 .catalog-outcome {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 40px;
   padding: 0 70px;
@@ -530,6 +541,7 @@ body {
 }
 .outcome-view {
   display: flex;
+  flex-wrap: wrap;
 }
 .view-item:not(:last-child) {
   margin-right: 8px;
@@ -654,6 +666,7 @@ body {
 /* ============ Пагинация ============ */
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   padding: 0 70px;
   margin-bottom: 60px;
 }
@@ -712,6 +725,7 @@ body {
 }
 .subscribe-form {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .subscribe-form input::placeholder {
@@ -736,11 +750,13 @@ body {
   height: 120px;
   padding: 40px 70px 30px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 .page-footer-social {
   display: flex;
+  flex-wrap: wrap;
 }
 .social-item {
 }
@@ -750,21 +766,6 @@ body {
   height: 41px;
   color: #83b3d3;
   padding: 12px;
-}
-.social-link-vk {
-  /* background-repeat: no-repeat;
-  width: 24px;
-  height: 14px; */
-}
-.social-link-tg {
-  /* background-repeat: no-repeat;
-  width: 18px;
-  height: 16px; */
-}
-.social-link-yt {
-  /* background-repeat: no-repeat;
-  width: 22px;
-  height: 17px; */
 }
 .page-footer-phone {
   font-size: 40px;
