@@ -28,7 +28,7 @@ body {
   line-height: 21px;
   font-weight: 400;
   background-color: #f2f2f2;
-  color: #000000;
+  color: #333333;
   margin: 0;
 }
 /* ???????????????? */
@@ -40,7 +40,9 @@ body {
   margin: -1px;
   padding: 0;
   border: 0;
+  white-space: nowrap;
   clip: rect(0 0 0 0);
+  clip-path: inset(100%);
   overflow: hidden;
 }
 /* Обнуление списков */
@@ -74,6 +76,9 @@ body {
   background-color: transparent;
 }
 .field {
+  width: 100%;
+  height: 48px;
+  padding: 12px 20px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -83,15 +88,11 @@ body {
   border: none;
   border-radius: 4px;
 }
-.card {
-  width: 400px;
-  min-height: 385px;
-  text-align: center;
-}
+
 .page {
 }
 .page-title {
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -105,6 +106,8 @@ body {
   line-height: 26px;
 }
 .background {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: block;
@@ -124,27 +127,32 @@ body {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 /* ============ Header ============ */
 .page-header {
   display: flex;
   flex-wrap: wrap;
-
+  position: relative;
   padding: 0 70px;
+  z-index: 10;
 }
 .page-header-logo {
+  width: 140px;
+  height: 70px;
   margin-right: 28px;
+  display: block;
+  margin-bottom: -6px;
 }
 /* ============ Главное меню ============ */
 .navigation {
   display: flex;
   flex-wrap: wrap;
+  margin-right: auto;
 }
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: auto;
 }
 .navigation-item {
 }
@@ -157,7 +165,6 @@ body {
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
-  text-transform: capitalize;
 }
 /* ============ Меню пользователя ============ */
 .navigation-user {
@@ -176,43 +183,48 @@ body {
   display: block;
   background-repeat: no-repeat;
   width: 44px;
-  height: 64px;
+  min-height: 64px;
   padding: 22px 12px;
   background-position: center;
 }
 .navigation-user-link-search {
   background-image: url("../img/svg/nav-search.svg");
-  padding: 1px 0px 0px 3px;
-  margin-left: 1px;
 }
 .navigation-user-link-favorite {
   background-image: url("../img/svg/nav-heart.svg");
-  padding: 2px 1px 1px;
 }
 .navigation-button {
-  height: 36px;
+  padding: 8px;
   width: 160px;
-  padding: 8px 34px;
+  margin-top: 14px;
 }
 /* ============ Main ============ */
 .main {
   flex-grow: 1;
 }
 .hero {
+  min-height: 485px;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  padding: 50px 70px 60px;
 }
 .hero-headline {
 }
 .hero-wallpaper {
 }
 .hero-welcome {
-  position: absolute;
-  top: 51px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  width: 458px;
+  height: 352px;
+  display: block;
 }
 /* ============ Преимущества ============ */
+.card {
+  width: 400px;
+  min-height: 385px;
+  text-align: center;
+}
 .advantages {
 }
 .advantages-headline {
@@ -221,7 +233,7 @@ body {
   text-align: center;
 }
 .advantages .chapter-container {
-  padding: 69px 0 90px 0;
+  padding: 69px 70px 90px;
 }
 .advantages-title {
   margin-bottom: 25px;
@@ -234,7 +246,6 @@ body {
 }
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.2);
-  line-height: 0;
 }
 .advantages-item:not(.advantages-item-full):nth-child(2n) {
   background-color: rgba(131, 179, 211, 0.122);
@@ -250,10 +261,10 @@ body {
   color: #ffffff;
 }
 .advantages-item-full .advantages-text {
-  padding: 102px 85px;
+  padding-top: 102px;
 }
 .advantages-text {
-  padding: 112px 85px;
+  padding: 113px 85px 102px;
 }
 .card-title {
   color: #000000;
@@ -261,16 +272,14 @@ body {
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
-  margin: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin: 0 0 30px;
 }
 .advantages .card-title::after {
   content: "";
   display: block;
   width: 60px;
   height: 2px;
-  margin: 30px auto;
+  margin: 30px auto 0;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .advantages-item-full .card-title::after {
@@ -283,8 +292,10 @@ body {
 .advantages-image {
 }
 .advantages-image img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 .advantages-item-reverse {
   flex-direction: row-reverse;
@@ -293,7 +304,7 @@ body {
 .services {
 }
 .services .chapter-container {
-  padding: 64px 0;
+  padding: 64px 70px;
 }
 
 .services-headline {
@@ -307,12 +318,12 @@ body {
   flex-wrap: wrap;
 }
 .services-item {
-  background-color: rgba(131, 179, 211, 0.122);
+  background-color: rgba(131, 179, 211, 0.12);
   background-repeat: no-repeat;
   background-position: top 81px center;
 }
 .services-item:nth-child(2n) {
-  background-color: #ffffff;
+  background-color: rgba(131, 179, 211, 0.2);
 }
 .services-item-home {
   background-image: url("../img/svg/home.svg");
@@ -326,13 +337,10 @@ body {
 .services-text {
   padding: 183px 85px 80px 85px;
 }
-.services-text .card-title {
-  margin-bottom: 30px;
-}
 /* ============ Поиск гостиниц ============ */
 .search-form {
   text-align: center;
-  padding: 96px 0;
+  padding: 96px 70px;
 }
 
 .search-form-headline {
@@ -712,7 +720,7 @@ body {
 /* ============ Подписка ============ */
 .subscribe {
   text-align: center;
-  padding: 96px 0 104px 0;
+  padding: 96px 70px 104px;
 }
 .subscribe-index {
   background-image: url("../img/background-subscribe.jpg");
@@ -736,15 +744,14 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-.subscribe-form input::placeholder {
+.subscribe-input::placeholder {
   font-weight: 400;
-  color: #000000;
-  opacity: 0.6;
 }
 .subscribe-input {
   border-radius: 4px 0 0 4px;
   border: none;
   width: 452px;
+  height: 52px;
   padding: 12px 20px;
 }
 .subscribe-button {
