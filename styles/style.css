@@ -87,7 +87,11 @@ body {
   border: none;
   border-radius: 4px;
 }
-
+.field::placeholder {
+  /* color: rgba(0, 0, 0, 0.6); */
+  color: #000000;
+  opacity: 0.6;
+}
 .page {
 }
 .page-title {
@@ -361,36 +365,38 @@ body {
   background-image: url(../img/background-inner.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-color: #82b3d3;
   color: #ffffff;
-  margin-bottom: 50px;
 }
 
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
-  margin: 0 0 8px 0;
+  margin: 0 0 8px;
 }
 /* ============ Хлебные крошки ============ */
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 40px;
 }
-.breadcrumbs-item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+.breadcrumbs-item:not(:last-child) {
+  position: relative;
+  margin-right: 28px;
 }
 .breadcrumbs-item:not(:last-child)::after {
-  content: url("../img/svg/arrow-right.svg");
+  content: "";
+  background-image: url("../img/svg/arrow-right.svg");
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -17px;
   width: 6px;
   height: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-right: 10px;
 }
 .breadcrumbs-link {
   font-size: 16px;
@@ -398,7 +404,6 @@ body {
   line-height: 21px;
   text-decoration: none;
   color: #ffffff;
-  margin-right: 10px;
 }
 
 .breadcrumbs-link-home {
@@ -410,7 +415,6 @@ body {
   background-position: center;
 }
 .breadcrumbs-link-current {
-  margin-right: 0;
 }
 /* ============ Фильтры ============ */
 .catalog-filters {
@@ -423,9 +427,6 @@ body {
   margin: 0 70px 0 0;
   padding: 0;
   border: none;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
 }
 .catalog-filter-group-checkbox {
 }
@@ -456,7 +457,10 @@ body {
   margin-right: auto;
 }
 .catalog-filter-group-prise {
+  width: 100%;
+  max-width: 288px;
 }
+/* гриды */
 .price-input-container {
   display: flex;
   flex-wrap: wrap;
@@ -505,6 +509,8 @@ body {
 }
 .catalog-filter-group-buttons {
   margin: 0;
+  max-width: 191px;
+  text-align: center;
 }
 .filter-cubmit {
   margin: 56px 0 32px 0;
@@ -516,8 +522,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 40px;
-  padding: 0 70px;
+  align-items: center;
+  padding: 50px 70px 40px;
 }
 .outcome {
 }
@@ -526,6 +532,7 @@ body {
 .outcome-subtitle {
   text-align: left;
   margin-right: auto;
+  margin-bottom: 0;
 }
 .outcome-found {
 }
@@ -738,30 +745,27 @@ body {
   margin-bottom: 54px;
 }
 .subscribe-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  max-width: 684px;
+  margin: 0 auto;
 }
 .subscribe-input::placeholder {
   font-weight: 400;
 }
 .subscribe-input {
   border-radius: 4px 0 0 4px;
-  border: none;
-  width: 452px;
-  height: 52px;
-  padding: 12px 20px;
+  height: 100%;
 }
 .subscribe-button {
   font-size: 20px;
   line-height: 36px;
   border-radius: 0 4px 4px 0;
-  border: none;
+  width: 232px;
 }
 /* ============ Подвал ============ */
 .page-footer {
-  height: 120px;
-  padding: 40px 70px 30px;
+  padding: 45px 70px 34px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -774,11 +778,27 @@ body {
 .social-item {
 }
 .social-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 41px;
   color: #83b3d3;
-  padding: 12px;
+}
+.social-link-vk img {
+  display: block;
+  width: 24px;
+  height: 14px;
+}
+.social-link-tg img {
+  display: block;
+  width: 18px;
+  height: 16px;
+}
+.social-link-yt img {
+  display: block;
+  width: 22px;
+  height: 17px;
 }
 .page-footer-phone {
   font-size: 40px;
@@ -790,4 +810,9 @@ body {
 .contacts-phone {
 }
 .page-footer-copyright {
+}
+.page-footer-copyright img {
+  display: block;
+  width: 115px;
+  height: 33px;
 }
