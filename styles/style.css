@@ -31,7 +31,6 @@ body {
   color: #333333;
   margin: 0;
 }
-/* ???????????????? */
 /* Скрытые элементы */
 .visually-hidden {
   position: absolute;
@@ -136,6 +135,7 @@ body {
   position: relative;
   padding: 0 70px;
   z-index: 10;
+  align-items: center;
 }
 .page-header-logo {
   width: 140px;
@@ -196,7 +196,6 @@ body {
 .navigation-button {
   padding: 8px;
   width: 160px;
-  margin-top: 14px;
 }
 /* ============ Main ============ */
 .main {
