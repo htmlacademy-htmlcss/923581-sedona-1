@@ -460,32 +460,25 @@ body {
   width: 100%;
   max-width: 288px;
 }
-/* гриды */
+/* гриды 40 минут */
 .price-input-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
 }
 .price-item {
   position: relative;
-}
-.price-item:not(:last-child) {
-  margin-right: 2px;
 }
 .price-label {
   color: rgba(0, 0, 0, 0.3);
   line-height: 24px;
   position: absolute;
+  right: 0;
+  padding: 11px 20px;
 }
-.price-label[for="price-min"] {
-  padding: 12px 20px 12px 107px;
-}
-.price-label[for="price-max"] {
-  padding: 12px 20px 12px 104px;
-}
+
 .price-input {
-  border: none;
-  width: 143px;
-  padding: 12px 20px;
+  padding: 10px 50px 10px 20px;
 }
 .price-min {
   border-radius: 4px 0 0 4px;
@@ -523,7 +516,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 70px 40px;
+  padding: 50px 70px 0;
 }
 .outcome {
 }
@@ -592,35 +585,23 @@ body {
 }
 /* ============ Каталог гостиниц ============ */
 .catalog-hotels {
+  padding: 0 70px 60px;
 }
 .catalog-hotels-title {
 }
 .catalog-hotels-list {
-  padding: 0 70px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -20px;
-}
-.catalog-hotels-list::after {
-  content: "";
-  display: block;
-  width: 1060px;
-  height: 1px;
-  background-color: #e6e6e6;
-  margin: 20px 0 40px 0;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  border-bottom: 1px solid #e6e6e6;
 }
 .catalog-hotels-item {
 }
 .hotel-card {
   border-radius: 4px;
   border: 1px solid #e6e6e6;
-  max-width: 340px;
-  height: 438px;
   padding: 20px;
-  margin: 0 20px 20px 0;
-}
-.hotel-card:nth-child(3n) {
-  /* margin-right: 0; */
 }
 .hotel-card .button {
   width: 140px;
@@ -650,19 +631,17 @@ body {
 .hotel-card-type {
 }
 .hotel-card-price {
-  float: right;
+  text-align: center;
 }
 .card-more {
   display: inline-block;
 }
 .card-favorite {
   display: inline-block;
-  float: right;
 }
 .hotel-card-stars {
   display: inline-block;
   width: 140px;
-  padding: 10px 0;
 }
 .hotel-card-stars-item {
   display: inline-block;
@@ -680,7 +659,6 @@ body {
   background-color: #f2f2f2;
   border-radius: 4px;
   padding: 8px 22px;
-  float: right;
 }
 .card-favorite-current {
   background-color: #7db54f;
@@ -689,8 +667,7 @@ body {
 .pagination {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 70px;
-  margin-bottom: 60px;
+  padding-top: 40px;
 }
 
 .pagination-item {
