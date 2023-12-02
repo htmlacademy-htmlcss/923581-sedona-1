@@ -429,7 +429,8 @@ body {
   flex-wrap: wrap;
 }
 .catalog-filter-group {
-  margin: 0 70px 0 0;
+  margin-right: 70px;
+  margin-left: 0;
   padding: 0;
   border: none;
 }
@@ -441,6 +442,7 @@ body {
   line-height: 24px;
   text-transform: capitalize;
   margin-bottom: 32px;
+  padding: 0;
 }
 .catalog-filter-list {
 }
@@ -453,13 +455,18 @@ body {
   cursor: pointer;
 }
 .control-input {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 .control-text {
   line-height: 23px;
+  margin-left: 16px;
 }
 /* ============ Движки ============ */
 .catalog-filter-group-radio {
   margin-right: auto;
+  margin-left: 0;
 }
 .catalog-filter-group-prise {
   width: 100%;
@@ -595,27 +602,28 @@ body {
 .catalog-hotels-title {
 }
 .catalog-hotels-list {
-  padding: 40px 0;
+  padding: 40px 0 40px;
   /* =========== на гридах =================== */
-  /* display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 18px; */
-  display: flex;
+  gap: 18px;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: flex-start; */
   /* ============================= */
   border-bottom: 1px solid #e6e6e6;
 }
 .catalog-hotels-item {
 }
 .hotel-card {
+  min-height: 438px;
   border-radius: 4px;
   border: 1px solid #e6e6e6;
   padding: 20px;
   /* ============= на флексах ================== */
-  width: 340px;
+  /* width: 340px;
   margin-bottom: 20px;
-  margin-right: 20px;
+  margin-right: 20px; */
   /* =============================== */
 }
 .hotel-card:nth-child(3n) {
@@ -705,6 +713,7 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #82b3d3;
+  border-radius: 4px;
   text-decoration: none;
   padding: 12px;
   text-align: center;
@@ -760,15 +769,16 @@ body {
 }
 /* ============ Подвал ============ */
 .page-footer {
-  padding: 45px 70px 34px;
+  min-height: 120px;
+  padding: 40px 70px 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 .page-footer-social {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .social-item {
 }
@@ -776,8 +786,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48px;
-  height: 41px;
+  width: 47px;
+  height: 40px;
   color: #83b3d3;
 }
 .social-link-vk img {
