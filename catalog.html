@@ -19,39 +19,37 @@
     <div class="wrapper">
       <!---------------- Header ------------------>
       <header class="page-header">
-        <a class="page-header-logo" href="index.html">
+        <a class="page-header-logo" href="index.html" aria-current="page">
           <img src="img/svg/logo.svg" alt="Логотип города Седона." width="140" height="70">
         </a>
         <!-- Главное меню -->
         <nav class="navigation" aria-label="Главное меню.">
           <ul class="navigation-list list-reset">
             <li class="navigation-item">
-              <a class="navigation-link" href="index.html" aria-label="Вы на странице.">Главная</a>
+              <a class="navigation-link navigation-link-current" href="index.html" aria-current="page" aria-label="Вы на странице.">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#" aria-label="Перейти на страницу.">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="catalog.html" aria-current="page" aria-label="Перейти на страницу.">Гостиницы</a>
+              <a class="navigation-link" href="catalog.html" aria-label="Перейти на страницу.">Гостиницы</a>
             </li>
           </ul>
         </nav>
         <!-- Меню пользователя -->
-        <nav class="navigation-user" aria-label="Меню пользователя.">
-          <ul class="navigation-user-list list-reset">
-            <li class="navigation-user-item">
-              <a class="navigation-user-link navigation-user-link-search" href="#" aria-label="Перейти на страницу.">
-                <span class="visually-hidden">Поиск</span>
-              </a>
-            </li>
-            <li class="navigation-user-item">
-              <a class="navigation-user-link navigation-user-link-favorite" href="#" aria-label="Перейти на страницу.">
-                <span class="visually-hidden">Избранное</span>
-              </a>
-            </li>
-          </ul>
-          <a class="navigation-button button" href="#" aria-label="#">Хочу сюда!</a>
-        </nav>
+        <ul class="navigation-user-list list-reset">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link navigation-user-link-search" href="#" aria-label="Перейти на страницу.">
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </li>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link navigation-user-link-favorite" href="#" aria-label="Перейти на страницу.">
+              <span class="visually-hidden">Избранное</span>
+            </a>
+          </li>
+        </ul>
+        <a class="navigation-button button" href="#" aria-label="#">Хочу сюда!</a>
       </header>
       <!--------------- Основная часть ---------------->
       <main class="main-inner">
