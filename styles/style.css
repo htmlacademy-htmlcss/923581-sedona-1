@@ -783,7 +783,7 @@ body {
 .page-footer-social {
   max-width: 145px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 .social-item {
 }
