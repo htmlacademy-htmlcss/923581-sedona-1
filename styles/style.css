@@ -154,6 +154,7 @@ body {
 }
 /* ============ Главное меню ============ */
 .navigation {
+  max-width: 550px;
   display: flex;
   flex-wrap: wrap;
   margin-right: auto;
@@ -203,8 +204,7 @@ body {
 }
 .navigation-button {
   padding: 8px 34px;
-  /* margin: auto 0; */
-  align-self: center;
+  margin: auto 0;
 }
 /* ============ Main ============ */
 .main {
@@ -388,6 +388,8 @@ body {
   align-items: center;
   margin-bottom: 40px;
 }
+.breadcrumbs-item {
+}
 .breadcrumbs-item:not(:last-child) {
   position: relative;
   margin-right: 28px;
@@ -569,6 +571,8 @@ body {
 .outcome-view {
   display: flex;
   flex-wrap: wrap;
+}
+.view-item {
 }
 .view-item:not(:last-child) {
   margin-right: 8px;
@@ -777,6 +781,7 @@ body {
   align-items: center;
 }
 .page-footer-social {
+  max-width: 145px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -799,6 +804,8 @@ body {
   display: block;
   width: 18px;
   height: 16px;
+}
+.social-link-yt {
 }
 .social-link-yt img {
   display: block;
