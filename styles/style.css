@@ -463,7 +463,7 @@ body {
 }
 .control-text {
   line-height: 23px;
-  margin-left: 16px;
+  padding-left: 16px;
 }
 /* ============ Движки ============ */
 .catalog-filter-group-radio {
@@ -708,9 +708,10 @@ body {
 }
 /* ============ Пагинация ============ */
 .pagination {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   padding-top: 40px;
+  grid-template-columns: repeat(12, 60px);
+  gap: 8px;
 }
 
 .pagination-item {
