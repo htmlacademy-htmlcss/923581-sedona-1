@@ -154,7 +154,7 @@ body {
 }
 /* ============ Главное меню ============ */
 .navigation {
-  max-width: 550px;
+  max-width: 500px;
   display: flex;
   flex-wrap: wrap;
   margin-right: auto;
@@ -185,6 +185,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-right: 20px;
+  max-width: 176px;
 }
 .navigation-user-item {
 }
@@ -195,6 +196,7 @@ body {
   min-height: 64px;
   padding: 22px 12px;
   background-position: center;
+  height: 100%;
 }
 .navigation-user-link-search {
   background-image: url("../img/svg/nav-search.svg");
@@ -204,7 +206,7 @@ body {
 }
 .navigation-button {
   padding: 8px 34px;
-  margin: auto 0;
+  margin: 14px 0 auto;
 }
 /* ============ Main ============ */
 .main {
@@ -531,7 +533,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 70px 0;
+  padding: 49px 70px 0;
 }
 .outcome {
 }
@@ -602,16 +604,16 @@ body {
 }
 /* ============ Каталог гостиниц ============ */
 .catalog-hotels {
-  padding: 0 70px 60px;
+  padding: 0 69px 60px;
 }
 .catalog-hotels-title {
 }
 .catalog-hotels-list {
-  padding: 40px 0 40px;
+  padding: 40px 0;
   /* =========== на гридах =================== */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 18px;
+  grid-template-columns: 342px 342px 342px;
+  gap: 19px 18px;
   /* display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; */
@@ -621,14 +623,12 @@ body {
 .catalog-hotels-item {
 }
 .hotel-card {
-  min-height: 438px;
   border-radius: 4px;
   border: 1px solid #e6e6e6;
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, 140px);
-  column-gap: 20px;
-  row-gap: 16px;
+  gap: 16px 20px;
   /* ============= на флексах ================== */
   /* width: 340px;
   margin-bottom: 20px;
@@ -710,7 +710,7 @@ body {
 /* ============ Пагинация ============ */
 .pagination {
   display: grid;
-  padding-top: 40px;
+  padding: 40px 1px 0;
   grid-template-columns: repeat(12, 60px);
   gap: 8px;
 }
