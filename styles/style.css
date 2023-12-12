@@ -613,7 +613,7 @@ body {
   padding: 40px 0;
   /* =========== на гридах =================== */
   display: grid;
-  grid-template-columns: 342px 342px 342px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 19px 18px;
   /* display: flex;
   flex-wrap: wrap;
@@ -645,7 +645,6 @@ body {
 }
 .hotel-card-link {
   text-decoration: none;
-  display: grid;
   grid-column: 1/-1;
 }
 .hotel-card-image {
@@ -708,14 +707,13 @@ body {
 }
 /* ============ Пагинация ============ */
 .pagination {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   padding: 39px 1px 0;
-  grid-template-columns: repeat(12, 60px);
   gap: 8px;
 }
 
 .pagination-item {
-  margin-right: 8px;
 }
 .pagination-item:last-child {
   margin-right: 0;
