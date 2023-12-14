@@ -141,7 +141,6 @@ body {
 .page-header {
   display: flex;
   flex-wrap: wrap;
-
   position: relative;
   padding: 0 70px;
   z-index: 10;
@@ -155,14 +154,16 @@ body {
 }
 /* ============ Главное меню ============ */
 .navigation {
-  max-width: 500px;
   display: flex;
   flex-wrap: wrap;
-  margin-right: auto;
+  align-items: start;
+  flex-grow: 1;
 }
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 500px;
+  margin-right: auto;
 }
 .navigation-item {
 }
@@ -188,6 +189,7 @@ body {
   margin-right: 20px;
   max-width: 176px;
 }
+/* Чтобы при переполнении меню иконки первого ряда оставались прижаты к верху */
 .navigation-user-item {
 }
 .navigation-user-link {
@@ -206,8 +208,10 @@ body {
   background-image: url("../img/svg/nav-heart.svg");
 }
 .navigation-button {
-  padding: 8px 34px;
-  margin: 14px 0 auto;
+  padding: 8px 20px;
+  margin-top: 14px;
+  /* margin: 14px 0 auto; */
+  min-width: 160px;
 }
 /* ============ Main ============ */
 .main {
@@ -251,9 +255,10 @@ body {
 }
 .advantages-annotation {
 }
-.advantages-list {
-  display: flex;
-  flex-wrap: wrap;
+.advantages-list,
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.2);
@@ -262,6 +267,7 @@ body {
   background-color: rgba(131, 179, 211, 0.122);
 }
 .advantages-item-full {
+  grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -325,8 +331,6 @@ body {
 .services-annotation {
 }
 .services-list {
-  display: flex;
-  flex-wrap: wrap;
 }
 .services-item {
   background-color: rgba(131, 179, 211, 0.12);
