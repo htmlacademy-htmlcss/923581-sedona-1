@@ -141,7 +141,6 @@ body {
 .page-header {
   display: flex;
   flex-wrap: wrap;
-
   position: relative;
   padding: 0 70px;
   z-index: 10;
@@ -155,14 +154,16 @@ body {
 }
 /* ============ Главное меню ============ */
 .navigation {
-  max-width: 500px;
   display: flex;
   flex-wrap: wrap;
-  margin-right: auto;
+  align-items: start;
+  flex-grow: 1;
 }
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 500px;
+  margin-right: auto;
 }
 .navigation-item {
 }
@@ -188,6 +189,7 @@ body {
   margin-right: 20px;
   max-width: 176px;
 }
+/* Чтобы при переполнении меню иконки первого ряда оставались прижаты к верху */
 .navigation-user-item {
 }
 .navigation-user-link {
@@ -206,8 +208,10 @@ body {
   background-image: url("../img/svg/nav-heart.svg");
 }
 .navigation-button {
-  padding: 8px 34px;
-  margin: 14px 0 auto;
+  padding: 8px 20px;
+  margin-top: 14px;
+  /* margin: 14px 0 auto; */
+  min-width: 160px;
 }
 /* ============ Main ============ */
 .main {
@@ -251,9 +255,10 @@ body {
 }
 .advantages-annotation {
 }
-.advantages-list {
-  display: flex;
-  flex-wrap: wrap;
+.advantages-list,
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.2);
@@ -262,6 +267,7 @@ body {
   background-color: rgba(131, 179, 211, 0.122);
 }
 .advantages-item-full {
+  grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -325,8 +331,6 @@ body {
 .services-annotation {
 }
 .services-list {
-  display: flex;
-  flex-wrap: wrap;
 }
 .services-item {
   background-color: rgba(131, 179, 211, 0.12);
@@ -498,6 +502,31 @@ body {
 .price-input {
   padding: 10px 50px 10px 20px;
 }
+/* =========== отключить стрелки при вводе чисел ============ */
+/* для браузера Chrome: */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* для браузера Firefox: */
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+/* для других */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* ============================================ */
 .price-min {
   border-radius: 4px 0 0 4px;
 }
@@ -528,13 +557,17 @@ body {
 }
 .filter-reset {
 }
-/* ============ Результаты ============ */
+/* ============ Каталог гостиниц ============ */
+.catalog {
+  padding: 49px 70px 60px;
+}
+
+/* ============ Результаты отбора ============ */
 .catalog-outcome {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 49px 70px 0;
 }
 .outcome {
 }
@@ -603,23 +636,17 @@ body {
 .view-link-list {
   background-image: url("../img/svg/view-list.svg");
 }
-/* ============ Каталог гостиниц ============ */
+/* ============ Карточки гостиниц ============ */
 .catalog-hotels {
-  padding: 0 69px 60px;
+  border-bottom: 1px solid #e6e6e6;
 }
 .catalog-hotels-title {
 }
 .catalog-hotels-list {
   padding: 40px 0;
-  /* =========== на гридах =================== */
   display: grid;
-  grid-template-columns: 342px 342px 342px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 19px 18px;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; */
-  /* ============================= */
-  border-bottom: 1px solid #e6e6e6;
 }
 .catalog-hotels-item {
 }
@@ -628,13 +655,9 @@ body {
   border: 1px solid #e6e6e6;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(2, 140px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px 20px;
-  /* ============= на флексах ================== */
-  /* width: 340px;
-  margin-bottom: 20px;
-  margin-right: 20px; */
-  /* =============================== */
+  align-items: start;
 }
 .hotel-card:nth-child(3n) {
   margin-right: 0;
@@ -645,7 +668,6 @@ body {
 }
 .hotel-card-link {
   text-decoration: none;
-  display: grid;
   grid-column: 1/-1;
 }
 .hotel-card-image {
@@ -660,7 +682,6 @@ body {
   line-height: 28px;
   color: #000000;
   margin: 0;
-  grid-column: 1 / -1;
 }
 .catalog-text {
   margin: 0;
@@ -669,7 +690,6 @@ body {
 }
 .hotel-card-price {
   text-align: end;
-  grid-area: 2/2/3/3;
 }
 .card-more {
   display: inline-block;
@@ -681,6 +701,8 @@ body {
   display: flex;
   align-items: center;
   width: 140px;
+  padding: 10px 0;
+  margin-left: -1px;
 }
 .hotel-card-stars-item {
   display: inline-block;
@@ -708,14 +730,12 @@ body {
 }
 /* ============ Пагинация ============ */
 .pagination {
-  display: grid;
-  padding: 39px 1px 0;
-  grid-template-columns: repeat(12, 60px);
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 39px;
   gap: 8px;
 }
-
 .pagination-item {
-  margin-right: 8px;
 }
 .pagination-item:last-child {
   margin-right: 0;

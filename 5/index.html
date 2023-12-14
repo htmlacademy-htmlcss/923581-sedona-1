@@ -23,8 +23,8 @@
         <a class="page-header-logo" href="index.html" aria-current="page">
           <img src="img/svg/logo.svg" alt="Логотип города Седона." width="140" height="70">
         </a>
-        <!-- Главное меню -->
-        <nav class="navigation" aria-label="Главное меню.">
+        <nav class="navigation" aria-label="Навигация по сайту.">
+          <!-- Главное меню -->
           <ul class="navigation-list list-reset">
             <li class="navigation-item">
               <a class="navigation-link navigation-link-current" href="index.html" aria-current="page" aria-label="Вы на странице.">Главная</a>
@@ -36,21 +36,21 @@
               <a class="navigation-link" href="catalog.html" aria-label="Перейти на страницу.">Гостиницы</a>
             </li>
           </ul>
+          <!-- Меню пользователя -->
+          <ul class="navigation-user-list list-reset">
+            <li class="navigation-user-item">
+              <a class="navigation-user-link navigation-user-link-search" href="#" aria-label="Перейти на страницу.">
+                <span class="visually-hidden">Поиск</span>
+              </a>
+            </li>
+            <li class="navigation-user-item">
+              <a class="navigation-user-link navigation-user-link-favorite" href="#" aria-label="Перейти на страницу.">
+                <span class="visually-hidden">Избранное</span>
+              </a>
+            </li>
+          </ul>
+          <a class="navigation-button button" href="#" aria-label="#">Хочу сюда!</a>
         </nav>
-        <!-- Меню пользователя -->
-        <ul class="navigation-user-list list-reset">
-          <li class="navigation-user-item">
-            <a class="navigation-user-link navigation-user-link-search" href="#" aria-label="Перейти на страницу.">
-              <span class="visually-hidden">Поиск</span>
-            </a>
-          </li>
-          <li class="navigation-user-item">
-            <a class="navigation-user-link navigation-user-link-favorite" href="#" aria-label="Перейти на страницу.">
-              <span class="visually-hidden">Избранное</span>
-            </a>
-          </li>
-        </ul>
-        <a class="navigation-button button" href="#" aria-label="#">Хочу сюда!</a>
       </header>
       <!-- Main -->
       <main class="main">
@@ -136,15 +136,15 @@
         <!-- Поиск гостиниц -->
         <section class="search-form">
           <h2 class="search-form-headline visually-hidden">Поиск гостиницы на выбранную дату</h2>
-            <h3 class="search-form-title page-title">Заинтересовались?</h3>
-            <p class="search-form-annotation page-text">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <h3 class="search-form-title page-title">Заинтересовались?</h3>
+          <p class="search-form-annotation page-text">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="search-form-button button" href="#" aria-label="Открыть форму.">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
         </section>
         <!-- Подписка на новости -->
         <section class="subscribe subscribe-index">
           <h2 class="subscribe-headline visually-hidden">Подписаться на новости</h2>
-            <h3 class="subscribe-title page-title">Подпишитесь на рассылку</h3>
-            <p class="subscribe-annotation page-text">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
+          <h3 class="subscribe-title page-title">Подпишитесь на рассылку</h3>
+          <p class="subscribe-annotation page-text">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="email">Введите Ваш E-mail</label>
             <input class="subscribe-input field" id="email" name="email" type="email" placeholder="Ваш e-mail" required>
