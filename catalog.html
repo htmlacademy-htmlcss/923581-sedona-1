@@ -17,13 +17,13 @@
 
   <body>
     <div class="wrapper">
-      <!---------------- Header ------------------>
+      <!-- Header -->
       <header class="page-header">
         <a class="page-header-logo" href="index.html" aria-current="page">
           <img src="img/svg/logo.svg" alt="Логотип города Седона." width="140" height="70">
         </a>
-        <!-- Главное меню -->
-        <nav class="navigation" aria-label="Главное меню.">
+        <nav class="navigation" aria-label="Навигация по сайту.">
+          <!-- Главное меню -->
           <ul class="navigation-list list-reset">
             <li class="navigation-item">
               <a class="navigation-link" href="index.html" aria-current="page" aria-label="Перейти на страницу.">Главная</a>
@@ -51,12 +51,12 @@
           <a class="navigation-button button" href="#" aria-label="#">Хочу сюда!</a>
         </nav>
       </header>
-      <!--------------- Основная часть ---------------->
+      <!-- Основная часть -->
       <main class="main-inner">
-        <!----------------- Фильтр поиска гостиницы ----------------->
+        <!-- Фильтр поиска гостиницы -->
         <header class="inner-header">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
-          <!----------------- Хлебные крошки ----------------->
+          <!-- Хлебные крошки -->
           <ol class="breadcrumbs list-reset">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html" aria-label="Перейти на страницу.">
@@ -67,9 +67,9 @@
               <a class="breadcrumbs-link breadcrumbs-link-current" href="catalog.html" aria-current="page" aria-label="Вы на странице.">Гостиницы</a>
             </li>
           </ol>
-          <!----------------- Фильтры для поиска ----------------->
+          <!-- Фильтры для поиска -->
           <section class="catalog-filters">
-            <h2 class="visually-hidden">Сортировка гостиниц по критериям</h2>
+            <h2 class="visually-hidden">Поиск гостиниц по критериям</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="catalog-filter-group catalog-filter-group-checkbox">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -117,9 +117,9 @@
                   </li>
                 </ul>
               </fieldset>
-              <!---------------- price-input ---------------------->
+              <!-- price-input -->
               <fieldset class="catalog-filter-group catalog-filter-group-prise">
-                <legend class="catalog-filter-title">Стоимость, &#8381:</legend>
+                <legend class="catalog-filter-title">Стоимость, &#8381;:</legend>
                 <div class="price-input-container">
                   <div class="price-item">
                     <label class="price-label" for="price-min">от</label>
@@ -136,7 +136,7 @@
                   </div>
                 </div>
               </fieldset>
-              <!-- ------------------------------------->
+              <!-- Кнопки управления -->
               <fieldset class="catalog-filter-group catalog-filter-group-buttons">
                 <legend class="catalog-filter-title visually-hidden">Кнопки управления</legend>
                 <button class="filter-cubmit button button-light" type="submit">Применить</button>
@@ -145,108 +145,112 @@
             </form>
           </section>
         </header>
-        <!---------------- Результаты поиска ----------------->
-        <section class="catalog-outcome outcome">
-          <h2 class="outcome-title visually-hidden">Результаты поиска</h2>
-          <h3 class="outcome-subtitle page-title">Найдено гостиниц: <output class="outcome-found">38</output></h3>
-          <select class="outcome-select" name="select-control" aria-label="Сортировка.">
-            <option class="outcome-select-option" value="cheap" selected>Сначала дешевые</option>
-            <option class="outcome-select-option" value="expensive">Сначала дорогие</option>
-            <option class="outcome-select-option" value="favorites">Сначала избранные</option>
-            <option class="outcome-select-option" value="popular">Сначала популярные</option>
-          </select>
-          <ul class="outcome-view view-list list-reset">
-            <li class="view-item">
-              <a class="view-link view-link-tile view-link-current" href="#" aria-label="Плитка.">
-                <span class="visually-hidden">Карточки</span>
-              </a>
-            </li>
-            <li class="view-item">
-              <a class="view-link view-link-slide" href="#" aria-label="Слайды.">
-                <span class="visually-hidden">Слайд-шоу</span>
-              </a>
-            </li>
-            <li class="view-item">
-              <a class="view-link view-link-list" href="#" aria-label="Список.">
-                <span class="visually-hidden">Списком</span>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <!---------------- Каталог гостиниц ----------------->
-        <section class="catalog-hotels">
-          <h2 class="catalog-hotels-title visually-hidden">Каталог гостиниц</h2>
-          <ul class="catalog-hotels-list list-reset">
-            <li class="catalog-hotels-item hotel-card">
-              <a class="hotel-card-link" href="#" aria-label="Карточка отеля.">
-                <img class="hotel-card-image" src="img/catalog/hotel-1.jpg" alt="Вид из пещеры на звёздное небо." width="300" height="212">
-                <h3 class="hotel-card-title">Amara Resort &amp; Spa</h3>
-              </a>
-              <p class="catalog-text hotel-card-type">Гостиница</p>
-              <p class="catalog-text hotel-card-price">От 4000 &#8381</p>
-              <a class="card-more button" href="#" aria-label="#">подробнее</a>
-              <a class="card-favorite button button-light" href="#" aria-label="#">в избранное</a>
-              <div class="hotel-card-stars">
-                <span class="visually-hidden">4 из 5 звёзд</span>
-                <span class="hotel-card-stars-item"></span>
-                <span class="hotel-card-stars-item"></span>
-                <span class="hotel-card-stars-item"></span>
-                <span class="hotel-card-stars-item"></span>
-              </div>
-              <span class="hotel-card-rating">Рейтинг: 8,5</span>
-            </li>
-            <li class="catalog-hotels-item hotel-card">
-              <a class="hotel-card-link" href="#" aria-label="Карточка отеля.">
-                <img class="hotel-card-image" src="img/catalog/hotel-2.jpg" alt="Радуга в горах." width="300" height="212">
-                <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
-              </a>
-              <p class="catalog-text hotel-card-type">Гостиница</p>
-              <p class="catalog-text hotel-card-price">От 5000 &#8381</p>
-              <a class="card-more button" href="#" aria-label="#">подробнее</a>
-              <a class="card-favorite button button-light card-favorite-current" href="#" aria-label="#">в избранном</a>
-              <div class="hotel-card-stars">
-                <span class="visually-hidden">4 из 5 звёзд</span>
-                <span class="hotel-card-stars-item"></span>
-                <span class="hotel-card-stars-item"></span>
-                <span class="hotel-card-stars-item"></span>
-                <span class="hotel-card-stars-item"></span>
-              </div>
-              <span class="hotel-card-rating">Рейтинг: 9,2</span>
-            </li>
-            <li class="catalog-hotels-item hotel-card">
-              <a class="hotel-card-link" href="#" aria-label="Карточка отеля.">
-                <img class="hotel-card-image" src="img/catalog/hotel-3.jpg" alt="Въезд в гостиницу у подножия горы." width="300" height="212">
-                <h3 class="hotel-card-title">Desert Quail Inn</h3>
-              </a>
-              <p class="catalog-text hotel-card-type">Гостиница</p>
-              <p class="catalog-text hotel-card-price">От 2500 &#8381</p>
-              <a class="card-more button" href="#" aria-label="#">подробнее</a>
-              <a class="card-favorite button button-light" href="#" aria-label="#">в избранное</a>
-              <div class="hotel-card-stars">
-                <span class="visually-hidden">3 из 5 звёзд</span>
-                <span class="hotel-card-stars-item"></span>
-                <span class="hotel-card-stars-item"></span>
-                <span class="hotel-card-stars-item"></span>
-              </div>
-              <span class="hotel-card-rating">Рейтинг: 6,9</span>
-            </li>
-            <li class="catalog-hotels-item hotel-card">
-              <a class="hotel-card-link" href="#" aria-label="Карточка отеля.">
-                <img class="hotel-card-image" src="img/catalog/hotel-4.jpg" alt="Столовая гора на фоне звёздного неба." width="300" height="212">
-                <h3 class="hotel-card-title">GreenTree Inn</h3>
-              </a>
-              <p class="catalog-text hotel-card-type">Гостиница</p>
-              <p class="catalog-text hotel-card-price">От 1500 &#8381</p>
-              <a class="card-more button" href="#" aria-label="#">подробнее</a>
-              <a class="card-favorite button button-light" href="#" aria-label="#">в избранное</a>
-              <div class="hotel-card-stars">
-                <span class="visually-hidden">2 из 5 звёзд</span>
-                <span class="hotel-card-stars-item"></span>
-                <span class="hotel-card-stars-item"></span>
-              </div>
-              <span class="hotel-card-rating">Рейтинг: 5,0</span>
-            </li>
-          </ul>
+        <!-- Каталог гостиниц -->
+        <section class="catalog">
+          <h2 class="outcome-title visually-hidden">Каталог гостиниц</h2>
+          <!-- Результаты поиска -->
+          <section class="catalog-outcome outcome">
+            <h3 class="outcome-subtitle page-title">Найдено гостиниц: <output class="outcome-found">38</output></h3>
+            <select class="outcome-select" name="select-control" aria-label="Сортировка.">
+              <option class="outcome-select-option" value="cheap" selected>Сначала дешевые</option>
+              <option class="outcome-select-option" value="expensive">Сначала дорогие</option>
+              <option class="outcome-select-option" value="favorites">Сначала избранные</option>
+              <option class="outcome-select-option" value="popular">Сначала популярные</option>
+            </select>
+            <ul class="outcome-view view-list list-reset">
+              <li class="view-item">
+                <a class="view-link view-link-tile view-link-current" href="#" aria-label="Плитка.">
+                  <span class="visually-hidden">Карточки</span>
+                </a>
+              </li>
+              <li class="view-item">
+                <a class="view-link view-link-slide" href="#" aria-label="Слайды.">
+                  <span class="visually-hidden">Слайд-шоу</span>
+                </a>
+              </li>
+              <li class="view-item">
+                <a class="view-link view-link-list" href="#" aria-label="Список.">
+                  <span class="visually-hidden">Списком</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <!-- Результат сортировки -->
+          <section class="catalog-hotels">
+            <h3 class="catalog-hotels-title visually-hidden">Результат сортировки гостиниц</h3>
+            <ul class="catalog-hotels-list list-reset">
+              <li class="catalog-hotels-item hotel-card">
+                <a class="hotel-card-link" href="#" aria-label="Карточка отеля.">
+                  <img class="hotel-card-image" src="img/catalog/hotel-1.jpg" alt="Вид из пещеры на звёздное небо." width="300" height="212">
+                  <h4 class="hotel-card-title">Amara Resort &amp; Spa</h4>
+                </a>
+                <p class="catalog-text hotel-card-type">Гостиница</p>
+                <p class="catalog-text hotel-card-price">От 4000 &#8381;</p>
+                <a class="card-more button" href="#" aria-label="#">подробнее</a>
+                <a class="card-favorite button button-light" href="#" aria-label="#">в избранное</a>
+                <div class="hotel-card-stars">
+                  <span class="visually-hidden">4 из 5 звёзд</span>
+                  <span class="hotel-card-stars-item"></span>
+                  <span class="hotel-card-stars-item"></span>
+                  <span class="hotel-card-stars-item"></span>
+                  <span class="hotel-card-stars-item"></span>
+                </div>
+                <span class="hotel-card-rating">Рейтинг: 8,5</span>
+              </li>
+              <li class="catalog-hotels-item hotel-card">
+                <a class="hotel-card-link" href="#" aria-label="Карточка отеля.">
+                  <img class="hotel-card-image" src="img/catalog/hotel-2.jpg" alt="Радуга в горах." width="300" height="212">
+                  <h4 class="hotel-card-title">Villas at Poco Diablo</h4>
+                </a>
+                <p class="catalog-text hotel-card-type">Гостиница</p>
+                <p class="catalog-text hotel-card-price">От 5000 &#8381;</p>
+                <a class="card-more button" href="#" aria-label="#">подробнее</a>
+                <a class="card-favorite button button-light card-favorite-current" href="#" aria-label="#">в избранном</a>
+                <div class="hotel-card-stars">
+                  <span class="visually-hidden">4 из 5 звёзд</span>
+                  <span class="hotel-card-stars-item"></span>
+                  <span class="hotel-card-stars-item"></span>
+                  <span class="hotel-card-stars-item"></span>
+                  <span class="hotel-card-stars-item"></span>
+                </div>
+                <span class="hotel-card-rating">Рейтинг: 9,2</span>
+              </li>
+              <li class="catalog-hotels-item hotel-card">
+                <a class="hotel-card-link" href="#" aria-label="Карточка отеля.">
+                  <img class="hotel-card-image" src="img/catalog/hotel-3.jpg" alt="Въезд в гостиницу у подножия горы." width="300" height="212">
+                  <h4 class="hotel-card-title">Desert Quail Inn</h4>
+                </a>
+                <p class="catalog-text hotel-card-type">Гостиница</p>
+                <p class="catalog-text hotel-card-price">От 2500 &#8381;</p>
+                <a class="card-more button" href="#" aria-label="#">подробнее</a>
+                <a class="card-favorite button button-light" href="#" aria-label="#">в избранное</a>
+                <div class="hotel-card-stars">
+                  <span class="visually-hidden">3 из 5 звёзд</span>
+                  <span class="hotel-card-stars-item"></span>
+                  <span class="hotel-card-stars-item"></span>
+                  <span class="hotel-card-stars-item"></span>
+                </div>
+                <span class="hotel-card-rating">Рейтинг: 6,9</span>
+              </li>
+              <li class="catalog-hotels-item hotel-card">
+                <a class="hotel-card-link" href="#" aria-label="Карточка отеля.">
+                  <img class="hotel-card-image" src="img/catalog/hotel-4.jpg" alt="Столовая гора на фоне звёздного неба." width="300" height="212">
+                  <h4 class="hotel-card-title">GreenTree Inn</h4>
+                </a>
+                <p class="catalog-text hotel-card-type">Гостиница</p>
+                <p class="catalog-text hotel-card-price">От 1500 &#8381;</p>
+                <a class="card-more button" href="#" aria-label="#">подробнее</a>
+                <a class="card-favorite button button-light" href="#" aria-label="#">в избранное</a>
+                <div class="hotel-card-stars">
+                  <span class="visually-hidden">2 из 5 звёзд</span>
+                  <span class="hotel-card-stars-item"></span>
+                  <span class="hotel-card-stars-item"></span>
+                </div>
+                <span class="hotel-card-rating">Рейтинг: 5,0</span>
+              </li>
+            </ul>
+          </section>
+          <!-- Пагинация -->
           <ul class="pagination list-reset">
             <li class="pagination-item">
               <a class="pagination-link pagination-link-current" href="#" aria-current="page">1</a>
@@ -268,7 +272,7 @@
             </li>
           </ul>
         </section>
-        <!---------------- Подписка на новости ----------------->
+        <!-- Подписка на новости -->
         <section class="subscribe">
           <h2 class="subscribe-headline visually-hidden">Подписаться на новости</h2>
           <div class="chapter-container">
@@ -282,7 +286,7 @@
           </form>
         </section>
       </main>
-      <!---------------- Footer ------------------>
+      <!-- Footer -->
       <footer class="page-footer">
         <ul class="page-footer-social social-list list-reset">
           <li class="social-item">
