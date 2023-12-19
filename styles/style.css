@@ -239,6 +239,7 @@ body {
   width: 400px;
   min-height: 385px;
   text-align: center;
+  flex-shrink: 0;
 }
 .advantages {
 }
@@ -807,17 +808,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 /* ============ Подвал ============ */
 .page-footer {
-  min-height: 120px;
   padding: 40px 70px 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .page-footer-social {
-  max-width: 145px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding: 5px 0;
 }
 .social-item {
 }
@@ -834,6 +834,10 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 24px;
   height: 14px;
 }
+.social-link-tg {
+  /* двигаем иконки и телефон на 1px для соответствию макету. */
+  margin-left: 1px;
+}
 .social-link-tg img {
   display: block;
   width: 18px;
@@ -847,15 +851,21 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 17px;
 }
 .page-footer-phone {
+  display: block;
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+  padding: 5px 0;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .contacts-phone {
 }
 .page-footer-copyright {
+  padding: 8px 0;
 }
 .page-footer-copyright img {
   display: block;
