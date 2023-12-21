@@ -72,6 +72,7 @@ body {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  word-wrap: break-word;
 }
 .button-light {
   background-color: #82b3d3;
@@ -210,8 +211,7 @@ body {
 .navigation-button {
   padding: 8px 20px;
   margin-top: 14px;
-  /* margin: 14px 0 auto; */
-  min-width: 160px;
+  width: 160px;
 }
 /* ============ Main ============ */
 .main {
@@ -239,6 +239,7 @@ body {
   width: 400px;
   min-height: 385px;
   text-align: center;
+  flex-shrink: 0;
 }
 .advantages {
 }
@@ -262,6 +263,7 @@ body {
 }
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.2);
+  word-break: break-word;
 }
 .advantages-item:not(.advantages-item-full):nth-child(2n) {
   background-color: rgba(131, 179, 211, 0.122);
@@ -336,6 +338,7 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
   background-repeat: no-repeat;
   background-position: top 81px center;
+  word-break: break-word;
 }
 .services-item:nth-child(2n) {
   background-color: rgba(131, 179, 211, 0.2);
@@ -366,6 +369,7 @@ body {
   margin-bottom: 54px;
 }
 .search-form-button {
+  width: 376px;
   font-size: 20px;
   line-height: 36px;
 }
@@ -439,12 +443,12 @@ body {
   flex-wrap: wrap;
 }
 .catalog-filter-group {
-  margin-right: 70px;
   margin-left: 0;
   padding: 0;
   border: none;
 }
 .catalog-filter-group-checkbox {
+  margin-right: 70px;
 }
 .catalog-filter-title {
   font-size: 20px;
@@ -463,12 +467,44 @@ body {
 }
 .control-label {
   cursor: pointer;
+  display: flex;
 }
 .control-input {
+  position: relative;
   padding: 0;
   margin: 0;
   border: none;
+  appearance: none;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
 }
+.control-input[type="checkbox"] {
+  border-radius: 4px;
+}
+.control-input[type="checkbox"]:checked:after {
+  position: absolute;
+  content: "";
+  background-image: url("../img/svg/tick.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.control-input[type="radio"] {
+  border-radius: 50%;
+}
+.control-input[type="radio"]:checked:after {
+  position: absolute;
+  content: "";
+  background-color: #3f5e72;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .control-text {
   line-height: 23px;
   padding-left: 16px;
@@ -481,6 +517,7 @@ body {
 .catalog-filter-group-prise {
   width: 100%;
   max-width: 288px;
+  margin-right: 70px;
 }
 /* гриды 40 минут */
 .price-input-container {
@@ -495,7 +532,9 @@ body {
   color: rgba(0, 0, 0, 0.3);
   line-height: 24px;
   position: absolute;
+  top: 0;
   right: 0;
+  bottom: 0;
   padding: 11px 20px;
 }
 
@@ -658,13 +697,14 @@ input[type="number"]::-webkit-outer-spin-button {
   grid-template-columns: repeat(2, 1fr);
   gap: 16px 20px;
   align-items: start;
+  align-content: start;
 }
 .hotel-card:nth-child(3n) {
   margin-right: 0;
 }
 .hotel-card .button {
   width: 140px;
-  padding: 8px 18px;
+  padding: 8px 8px;
 }
 .hotel-card-link {
   text-decoration: none;
@@ -672,8 +712,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .hotel-card-image {
   display: block;
-  width: 300px;
-  height: 212px;
+  width: 100%;
   margin-bottom: 16px;
 }
 .hotel-card-title {
@@ -807,17 +846,15 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 /* ============ Подвал ============ */
 .page-footer {
-  min-height: 120px;
   padding: 40px 70px 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
 }
 .page-footer-social {
-  max-width: 145px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding: 5px 0;
 }
 .social-item {
 }
@@ -834,6 +871,10 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 24px;
   height: 14px;
 }
+.social-link-tg {
+  /* двигаем иконки и телефон на 1px для соответствию макету. */
+  margin-left: 1px;
+}
 .social-link-tg img {
   display: block;
   width: 18px;
@@ -847,15 +888,21 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 17px;
 }
 .page-footer-phone {
+  display: block;
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+  padding: 5px 0;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .contacts-phone {
 }
 .page-footer-copyright {
+  padding: 8px 0;
 }
 .page-footer-copyright img {
   display: block;
