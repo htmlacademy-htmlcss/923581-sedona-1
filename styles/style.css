@@ -20,6 +20,9 @@
 *::after {
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
 
 html {
   height: 100%;
@@ -784,12 +787,41 @@ img {
   border-radius: 4px;
 }
 
+.view-link:hover {
+  border-color: #000000;
+}
+
+/* .view-link:focus {
+  border-color: #68a2ca;
+} */
+/* ====================== */
+
+/*  Указываем :focus-visible */
+.view-link:focus-visible {
+  outline: 2px solid #68a2ca;
+  outline-offset: -2px;
+}
+
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .view-link:focus {
+    /* Fallback for browsers without :focus-visible support */
+    outline: 2px solid #68a2ca;
+    outline-offset: -2px;
+  }
+}
+
+/* ======================= */
+.view-link:active {
+  border-color: #000000;
+}
+
 .view-link-tile {
   background-image: url("../img/svg/view-tile.svg");
 }
 
 .view-link-current {
-  border-color: #000000;
+  /* border-color: #000000; */
   pointer-events: none;
 }
 
@@ -1026,6 +1058,7 @@ img {
 }
 
 .social-link {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1034,31 +1067,39 @@ img {
   color: #83b3d3;
 }
 
-.social-link-vk img {
+.social-link-svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  fill: #83b3d3;
+}
+
+/* .social-link-vk img {
   display: block;
   width: 24px;
   height: 14px;
-}
+} */
 
 .social-link-tg {
-  /* двигаем иконки и телефон на 1px для соответствию макету. */
-  margin-left: 1px;
 }
 
-.social-link-tg img {
+/* .social-link-tg img {
   display: block;
   width: 18px;
   height: 16px;
-}
+} */
 
 .social-link-yt {
 }
 
-.social-link-yt img {
+/* .social-link-yt img {
   display: block;
   width: 22px;
   height: 17px;
-}
+} */
 
 .page-footer-phone {
   display: block;
@@ -1083,7 +1124,7 @@ img {
   margin-top: 8px;
 }
 
-.page-footer-copyright img {
+/* .page-footer-copyright img {
   width: 100%;
   height: 100%;
-}
+} */
