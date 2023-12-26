@@ -86,12 +86,104 @@ img {
   word-wrap: break-word;
 }
 
+.button:hover {
+  background-color: #615048;
+}
+
+/*  Указываем :focus-visible */
+.button:focus-visible {
+  background-color: #615048;
+  outline: none;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .button:focus {
+    /* Fallback for browsers without :focus-visible support */
+    background-color: #615048;
+  }
+}
+
+.button:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background-color: #e5e5e5;
+}
+
 .button-light {
   background-color: #82b3d3;
 }
 
+.button-light:hover {
+  background-color: #68a2ca;
+}
+
+/*  Указываем :focus-visible */
+.button-light:focus-visible {
+  background-color: #68a2ca;
+  outline: none;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .button-light:focus {
+    /* Fallback for browsers without :focus-visible support */
+    background-color: #68a2ca;
+  }
+}
+
+.button-light:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-light:disabled {
+  background-color: #e5e5e5;
+}
+
 .button-transparent {
   background-color: transparent;
+}
+
+.button-transparent:hover {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* .button-transparent:focus {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 3px solid #83b3d3;
+  margin: -3px;
+} */
+
+/*  Указываем :focus-visible */
+.button-transparent:focus-visible {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 3px solid #83b3d3;
+  margin: -3px;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .button-transparent:focus {
+    /* Fallback for browsers without :focus-visible support */
+    background-color: transparent;
+    border-radius: 4px;
+    border: 3px solid #83b3d3;
+    margin: -3px;
+  }
+}
+
+.button-transparent:active {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-transparent:disabled {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.1);
 }
 
 .field {
@@ -509,6 +601,14 @@ img {
   color: #ffffff;
 }
 
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
 .breadcrumbs-link-home {
   background-image: url("../img/svg/house-breadcrumbs.svg");
   width: 13px;
@@ -556,13 +656,22 @@ img {
 .control-list {
 }
 
+.control-item {
+  outline: none;
+}
+
 .control-item:not(:last-child) {
   margin-bottom: 16px;
+}
+
+.control-item:hover {
+  opacity: 0.6;
 }
 
 .control-label {
   cursor: pointer;
   display: flex;
+  outline: none;
 }
 
 .control-input {
@@ -574,6 +683,24 @@ img {
   background-color: #fff;
   width: 20px;
   height: 20px;
+}
+
+/*  Указываем :focus-visible */
+.control-input:focus-visible {
+  outline: 3px solid #83b3d3;
+  outline-offset: 0;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .control-input:focus {
+    /* Fallback for browsers without :focus-visible support */
+    outline: 3px solid #83b3d3;
+    outline-offset: 0;
+  }
+}
+
+.control-item:active {
+  opacity: 0.3;
 }
 
 .control-input[type="checkbox"] {
@@ -643,6 +770,10 @@ img {
 
 .price-input {
   padding: 10px 50px 10px 20px;
+}
+
+.price-input:hover {
+  background-color: #e6e6e6;
 }
 
 /* =========== отключить стрелки при вводе чисел ============ */
@@ -762,6 +893,27 @@ img {
   margin-right: 70px;
 }
 
+.outcome-select:hover {
+  border-color: #68a2ca;
+}
+
+/*  Указываем :focus-visible */
+.outcome-select:focus-visible {
+  outline: 2px solid #68a2ca;
+  outline-offset: -2px;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .outcome-select:focus {
+    /* Fallback for browsers without :focus-visible support */
+    outline: 2px solid #68a2ca;
+    outline-offset: -2px;
+  }
+}
+.outcome-select:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
 .outcome-select-option {
 }
 
@@ -791,17 +943,11 @@ img {
   border-color: #000000;
 }
 
-/* .view-link:focus {
-  border-color: #68a2ca;
-} */
-/* ====================== */
-
 /*  Указываем :focus-visible */
 .view-link:focus-visible {
   outline: 2px solid #68a2ca;
   outline-offset: -2px;
 }
-
 /*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
 @supports not selector(:focus-visible) {
   .view-link:focus {
@@ -811,7 +957,6 @@ img {
   }
 }
 
-/* ======================= */
 .view-link:active {
   border-color: #000000;
 }
@@ -821,8 +966,11 @@ img {
 }
 
 .view-link-current {
-  /* border-color: #000000; */
   pointer-events: none;
+}
+
+.view-link-current:focus {
+  outline: none;
 }
 
 .view-link-slide {
@@ -941,8 +1089,28 @@ img {
   text-align: center;
 }
 
-.card-favorite-current {
+.button-favorite-current {
   background-color: #7db54f;
+}
+
+.button-favorite-current:hover {
+  background-color: #6c9e42;
+}
+
+/*  Указываем :focus-visible */
+.button-favorite-current:focus-visible {
+  background-color: #6c9e42;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .button-favorite-current:focus {
+    /* Fallback for browsers without :focus-visible support */
+    background-color: #6c9e42;
+  }
+}
+
+.button-favorite-current:disabled {
+  background-color: #e5e5e5;
 }
 
 /* ============ Пагинация ============ */
@@ -977,6 +1145,33 @@ img {
   text-align: center;
 }
 
+.pagination-link:not(.pagination-link-dots):hover {
+  background: #68a2ca;
+  outline: 1px solid #82b3d3;
+  outline-offset: -1px;
+}
+
+/*  Указываем :focus-visible */
+.pagination-link:not(.pagination-link-dots, .pagination-link-current):focus-visible {
+  background: #68a2ca;
+  outline: 1px solid #82b3d3;
+  outline-offset: -1px;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .pagination-link:not(.pagination-link-dots, .pagination-link-current):focus {
+    /* Fallback for browsers without :focus-visible support */
+    background: #68a2ca;
+    outline: 1px solid #82b3d3;
+    outline-offset: -1px;
+  }
+}
+/* .pagination-link:not(.pagination-link-dots):hover {
+  background: #68a2ca;
+  outline: 1px solid #82b3d3;
+  outline-offset: -1px;
+} */
+
 .pagination-link-current {
   color: #000000;
   background-color: #f2f2f2;
@@ -987,7 +1182,26 @@ img {
   background-color: transparent;
   color: #000000;
 }
+.pagination-link-dots:hover {
+  background-color: #f2f2f2;
+}
 
+/*  Указываем :focus-visible */
+.pagination-link-dots:focus-visible {
+  background-color: #f2f2f2;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .pagination-link-dots:focus {
+    /* Fallback for browsers without :focus-visible support */
+    background-color: #f2f2f2;
+  }
+}
+
+.pagination-link:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
 /* ============ Подписка ============ */
 .subscribe {
   text-align: center;
@@ -1060,11 +1274,11 @@ img {
 .social-link {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   width: 47px;
   height: 40px;
-  color: #83b3d3;
+  color: currentColor;
 }
 
 .social-link-svg {
@@ -1077,29 +1291,27 @@ img {
   fill: #83b3d3;
 }
 
-/* .social-link-vk img {
-  display: block;
-  width: 24px;
-  height: 14px;
-} */
+.social-link:hover .social-link-svg {
+  fill: #68a2ca;
+}
+
+/*  Указываем :focus-visible */
+.social-link:focus-visible .social-link-svg {
+  fill: #68a2ca;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .social-link:focus .social-link-svg {
+    /* Fallback for browsers without :focus-visible support */
+    fill: #68a2ca;
+  }
+}
 
 .social-link-tg {
 }
 
-/* .social-link-tg img {
-  display: block;
-  width: 18px;
-  height: 16px;
-} */
-
 .social-link-yt {
 }
-
-/* .social-link-yt img {
-  display: block;
-  width: 22px;
-  height: 17px;
-} */
 
 .page-footer-phone {
   display: block;
@@ -1114,6 +1326,28 @@ img {
   width: fit-content;
 }
 
+.page-footer-phone:hover {
+  color: #756157;
+}
+
+/*  Указываем :focus-visible */
+.page-footer-phone:focus-visible {
+  color: #756157;
+  outline: none;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .page-footer-phone:focus {
+    /* Fallback for browsers without :focus-visible support */
+    color: #756157;
+    outline: none;
+  }
+}
+
+.page-footer-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .contacts-phone {
 }
 
@@ -1122,9 +1356,25 @@ img {
   width: 115px;
   height: 33px;
   margin-top: 8px;
+  color: currentColor;
 }
 
-/* .page-footer-copyright img {
-  width: 100%;
-  height: 100%;
-} */
+.page-footer-copyright:hover .copyright-svg {
+  fill: #756157;
+}
+
+/*  Указываем :focus-visible */
+.page-footer-copyright:focus-visible .copyright-svg {
+  fill: #756157;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .page-footer-copyright:focus .copyright-svg {
+    /* Fallback for browsers without :focus-visible support */
+    fill: #756157;
+  }
+}
+
+.page-footer-copyright:active .copyright-svg {
+  fill: rgba(117, 97, 87, 0.3);
+}
