@@ -766,6 +766,7 @@ img {
   right: 0;
   bottom: 0;
   padding: 11px 20px;
+  z-index: 10;
 }
 
 .price-input {
@@ -776,6 +777,23 @@ img {
   background-color: #e6e6e6;
 }
 
+/*  Указываем :focus-visible */
+.price-input:focus-visible {
+  outline: 3px solid #83b3d3;
+  outline-offset: 0;
+  z-index: 5;
+  position: relative;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .price-input:focus {
+    /* Fallback for browsers without :focus-visible support */
+    outline: 3px solid #83b3d3;
+    outline-offset: 0;
+    z-index: 5;
+    position: relative;
+  }
+}
 /* =========== отключить стрелки при вводе чисел ============ */
 /* для браузера Chrome: */
 .field[type="number"]::-webkit-outer-spin-button,
@@ -1146,14 +1164,14 @@ img {
 }
 
 .pagination-link:not(.pagination-link-dots):hover {
-  background: #68a2ca;
+  background-color: #68a2ca;
   outline: 1px solid #82b3d3;
   outline-offset: -1px;
 }
 
 /*  Указываем :focus-visible */
 .pagination-link:not(.pagination-link-dots, .pagination-link-current):focus-visible {
-  background: #68a2ca;
+  background-color: #68a2ca;
   outline: 1px solid #82b3d3;
   outline-offset: -1px;
 }
@@ -1161,7 +1179,7 @@ img {
 @supports not selector(:focus-visible) {
   .pagination-link:not(.pagination-link-dots, .pagination-link-current):focus {
     /* Fallback for browsers without :focus-visible support */
-    background: #68a2ca;
+    background-color: #68a2ca;
     outline: 1px solid #82b3d3;
     outline-offset: -1px;
   }
@@ -1305,6 +1323,10 @@ img {
     /* Fallback for browsers without :focus-visible support */
     fill: #68a2ca;
   }
+}
+
+.social-link:active .social-link-svg {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .social-link-tg {
