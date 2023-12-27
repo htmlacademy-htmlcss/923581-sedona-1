@@ -21,7 +21,7 @@
   box-sizing: border-box;
 }
 *:focus {
-  outline: none;
+  /* outline: none; */
 }
 
 html {
@@ -144,19 +144,13 @@ img {
 
 .button-transparent {
   background-color: transparent;
+  min-width: 191px;
 }
 
 .button-transparent:hover {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.6);
 }
-
-/* .button-transparent:focus {
-  background-color: transparent;
-  border-radius: 4px;
-  border: 3px solid #83b3d3;
-  margin: -3px;
-} */
 
 /*  Указываем :focus-visible */
 .button-transparent:focus-visible {
@@ -198,6 +192,20 @@ img {
   background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
+}
+
+/*  Указываем :focus-visible */
+.field:focus-visible {
+  outline: 3px solid #83b3d3;
+  outline-offset: 0;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .field:focus {
+    /* Fallback for browsers without :focus-visible support */
+    outline: 3px solid #83b3d3;
+    outline-offset: 0;
+  }
 }
 
 .field::placeholder {
@@ -242,6 +250,18 @@ img {
 
 .navigation-link-current {
   pointer-events: none;
+  position: relative;
+}
+
+.navigation-link-current::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #756257;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  margin: -1px;
 }
 
 /* ============ wrapper ============ */
@@ -299,6 +319,7 @@ img {
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
+  outline: none;
 }
 
 /* ============ Меню пользователя ============ */
@@ -325,6 +346,7 @@ img {
   min-height: 64px;
   padding: 22px 12px;
   background-position: center;
+  outline: none;
 }
 
 .navigation-user-link-search {
@@ -333,6 +355,21 @@ img {
 
 .navigation-user-link-favorite {
   background-image: url("../img/svg/nav-heart.svg");
+  position: relative;
+}
+
+.favorite-badge {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  /* line-height: 10px; */
+  text-align: center;
+  color: #ffffff;
+  background-color: #7db54f;
+  border-radius: 50%;
+  top: 11px;
+  left: 20px;
 }
 
 .navigation-button {
@@ -599,6 +636,7 @@ img {
   line-height: 21px;
   text-decoration: none;
   color: #ffffff;
+  outline: none;
 }
 
 .breadcrumbs-link:hover {
@@ -780,6 +818,7 @@ img {
 /*  Указываем :focus-visible */
 .price-input:focus-visible {
   outline: 3px solid #83b3d3;
+  /* border: 2px solid #000000; */
   outline-offset: 0;
   z-index: 5;
   position: relative;
@@ -794,6 +833,7 @@ img {
     position: relative;
   }
 }
+
 /* =========== отключить стрелки при вводе чисел ============ */
 /* для браузера Chrome: */
 .field[type="number"]::-webkit-outer-spin-button,
@@ -854,7 +894,7 @@ img {
 }
 
 .filter-cubmit {
-  margin: 56px 0 32px 0;
+  margin: 56px 0 32px;
 }
 
 .filter-reset {
@@ -929,7 +969,8 @@ img {
   }
 }
 .outcome-select:disabled {
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  /* border: 2px solid rgba(0, 0, 0, 0.3); */
+  opacity: 0.3;
 }
 
 .outcome-select-option {
@@ -1018,6 +1059,7 @@ img {
 }
 
 .hotel-card {
+  position: relative;
   border-radius: 4px;
   border: 1px solid #e6e6e6;
   padding: 20px;
@@ -1028,17 +1070,53 @@ img {
   align-content: start;
 }
 
-.hotel-card:nth-child(3n) {
+.hotel-card:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 3px 3px #e5e3e3;
 }
 
 .hotel-card .button {
   width: 140px;
   padding: 8px 8px;
+  z-index: 5;
 }
 
 .hotel-card-link {
   text-decoration: none;
   grid-column: 1/-1;
+  outline: none;
+  z-index: 5;
+}
+
+/*  Указываем :focus-visible */
+.hotel-card-link:focus-visible::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 3px 3px #e5e3e3;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .hotel-card-link:focus::before {
+    /* Fallback for browsers without :focus-visible support */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 3px 3px #e5e3e3;
+  }
 }
 
 .hotel-card-image {
@@ -1184,21 +1262,23 @@ img {
     outline-offset: -1px;
   }
 }
-/* .pagination-link:not(.pagination-link-dots):hover {
-  background: #68a2ca;
-  outline: 1px solid #82b3d3;
-  outline-offset: -1px;
-} */
+
+.pagination-link:not(.pagination-link-dots):active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
 
 .pagination-link-current {
   color: #000000;
   background-color: #f2f2f2;
   pointer-events: none;
+  outline: none;
 }
 
 .pagination-link-dots {
   background-color: transparent;
   color: #000000;
+  outline: none;
 }
 .pagination-link-dots:hover {
   background-color: #f2f2f2;
@@ -1216,9 +1296,8 @@ img {
   }
 }
 
-.pagination-link:active {
-  background-color: #82b3d3;
-  color: rgba(255, 255, 255, 0.3);
+.pagination-link-dots:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 /* ============ Подписка ============ */
 .subscribe {
@@ -1292,20 +1371,12 @@ img {
 .social-link {
   position: relative;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
   width: 47px;
   height: 40px;
   color: currentColor;
-}
-
-.social-link-svg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  outline: none;
   fill: #83b3d3;
 }
 
@@ -1379,6 +1450,7 @@ img {
   height: 33px;
   margin-top: 8px;
   color: currentColor;
+  outline: none;
 }
 
 .page-footer-copyright:hover .copyright-svg {
