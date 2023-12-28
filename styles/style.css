@@ -290,6 +290,7 @@ img {
   margin-right: 28px;
   display: block;
   margin-bottom: -6px;
+  outline: none;
 }
 
 /* ============ Главное меню ============ */
@@ -320,6 +321,28 @@ img {
   background-color: #ffffff;
   text-decoration: none;
   outline: none;
+}
+
+.navigation-link:hover {
+  color: #756157;
+}
+
+/*  Указываем :focus-visible */
+.navigation-link:focus-visible {
+  color: #756157;
+  outline: none;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .navigation-link:focus {
+    /* Fallback for browsers without :focus-visible support */
+    color: #756157;
+    outline: none;
+  }
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 /* ============ Меню пользователя ============ */
@@ -363,7 +386,8 @@ img {
   width: 20px;
   height: 20px;
   font-size: 10px;
-  /* line-height: 10px; */
+  line-height: 10px;
+  padding-top: 6px;
   text-align: center;
   color: #ffffff;
   background-color: #7db54f;
@@ -641,6 +665,18 @@ img {
 
 .breadcrumbs-link:hover {
   opacity: 0.6;
+}
+
+/*  Указываем :focus-visible */
+.breadcrumbs-link:not(.breadcrumbs-link-current):focus-visible {
+  opacity: 0.6;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .breadcrumbs-link:not(.breadcrumbs-link-current):focus {
+    /* Fallback for browsers without :focus-visible support */
+    opacity: 0.6;
+  }
 }
 
 .breadcrumbs-link:active {
