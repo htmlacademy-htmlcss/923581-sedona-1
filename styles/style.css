@@ -363,22 +363,37 @@ img {
 }
 
 .navigation-user-link {
-  display: block;
-  background-repeat: no-repeat;
+  position: relative;
   width: 44px;
   min-height: 64px;
   padding: 22px 12px;
   background-position: center;
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: currentColor;
+  fill: #000000;
 }
 
-.navigation-user-link-search {
-  background-image: url("../img/svg/nav-search.svg");
+.navigation-user-link:hover .navigation-user-link-svg {
+  fill: #756157;
 }
 
-.navigation-user-link-favorite {
-  background-image: url("../img/svg/nav-heart.svg");
-  position: relative;
+/*  Указываем :focus-visible */
+.navigation-user-link:focus-visible .navigation-user-link-svg {
+  fill: #756157;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .navigation-user-link:focus .navigation-user-link-svg {
+    /* Fallback for browsers without :focus-visible support */
+    fill: #756157;
+  }
+}
+
+.navigation-user-link:active .navigation-user-link-svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .favorite-badge {
