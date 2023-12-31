@@ -828,15 +828,15 @@ img {
 
 /*  Указываем :focus-visible */
 .control-input:focus-visible {
-  outline: 3px solid #83b3d3;
-  outline-offset: 0;
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
 }
 /*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
 @supports not selector(:focus-visible) {
   .control-input:focus {
     /* Fallback for browsers without :focus-visible support */
-    outline: 3px solid #83b3d3;
-    outline-offset: 0;
+    box-shadow: 0 0 0 3px #83b3d3;
+    outline: none;
   }
 }
 
@@ -916,7 +916,7 @@ img {
 }
 
 .price-input::placeholder {
-  color: rgba(0, 0, 0, 1);
+  /* color: rgba(0, 0, 0, 1); */
   /* color: #000000;
   opacity: 1; */
 }
@@ -1011,8 +1011,6 @@ img {
   background-position: right 20px center;
   /* убираем стрелочку у select */
   appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   margin-right: 70px;
 }
 
@@ -1022,15 +1020,15 @@ img {
 
 /*  Указываем :focus-visible */
 .outcome-select:focus-visible {
-  outline: 2px solid #68a2ca;
-  outline-offset: -2px;
+  border-color: #68a2ca;
+  outline: none;
 }
 /*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
 @supports not selector(:focus-visible) {
   .outcome-select:focus {
     /* Fallback for browsers without :focus-visible support */
-    outline: 2px solid #68a2ca;
-    outline-offset: -2px;
+    border-color: #68a2ca;
+    outline: none;
   }
 }
 .outcome-select:disabled {
@@ -1069,15 +1067,15 @@ img {
 
 /*  Указываем :focus-visible */
 .view-link:focus-visible {
-  outline: 2px solid #68a2ca;
-  outline-offset: -2px;
+  border-color: #68a2ca;
+  outline: none;
 }
 /*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
 @supports not selector(:focus-visible) {
   .view-link:focus {
     /* Fallback for browsers without :focus-visible support */
-    outline: 2px solid #68a2ca;
-    outline-offset: -2px;
+    border-color: #68a2ca;
+    outline: none;
   }
 }
 
@@ -1091,10 +1089,7 @@ img {
 
 .view-link-current {
   pointer-events: none;
-}
-
-.view-link-current:focus {
-  outline: none;
+  border-color: #000000;
 }
 
 .view-link-slide {
@@ -1135,52 +1130,35 @@ img {
   align-content: start;
 }
 
-.hotel-card:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
+.hotel-card:focus-within,
+.hotel-card:hover {
   box-shadow: 0 0 3px 3px #e5e3e3;
 }
 
 .hotel-card .button {
   width: 140px;
   padding: 8px 8px;
-  z-index: 5;
 }
 
 .hotel-card-link {
   text-decoration: none;
   grid-column: 1/-1;
-  outline: none;
-  z-index: 5;
+  color: #000000;
 }
 
 /*  Указываем :focus-visible */
-.hotel-card-link:focus-visible::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  box-shadow: 0 0 3px 3px #e5e3e3;
+.hotel-card-link:focus-visible,
+.hotel-card-link:hover {
+  outline: none;
+  color: #756157;
 }
 /*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
 @supports not selector(:focus-visible) {
-  .hotel-card-link:focus::before {
+  .hotel-card-link:focus,
+  .hotel-card-link:hover {
     /* Fallback for browsers without :focus-visible support */
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 3px 3px #e5e3e3;
+    outline: none;
+    color: #756157;
   }
 }
 
@@ -1190,11 +1168,26 @@ img {
   margin-bottom: 16px;
 }
 
+/*  Указываем :focus-visible */
+.hotel-card-link:focus-visible .hotel-card-image,
+.hotel-card-link:hover .hotel-card-image {
+  opacity: 0.8;
+  outline: none;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .hotel-card-link:focus .hotel-card-image,
+  .hotel-card-link:hover .hotel-card-image {
+    /* Fallback for browsers without :focus-visible support */
+    opacity: 0.8;
+    outline: none;
+  }
+}
+
 .hotel-card-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  color: #000000;
   margin: 0;
 }
 
