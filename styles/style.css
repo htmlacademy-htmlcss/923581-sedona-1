@@ -332,6 +332,10 @@ img {
   color: rgba(104, 162, 202, 0.3);
 }
 
+.page-header-logo[aria-current] {
+  pointer-events: none;
+}
+
 /* ============ Главное меню ============ */
 .navigation {
   display: flex;
@@ -1136,7 +1140,7 @@ img {
 }
 
 .hotel-card .button {
-  width: 140px;
+  display: block;
   padding: 8px 8px;
 }
 
@@ -1160,6 +1164,10 @@ img {
     outline: none;
     color: #756157;
   }
+}
+
+.hotel-card-link:active {
+  opacity: 0.3;
 }
 
 .hotel-card-image {
@@ -1200,14 +1208,6 @@ img {
 
 .hotel-card-price {
   text-align: end;
-}
-
-.card-more {
-  display: inline-block;
-}
-
-.card-favorite {
-  display: inline-block;
 }
 
 .hotel-card-stars {
@@ -1293,35 +1293,32 @@ img {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #82b3d3;
+  border: 1px solid #82b3d3;
   border-radius: 4px;
   text-decoration: none;
   padding: 12px;
   text-align: center;
 }
 
-.pagination-link:not(.pagination-link-dots):hover {
+.pagination-link:not(.pagination-link-dots, .pagination-link-current):hover {
   background-color: #68a2ca;
-  outline: 1px solid #82b3d3;
-  outline-offset: -1px;
 }
 
 /*  Указываем :focus-visible */
 .pagination-link:not(.pagination-link-dots, .pagination-link-current):focus-visible {
   background-color: #68a2ca;
-  outline: 1px solid #82b3d3;
-  outline-offset: -1px;
+  outline: none;
 }
 /*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
 @supports not selector(:focus-visible) {
   .pagination-link:not(.pagination-link-dots, .pagination-link-current):focus {
     /* Fallback for browsers without :focus-visible support */
     background-color: #68a2ca;
-    outline: 1px solid #82b3d3;
-    outline-offset: -1px;
+    outline: none;
   }
 }
 
-.pagination-link:not(.pagination-link-dots):active {
+.pagination-link:not(.pagination-link-dots, .pagination-link-current):active {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1330,27 +1327,31 @@ img {
   color: #000000;
   background-color: #f2f2f2;
   pointer-events: none;
-  outline: none;
+  border-color: #f2f2f2;
 }
 
 .pagination-link-dots {
   background-color: transparent;
   color: #000000;
   outline: none;
+  border-color: #ffffff;
 }
 .pagination-link-dots:hover {
   background-color: #f2f2f2;
+  border-color: #f2f2f2;
 }
 
 /*  Указываем :focus-visible */
 .pagination-link-dots:focus-visible {
   background-color: #f2f2f2;
+  outline: none;
 }
 /*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
 @supports not selector(:focus-visible) {
   .pagination-link-dots:focus {
     /* Fallback for browsers without :focus-visible support */
     background-color: #f2f2f2;
+    outline: none;
   }
 }
 
@@ -1451,11 +1452,13 @@ img {
   .social-link:focus {
     /* Fallback for browsers without :focus-visible support */
     color: #68a2ca;
+    outline: none;
   }
 }
 
 .social-link:active {
   color: rgba(104, 162, 202, 0.3);
+  outline: none;
 }
 
 .social-link-tg {
@@ -1473,7 +1476,6 @@ img {
   text-decoration: none;
   padding: 5px 0;
   margin: 0 auto;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -1509,7 +1511,6 @@ img {
   margin-top: 8px;
   color: #000000;
   fill: currentColor;
-  outline: none;
 }
 
 .page-footer-copyright:hover {
@@ -1519,12 +1520,14 @@ img {
 /*  Указываем :focus-visible */
 .page-footer-copyright:focus-visible {
   color: #756157;
+  outline: none;
 }
 /*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
 @supports not selector(:focus-visible) {
   .page-footer-copyright:focus {
     /* Fallback for browsers without :focus-visible support */
     color: #756157;
+    outline: none;
   }
 }
 
