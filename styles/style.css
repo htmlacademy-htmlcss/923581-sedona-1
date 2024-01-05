@@ -898,6 +898,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2px;
+  margin-bottom: 44px;
 }
 
 .price-item {
@@ -919,12 +920,6 @@ img {
   padding: 10px 50px 10px 20px;
 }
 
-.price-input::placeholder {
-  /* color: rgba(0, 0, 0, 1); */
-  /* color: #000000;
-  opacity: 1; */
-}
-
 .price-min {
   border-radius: 4px 0 0 4px;
 }
@@ -933,25 +928,62 @@ img {
   border-radius: 0 4px 4px 0;
 }
 
-.price-range-control {
+.range {
+}
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.range-progress {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
 }
 
-.price-range-slider {
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  outline: none;
 }
 
-.price-range-progress {
+/*  Указываем :focus-visible */
+.range-toggle:focus-visible {
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.25),
+    0 0 0 3px #83b3d3;
+  outline: none;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .range-toggle:focus {
+    /* Fallback for browsers without :focus-visible support */
+    box-shadow:
+      0 4px 10px rgba(0, 0, 0, 0.25),
+      0 0 0 3px #83b3d3;
+    outline: none;
+  }
 }
 
-.price-range-input {
+.range-toggle:active {
+  box-shadow: 0 0 0 2px #83b3d3;
+  outline: none;
 }
 
-.range-label {
+.toggle-min {
+  left: 0;
 }
-
-.range-min {
-}
-
-.range-max {
+.toggle-max {
+  right: 0;
 }
 
 .catalog-filter-group-buttons {
