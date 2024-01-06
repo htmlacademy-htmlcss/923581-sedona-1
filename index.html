@@ -59,7 +59,7 @@
               <a class="navigation-user-link navigation-user-link-search" href="#">
                 <span class="visually-hidden">Поиск</span>
                 <svg class="navigation-user-link-svg" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.5 18.0083L15.8 14.3287C16.8 13.0359 17.5 11.3453 17.5 9.4558C17.5 5.08011 13.9 1.5 9.5 1.5C5.1 1.5 1.5 5.17956 1.5 9.55525C1.5 13.9309 5.1 17.511 9.5 17.511C11.3 17.511 13 16.9144 14.4 15.8204L18.1 19.5L19.5 18.0083ZM9.5 15.5221C6.2 15.5221 3.5 12.837 3.5 9.55525C3.5 6.27348 6.2 3.5884 9.5 3.5884C12.8 3.5884 15.5 6.27348 15.5 9.55525C15.5 12.837 12.8 15.5221 9.5 15.5221Z"/>
+                  <path d="M19.5 18.0083L15.8 14.3287C16.8 13.0359 17.5 11.3453 17.5 9.4558C17.5 5.08011 13.9 1.5 9.5 1.5C5.1 1.5 1.5 5.17956 1.5 9.55525C1.5 13.9309 5.1 17.511 9.5 17.511C11.3 17.511 13 16.9144 14.4 15.8204L18.1 19.5L19.5 18.0083ZM9.5 15.5221C6.2 15.5221 3.5 12.837 3.5 9.55525C3.5 6.27348 6.2 3.5884 9.5 3.5884C12.8 3.5884 15.5 6.27348 15.5 9.55525C15.5 12.837 12.8 15.5221 9.5 15.5221Z" />
                 </svg>
               </a>
             </li>
@@ -222,6 +222,44 @@
           </svg>
         </a>
       </footer>
+    </div>
+    <div class="modal-container">
+      <div class="modal modal-search">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title page-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group">
+              <label class="modal-search-title" for="check-in">Дата заезда:</label>
+              <input class="search-form-field field" id="check-in" name="check-in" type="text" placeholder="27 апреля 2020">
+              <span class="input-caption past">Мы не можем отправить вас в прошлое.</span>
+            </p>
+            <p class="field-group">
+              <label class="modal-search-title" for="check-out">Дата выезда:</label>
+              <input class="search-form-field field" id="check-out" name="check-out" type="text" placeholder="1 сентября 2023">
+              <span class="input-caption">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+            <p class="field-group-persons">
+              <label class="modal-search-title" for="quantity">Взрослые:</label>
+              <input class="quantity-persons-field field" id="quantity" name="quantity" type="number" value="2">
+              <button class="button-minus" type="button"><span class="visually-hidden">Уменьшить</span></button>
+              <button class="button-plus" type="button"><span class="visually-hidden">Увеличить</span></button>
+            </p>
+
+            <!-- <div class="field-group-persons">
+              <div class="modal-search-title">Взрослые:</div>
+              <div class="persons-item">
+                <button class="button-minus" type="button"><span class="visually-hidden">Уменьшить</span></button>
+                <span class="quantity">2</span>
+                <button class="button-plus" type="button"><span class="visually-hidden">Увеличить</span></button>
+              </div>
+            </div> -->
+
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 
