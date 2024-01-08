@@ -194,8 +194,6 @@ img {
   /* У field в Safari border-radius не работает, поэтому обводку делаем через box-shadow */
   outline: none;
   box-shadow: 0 0 0 3px #83b3d3;
-  z-index: 5;
-  position: relative;
 }
 /*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
 @supports not selector(:focus-visible) {
@@ -920,6 +918,18 @@ img {
   padding: 10px 50px 10px 20px;
 }
 
+.price-input:focus-visible {
+  z-index: 5;
+  position: relative;
+}
+
+@supports not selector(:focus-visible) {
+  .price-input:focus {
+    z-index: 5;
+    position: relative;
+  }
+}
+
 .price-min {
   border-radius: 4px 0 0 4px;
 }
@@ -1619,6 +1629,33 @@ img {
   border: none;
 }
 
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+/*  Указываем :focus-visible */
+.modal-close-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+@supports not selector(:focus-visible) {
+  .modal-close-button:focus {
+    /* Fallback for browsers without :focus-visible support */
+    outline: none;
+    box-shadow: 0 0 0 3px #83b3d3;
+  }
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active::before,
+.modal-close-button:active::after {
+  background-color: rgba(36, 36, 36, 0.3);
+}
+
 .modal-close-button::before,
 .modal-close-button::after {
   position: absolute;
@@ -1746,10 +1783,45 @@ img {
 
 .search-form-field {
   width: 440px;
-  background-image: url("../img/svg/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: right 20px top 15px;
   padding: 10px 50px 8px 20px;
+}
+
+.search-form-calendar {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 60px;
+  color: #000000;
+  fill: currentColor;
+  top: 0;
+  right: 0;
+  outline: none;
+}
+
+.search-form-calendar:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.search-form-calendar:focus-visible .search-form-svg {
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+  border-radius: 4px;
+  outline-offset: 1px;
+}
+
+@supports not selector(:focus-visible) {
+  .search-form-calendar:focus .search-form-svg {
+    outline: none;
+    box-shadow: 0 0 0 3px #83b3d3;
+    border-radius: 4px;
+    outline-offset: 1px;
+  }
+}
+
+.search-form-calendar:active {
+  color: #000000;
 }
 
 .input-caption {
@@ -1778,34 +1850,57 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 48px;
+  height: 44px;
   width: 40px;
   background-color: #f2f2f2ff;
   border: none;
+  border-radius: 4px;
   top: 50%;
   transform: translateY(-50%);
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.button-focus {
+  height: 20px;
+  width: 20px;
+  background-color: #f2f2f2ff;
+  border-radius: 4px;
+}
+
+.quantity-button:focus-visible .button-focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+@supports not selector(:focus-visible) {
+  .quantity-button:focus .button-focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #83b3d3;
+  }
 }
 
 .button-minus {
-  left: 0;
+  left: 2px;
 }
 
 .button-minus::before {
   position: absolute;
-  width: 17px;
+  width: 14px;
   height: 2px;
   background-color: rgba(117, 97, 87, 0.3);
   content: "";
 }
 
 .button-plus {
-  right: 0;
+  right: 2px;
 }
 
 .button-plus::before,
 .button-plus::after {
   position: absolute;
-  width: 17px;
+  width: 14px;
   height: 2px;
   background-color: rgba(117, 97, 87, 0.3);
   content: "";
@@ -1813,6 +1908,17 @@ img {
 
 .button-plus::after {
   transform: rotate(90deg);
+}
+
+.quantity-button:hover::before,
+.quantity-button:hover::after {
+  background-color: #000000;
+}
+
+.quantity-button:active::before,
+.quantity-button:active::after,
+.quantity-button:active::before {
+  background-color: rgba(117, 97, 87, 0.3);
 }
 
 .modal-search-button {
