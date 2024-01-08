@@ -1686,6 +1686,8 @@ img {
   row-gap: 48px;
 }
 .modal-search-title {
+  display: flex;
+  align-items: center;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -1693,6 +1695,7 @@ img {
   text-transform: capitalize;
   padding: 12px 0;
 }
+
 .field-group {
   margin: 0;
   padding: 0;
@@ -1715,6 +1718,7 @@ img {
   grid-area: 3/3/4/-2;
   margin-left: auto;
   padding-right: 84px;
+  padding-left: 20px;
 }
 
 .adults {
@@ -1723,7 +1727,6 @@ img {
 
 .kids {
   grid-area: 3/-2/4/-1;
-  position: relative;
 }
 
 .kids-info {
@@ -1838,6 +1841,8 @@ img {
 
 .field-group-persons {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .quantity-persons-field {
