@@ -1684,7 +1684,7 @@ img {
 .modal-search-form {
   display: grid;
   grid-template-columns: auto repeat(4, 110px);
-  row-gap: 48px;
+  row-gap: 23px;
 }
 .modal-search-title {
   font-size: 20px;
@@ -1724,14 +1724,6 @@ img {
   grid-area: 3/1/4/2;
 }
 
-/* .label-kids {
-  grid-area: 3/3/4/-2;
-  margin-left: auto;
-  padding-right: 84px;
-  padding-left: 20px;
-  position: relative;
-} */
-
 .adults {
   grid-area: 3/2/4/3;
 }
@@ -1741,11 +1733,11 @@ img {
 }
 
 .tooltip {
-  width: 26px;
-  height: 26px;
   margin-left: 11px;
 }
 .tooltip-toggle {
+  width: 26px;
+  height: 26px;
   border: none;
   background-color: transparent;
   padding: 0;
@@ -1860,11 +1852,10 @@ img {
 }
 
 .input-caption {
-  position: absolute;
+  display: block;
   font-size: 16px;
   padding-left: 20px;
-  top: 52px;
-  left: 0;
+  margin-top: 4px;
 }
 
 .past {
@@ -1878,14 +1869,13 @@ img {
 }
 
 .quantity-persons-field {
-  position: relative;
   padding: 0 50px;
+  line-height: 20px;
 }
 
 .quantity-button {
   position: absolute;
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 44px;
   width: 40px;
@@ -1900,6 +1890,7 @@ img {
 }
 
 .button-focus {
+  display: block;
   height: 20px;
   width: 20px;
   background-color: #f2f2f2ff;
@@ -1920,6 +1911,7 @@ img {
 
 .button-minus {
   left: 2px;
+  padding-left: 8px;
 }
 
 .button-minus::before {
@@ -1928,10 +1920,12 @@ img {
   height: 2px;
   background-color: rgba(117, 97, 87, 0.3);
   content: "";
+  left: 11px;
 }
 
 .button-plus {
   right: 2px;
+  padding-left: 12px;
 }
 
 .button-plus::before,
@@ -1941,6 +1935,7 @@ img {
   height: 2px;
   background-color: rgba(117, 97, 87, 0.3);
   content: "";
+  left: 15px;
 }
 
 .button-plus::after {
@@ -1964,4 +1959,5 @@ img {
   border-radius: 10px;
   font-size: 20px;
   line-height: 24px;
+  margin-top: 25px;
 }
