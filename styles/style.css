@@ -1628,6 +1628,7 @@ img {
   width: 52px;
   height: 52px;
   border: none;
+  cursor: pointer;
 }
 
 .modal-close-button:hover {
@@ -1744,6 +1745,7 @@ img {
   margin: 0;
   display: block;
   outline: none;
+  cursor: pointer;
 }
 
 .tooltip-icon {
@@ -1869,16 +1871,15 @@ img {
 }
 
 .quantity-persons-field {
-  padding: 0 50px;
+  padding-bottom: 10px;
+  text-align: center;
   line-height: 20px;
 }
 
 .quantity-button {
   position: absolute;
-  display: flex;
-  align-items: center;
   height: 44px;
-  width: 40px;
+  width: 30px;
   background-color: #f2f2f2ff;
   border: none;
   border-radius: 4px;
@@ -1921,11 +1922,12 @@ img {
   background-color: rgba(117, 97, 87, 0.3);
   content: "";
   left: 11px;
+  top: 21px;
 }
 
 .button-plus {
   right: 2px;
-  padding-left: 12px;
+  padding-left: 2px;
 }
 
 .button-plus::before,
@@ -1935,7 +1937,8 @@ img {
   height: 2px;
   background-color: rgba(117, 97, 87, 0.3);
   content: "";
-  left: 15px;
+  right: 11px;
+  top: 21px;
 }
 
 .button-plus::after {
