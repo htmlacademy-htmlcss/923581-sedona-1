@@ -1876,7 +1876,7 @@ img {
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   width: 256px;
   min-height: 143px;
-  padding: 18px 18px 18px 22px;
+  padding: 20px 18px 18px 22px;
 }
 
 .tooltip-text::before {
