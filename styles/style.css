@@ -25,6 +25,7 @@
 *,
 *::before,
 *::after {
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -252,6 +253,7 @@ img {
 /* для браузера Firefox: */
 .field[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 /* ============================================ */
 
@@ -438,9 +440,6 @@ img {
   flex-wrap: wrap;
   margin-right: 20px;
   max-width: 176px;
-}
-
-.navigation-user-item {
 }
 
 .navigation-user-link {
@@ -745,6 +744,8 @@ img {
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   right: -17px;
   width: 6px;
@@ -792,9 +793,6 @@ img {
 }
 
 /* ============ Фильтры ============ */
-.catalog-filters {
-}
-
 .catalog-filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -903,6 +901,8 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -1723,10 +1723,14 @@ img {
 .modal-close-button::before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
 .modal-close-button::after {
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -1739,10 +1743,11 @@ img {
 .modal-search-form {
   display: -ms-grid;
   display: grid;
+  row-gap: 23px;
   -ms-grid-columns: auto (110px) [4];
   grid-template-columns: auto repeat(4, 110px);
-  row-gap: 23px;
 }
+
 .modal-search-title {
   font-size: 20px;
   font-style: normal;
@@ -1867,8 +1872,8 @@ img {
   left: -36px;
   border-radius: 10px;
   background-color: #333;
-  -webkit-box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   width: 256px;
   min-height: 143px;
   padding: 18px 18px 18px 22px;
@@ -1886,6 +1891,8 @@ img {
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -1977,6 +1984,8 @@ img {
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   transform: translateY(-50%);
   padding: 0;
   cursor: pointer;
@@ -2039,6 +2048,8 @@ img {
 .button-plus::after {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
