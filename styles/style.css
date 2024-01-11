@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -18,6 +25,7 @@
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -52,6 +60,7 @@ img {
   border: 0;
   white-space: nowrap;
   clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   overflow: hidden;
 }
@@ -87,15 +96,13 @@ img {
   background-color: #615048;
 }
 
-/*  Указываем :focus-visible */
 .button:focus-visible {
   background-color: #615048;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .button:focus {
-    /* Fallback for browsers without :focus-visible support */
     background-color: #615048;
     outline: none;
   }
@@ -120,14 +127,12 @@ img {
   background-color: #68a2ca;
 }
 
-/*  Указываем :focus-visible */
 .button-light:focus-visible {
   background-color: #68a2ca;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .button-light:focus {
-    /* Fallback for browsers without :focus-visible support */
     background-color: #68a2ca;
   }
 }
@@ -151,15 +156,13 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/*  Указываем :focus-visible */
 .button-transparent:focus-visible {
   background-color: transparent;
   border-color: #83b3d3;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .button-transparent:focus {
-    /* Fallback for browsers without :focus-visible support */
     background-color: transparent;
     border-color: #83b3d3;
   }
@@ -189,31 +192,53 @@ img {
   border-radius: 4px;
 }
 
-/*  Указываем :focus-visible */
 .field:focus-visible {
-  /* У field в Safari border-radius не работает, поэтому обводку делаем через box-shadow */
   outline: none;
+  -webkit-box-shadow: 0 0 0 3px #83b3d3;
   box-shadow: 0 0 0 3px #83b3d3;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .field:focus {
-    /* Fallback for browsers without :focus-visible support */
     outline: none;
+    -webkit-box-shadow: 0 0 0 3px #83b3d3;
     box-shadow: 0 0 0 3px #83b3d3;
     z-index: 5;
     position: relative;
   }
 }
 
-.field:focus-visible:not(:placeholder-shown) {
+.field:focus-visible:not(:-moz-placeholder-shown) {
   box-shadow: 0 0 0 2px inset #000000;
+}
+
+.field:focus-visible:not(:-ms-input-placeholder) {
+  box-shadow: 0 0 0 2px inset #000000;
+}
+
+.field:focus-visible:not(:placeholder-shown) {
+  -webkit-box-shadow: 0 0 0 2px inset #000000;
+  box-shadow: 0 0 0 2px inset #000000;
+}
+
+.field::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.field::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.field:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.field::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .field::placeholder {
   color: rgba(0, 0, 0, 0.6);
-  /* color: #000000;
-  opacity: 0.6; */
 }
 
 /* =========== отключить стрелки при вводе чисел ============ */
@@ -229,9 +254,6 @@ img {
   -moz-appearance: textfield;
 }
 /* ============================================ */
-
-.page {
-}
 
 .page-title {
   margin: 0;
@@ -255,13 +277,8 @@ img {
   width: 100%;
   height: 100%;
   display: block;
+  -o-object-fit: cover;
   object-fit: cover;
-}
-
-.social-list {
-}
-
-.view-list {
 }
 
 .navigation-link-current {
@@ -281,18 +298,27 @@ img {
 
 /* ============ wrapper ============ */
 .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100%;
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 /* ============ Header ============ */
 .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: relative;
   padding: 0 70px;
@@ -314,14 +340,12 @@ img {
   color: #68a2ca;
 }
 
-/*  Указываем :focus-visible */
 .page-header-logo:focus-visible {
   color: #68a2ca;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .page-header-logo:focus {
-    /* Fallback for browsers without :focus-visible support */
     color: #68a2ca;
   }
 }
@@ -335,14 +359,24 @@ img {
 
 /* ============ Главное меню ============ */
 .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: start;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 500px;
   margin-right: auto;
@@ -368,15 +402,13 @@ img {
   color: #756157;
 }
 
-/*  Указываем :focus-visible */
 .navigation-link:focus-visible {
   color: #756157;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .navigation-link:focus {
-    /* Fallback for browsers without :focus-visible support */
     color: #756157;
     outline: none;
   }
@@ -388,13 +420,21 @@ img {
 
 /* ============ Меню пользователя ============ */
 .navigation-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .navigation-user-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: 20px;
   max-width: 176px;
@@ -410,8 +450,14 @@ img {
   padding: 22px 12px;
   background-position: center;
   outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #000000;
   fill: currentColor;
@@ -421,14 +467,12 @@ img {
   color: #756157;
 }
 
-/*  Указываем :focus-visible */
 .navigation-user-link:focus-visible {
   color: #756157;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .navigation-user-link:focus {
-    /* Fallback for browsers without :focus-visible support */
     color: #756157;
   }
 }
@@ -439,8 +483,14 @@ img {
 
 .favorite-badge {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 20px;
   min-height: 20px;
@@ -458,11 +508,14 @@ img {
 .navigation-button {
   padding: 8px 20px;
   margin-top: 14px;
+  /* ? min-width переполнение ? */
   width: 160px;
 }
 
 /* ============ Main ============ */
 .main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -481,12 +534,6 @@ img {
   height: 57px;
 }
 
-.hero-headline {
-}
-
-.hero-wallpaper {
-}
-
 .hero-welcome {
   position: relative;
   z-index: 1;
@@ -501,13 +548,8 @@ img {
   width: 400px;
   min-height: 385px;
   text-align: center;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
-}
-
-.advantages {
-}
-
-.advantages-headline {
 }
 
 .chapter-container {
@@ -522,12 +564,11 @@ img {
   margin-bottom: 25px;
 }
 
-.advantages-annotation {
-}
-
 .advantages-list,
 .services-list {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr) [3];
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -542,7 +583,10 @@ img {
 
 .advantages-item-full {
   grid-column: 1 / -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
   background-color: #82b3d3;
@@ -588,39 +632,28 @@ img {
   line-height: 21px;
 }
 
-.advantages-image {
-}
-
 .advantages-image img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   display: block;
 }
 
 .advantages-item-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
 }
 
 /* ============ Сервис ============ */
-.services {
-}
-
 .services .chapter-container {
   padding: 64px 70px;
 }
 
-.services-headline {
-}
-
 .services-title {
   margin-bottom: 20px;
-}
-
-.services-annotation {
-}
-
-.services-list {
 }
 
 .services-item {
@@ -655,9 +688,6 @@ img {
   padding: 96px 70px;
 }
 
-.search-form-headline {
-}
-
 .search-form-title {
   margin-bottom: 20px;
 }
@@ -671,11 +701,7 @@ img {
   font-size: 20px;
   line-height: 36px;
 }
-
 /* ============ Страница каталога ============ */
-.main-inner {
-}
-
 .inner-header {
   padding: 35px 70px 67px;
   background-image: url(../img/background-inner.jpg);
@@ -695,13 +721,15 @@ img {
 
 /* ============ Хлебные крошки ============ */
 .breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 40px;
-}
-
-.breadcrumbs-item {
 }
 
 .breadcrumbs-item:not(:last-child) {
@@ -715,6 +743,8 @@ img {
   background-position: center;
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   right: -17px;
   width: 6px;
@@ -735,14 +765,12 @@ img {
   opacity: 0.6;
 }
 
-/*  Указываем :focus-visible */
 .breadcrumbs-link:not(.breadcrumbs-link-current):focus-visible {
   opacity: 0.6;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .breadcrumbs-link:not(.breadcrumbs-link-current):focus {
-    /* Fallback for browsers without :focus-visible support */
     opacity: 0.6;
   }
 }
@@ -768,7 +796,10 @@ img {
 }
 
 .catalog-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 70px;
 }
@@ -780,9 +811,6 @@ img {
   max-width: 191px;
 }
 
-.catalog-filter-group-checkbox {
-}
-
 .catalog-filter-title {
   font-size: 20px;
   font-weight: 700;
@@ -790,9 +818,6 @@ img {
   text-transform: capitalize;
   margin-bottom: 32px;
   padding: 0;
-}
-
-.catalog-filter-list {
 }
 
 .control-list {
@@ -813,6 +838,8 @@ img {
 
 .control-label {
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   outline: none;
 }
@@ -822,21 +849,23 @@ img {
   padding: 0;
   margin: 0;
   border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   background-color: #fff;
   width: 20px;
   height: 20px;
 }
 
-/*  Указываем :focus-visible */
 .control-input:focus-visible {
+  -webkit-box-shadow: 0 0 0 3px #83b3d3;
   box-shadow: 0 0 0 3px #83b3d3;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .control-input:focus {
-    /* Fallback for browsers without :focus-visible support */
+    -webkit-box-shadow: 0 0 0 3px #83b3d3;
     box-shadow: 0 0 0 3px #83b3d3;
     outline: none;
   }
@@ -872,6 +901,8 @@ img {
   border-radius: 50%;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -893,7 +924,9 @@ img {
 
 /* гриды 40 минут */
 .price-input-container {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 2px 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 2px;
   margin-bottom: 44px;
@@ -938,8 +971,6 @@ img {
   border-radius: 0 4px 4px 0;
 }
 
-.range {
-}
 .range-scale {
   position: relative;
   height: 4px;
@@ -962,21 +993,26 @@ img {
 }
 
 .range-toggle:hover {
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   outline: none;
 }
 
-/*  Указываем :focus-visible */
 .range-toggle:focus-visible {
+  -webkit-box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.25),
+    0 0 0 3px #83b3d3;
   box-shadow:
     0 4px 10px rgba(0, 0, 0, 0.25),
     0 0 0 3px #83b3d3;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .range-toggle:focus {
-    /* Fallback for browsers without :focus-visible support */
+    -webkit-box-shadow:
+      0 4px 10px rgba(0, 0, 0, 0.25),
+      0 0 0 3px #83b3d3;
     box-shadow:
       0 4px 10px rgba(0, 0, 0, 0.25),
       0 0 0 3px #83b3d3;
@@ -985,6 +1021,7 @@ img {
 }
 
 .range-toggle:active {
+  -webkit-box-shadow: 0 0 0 2px #83b3d3;
   box-shadow: 0 0 0 2px #83b3d3;
   outline: none;
 }
@@ -1008,9 +1045,6 @@ img {
   margin: 56px 0 29px;
 }
 
-.filter-reset {
-}
-
 /* ============ Каталог гостиниц ============ */
 .catalog {
   padding: 49px 69px 60px;
@@ -1018,16 +1052,17 @@ img {
 
 /* ============ Результаты отбора ============ */
 .catalog-outcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-}
-
-.outcome {
-}
-
-.outcome-title {
 }
 
 .outcome-subtitle {
@@ -1035,9 +1070,6 @@ img {
   margin-right: auto;
   margin-bottom: 0;
   padding-left: 1px;
-}
-
-.outcome-found {
 }
 
 .outcome-select {
@@ -1057,6 +1089,8 @@ img {
   background-repeat: no-repeat;
   background-position: right 17px top 19px;
   /* убираем стрелочку у select */
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   margin-right: 71px;
 }
@@ -1065,33 +1099,27 @@ img {
   border-color: #68a2ca;
 }
 
-/*  Указываем :focus-visible */
 .outcome-select:focus-visible {
   border-color: #68a2ca;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .outcome-select:focus {
-    /* Fallback for browsers without :focus-visible support */
     border-color: #68a2ca;
     outline: none;
   }
 }
 .outcome-select:disabled {
-  /* border: 2px solid rgba(0, 0, 0, 0.3); */
   opacity: 0.3;
 }
 
-.outcome-select-option {
-}
-
 .outcome-view {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-}
-
-.view-item {
 }
 
 .view-item:not(:last-child) {
@@ -1112,15 +1140,13 @@ img {
   border-color: #000000;
 }
 
-/*  Указываем :focus-visible */
 .view-link:focus-visible {
   border-color: #68a2ca;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .view-link:focus {
-    /* Fallback for browsers without :focus-visible support */
     border-color: #68a2ca;
     outline: none;
   }
@@ -1154,17 +1180,13 @@ img {
   border-bottom: 1px solid #e6e6e6;
 }
 
-.catalog-hotels-title {
-}
-
 .catalog-hotels-list {
   padding: 40px 0;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 18px 1fr 18px 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-}
-
-.catalog-hotels-item {
 }
 
 .hotel-card {
@@ -1172,15 +1194,21 @@ img {
   border-radius: 4px;
   border: 1px solid #e6e6e6;
   padding: 20px;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px 20px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: start;
+  -ms-flex-line-pack: start;
   align-content: start;
 }
 
 .hotel-card:focus-within,
 .hotel-card:hover {
+  -webkit-box-shadow: 0 0 3px 3px #e5e3e3;
   box-shadow: 0 0 3px 3px #e5e3e3;
 }
 
@@ -1196,17 +1224,15 @@ img {
   color: #000000;
 }
 
-/*  Указываем :focus-visible */
 .hotel-card-link:focus-visible,
 .hotel-card-link:hover {
   outline: none;
   color: #756157;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .hotel-card-link:focus,
   .hotel-card-link:hover {
-    /* Fallback for browsers without :focus-visible support */
     outline: none;
     color: #756157;
   }
@@ -1222,17 +1248,15 @@ img {
   margin-bottom: 17px;
 }
 
-/*  Указываем :focus-visible */
 .hotel-card-link:focus-visible .hotel-card-image,
 .hotel-card-link:hover .hotel-card-image {
   opacity: 0.8;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .hotel-card-link:focus .hotel-card-image,
   .hotel-card-link:hover .hotel-card-image {
-    /* Fallback for browsers without :focus-visible support */
     opacity: 0.8;
     outline: none;
   }
@@ -1249,16 +1273,18 @@ img {
   margin: 0;
 }
 
-.hotel-card-type {
-}
-
 .hotel-card-price {
   text-align: end;
 }
 
 .hotel-card-stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 140px;
   padding: 10px 0;
@@ -1296,14 +1322,12 @@ img {
   background-color: #6c9e42;
 }
 
-/*  Указываем :focus-visible */
 .button-favorite-current:focus-visible {
   background-color: #6c9e42;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .button-favorite-current:focus {
-    /* Fallback for browsers without :focus-visible support */
     background-color: #6c9e42;
   }
 }
@@ -1314,14 +1338,14 @@ img {
 
 /* ============ Пагинация ============ */
 .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-top: 38px;
   gap: 8px;
   padding-left: 1px;
-}
-
-.pagination-item {
 }
 
 .pagination-item:last-child {
@@ -1329,8 +1353,14 @@ img {
 }
 
 .pagination-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   min-width: 60px;
   max-width: 200px;
@@ -1351,15 +1381,13 @@ img {
   background-color: #68a2ca;
 }
 
-/*  Указываем :focus-visible */
 .pagination-link:not(.pagination-link-dots, .pagination-link-current):focus-visible {
   background-color: #68a2ca;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .pagination-link:not(.pagination-link-dots, .pagination-link-current):focus {
-    /* Fallback for browsers without :focus-visible support */
     background-color: #68a2ca;
     outline: none;
   }
@@ -1389,15 +1417,13 @@ img {
   border-color: #f2f2f2;
 }
 
-/*  Указываем :focus-visible */
 .pagination-link-dots:focus-visible {
   background-color: #f2f2f2;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .pagination-link-dots:focus {
-    /* Fallback for browsers without :focus-visible support */
     background-color: #f2f2f2;
     outline: none;
   }
@@ -1420,9 +1446,6 @@ img {
   color: #ffffff;
 }
 
-.subscribe-headline {
-}
-
 .subscribe-title {
   margin-bottom: 20px;
 }
@@ -1436,10 +1459,28 @@ img {
 }
 
 .subscribe-form {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr auto;
   grid-template-columns: 1fr auto;
   max-width: 684px;
   margin: 0 auto;
+}
+
+.subscribe-input::-webkit-input-placeholder {
+  font-weight: 400;
+}
+
+.subscribe-input::-moz-placeholder {
+  font-weight: 400;
+}
+
+.subscribe-input:-ms-input-placeholder {
+  font-weight: 400;
+}
+
+.subscribe-input::-ms-input-placeholder {
+  font-weight: 400;
 }
 
 .subscribe-input::placeholder {
@@ -1461,24 +1502,34 @@ img {
 /* ============ Подвал ============ */
 .page-footer {
   padding: 40px 70px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .page-footer-social {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr) [3];
   grid-template-columns: repeat(3, 1fr);
   padding: 5px 0;
 }
 
-.social-item {
-}
-
 .social-link {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 47px;
   height: 40px;
@@ -1491,15 +1542,13 @@ img {
   color: #68a2ca;
 }
 
-/*  Указываем :focus-visible */
 .social-link:focus-visible {
   color: #68a2ca;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .social-link:focus {
-    /* Fallback for browsers without :focus-visible support */
     color: #68a2ca;
     outline: none;
   }
@@ -1528,6 +1577,8 @@ img {
   padding: 5px 0;
   padding-left: 3px;
   margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -1535,15 +1586,13 @@ img {
   color: #756157;
 }
 
-/*  Указываем :focus-visible */
 .page-footer-phone:focus-visible {
   color: #756157;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .page-footer-phone:focus {
-    /* Fallback for browsers without :focus-visible support */
     color: #756157;
     outline: none;
   }
@@ -1551,9 +1600,6 @@ img {
 
 .page-footer-phone:active {
   color: rgba(117, 97, 87, 0.3);
-}
-
-.contacts-phone {
 }
 
 .page-footer-copyright {
@@ -1569,15 +1615,13 @@ img {
   color: #756157;
 }
 
-/*  Указываем :focus-visible */
 .page-footer-copyright:focus-visible {
   color: #756157;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .page-footer-copyright:focus {
-    /* Fallback for browsers without :focus-visible support */
     color: #756157;
     outline: none;
   }
@@ -1593,6 +1637,8 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 100%;
@@ -1610,6 +1656,7 @@ img {
   padding: 64px 70px;
   background-color: #ffffff;
   border-radius: 30px;
+  -webkit-box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -1617,8 +1664,14 @@ img {
   width: 717px;
 }
 .modal-close-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: absolute;
   border-radius: 50%;
@@ -1635,16 +1688,16 @@ img {
   background-color: #e6e6e6;
 }
 
-/*  Указываем :focus-visible */
 .modal-close-button:focus-visible {
   outline: none;
+  -webkit-box-shadow: 0 0 0 3px #83b3d3;
   box-shadow: 0 0 0 3px #83b3d3;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .modal-close-button:focus {
-    /* Fallback for browsers without :focus-visible support */
     outline: none;
+    -webkit-box-shadow: 0 0 0 3px #83b3d3;
     box-shadow: 0 0 0 3px #83b3d3;
   }
 }
@@ -1668,14 +1721,15 @@ img {
 }
 
 .modal-close-button::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
 .modal-close-button::after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-}
-
-.modal-content {
 }
 
 .modal-title {
@@ -1683,7 +1737,9 @@ img {
 }
 
 .modal-search-form {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto (110px) [4];
   grid-template-columns: auto repeat(4, 110px);
   row-gap: 23px;
 }
@@ -1697,13 +1753,21 @@ img {
 }
 
 .form-label {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
   grid-area: 3/3/4/-2;
   margin-left: auto;
   padding-right: 47px;
   padding-left: 20px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -1714,22 +1778,36 @@ img {
 }
 
 .field-group-in {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
   grid-area: 1/2/2/-1;
 }
 
 .field-group-out {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
   grid-area: 2/2/3/-1;
 }
 
 .label-adults {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-area: 3/1/4/2;
 }
 
 .adults {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-area: 3/2/4/3;
 }
 
 .kids {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
   grid-area: 3/-2/4/-1;
 }
 
@@ -1765,15 +1843,13 @@ img {
   display: block;
 }
 
-/*  Указываем :focus-visible */
 .tooltip-toggle:focus-visible .tooltip-icon {
   color: #68a2ca;
   outline: none;
 }
-/*  Проверяем поддержку :focus-visible, если НЕ поддерживаем, то проваливаемся внутрь директивы и прописываем :focus */
+
 @supports not selector(:focus-visible) {
   .tooltip-toggle:focus .tooltip-icon {
-    /* Fallback for browsers without :focus-visible support */
     color: #68a2ca;
     outline: none;
   }
@@ -1791,6 +1867,7 @@ img {
   left: -36px;
   border-radius: 10px;
   background-color: #333;
+  -webkit-box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.3);
   width: 256px;
   min-height: 143px;
@@ -1807,6 +1884,8 @@ img {
   border-bottom: 9px solid #333333;
   top: -9px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -1817,8 +1896,14 @@ img {
 
 .search-form-calendar {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 48px;
   width: 60px;
@@ -1835,6 +1920,7 @@ img {
 
 .search-form-calendar:focus-visible .search-form-svg {
   outline: none;
+  -webkit-box-shadow: 0 0 0 3px #83b3d3;
   box-shadow: 0 0 0 3px #83b3d3;
   border-radius: 4px;
   outline-offset: 1px;
@@ -1843,6 +1929,7 @@ img {
 @supports not selector(:focus-visible) {
   .search-form-calendar:focus .search-form-svg {
     outline: none;
+    -webkit-box-shadow: 0 0 0 3px #83b3d3;
     box-shadow: 0 0 0 3px #83b3d3;
     border-radius: 4px;
     outline-offset: 1px;
@@ -1866,7 +1953,11 @@ img {
 
 .field-group-persons {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -1884,6 +1975,8 @@ img {
   border: none;
   border-radius: 4px;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   padding: 0;
   cursor: pointer;
@@ -1900,12 +1993,14 @@ img {
 
 .quantity-button:focus-visible .button-focus {
   outline: none;
+  -webkit-box-shadow: 0 0 0 3px #83b3d3;
   box-shadow: 0 0 0 3px #83b3d3;
 }
 
 @supports not selector(:focus-visible) {
   .quantity-button:focus .button-focus {
     outline: none;
+    -webkit-box-shadow: 0 0 0 3px #83b3d3;
     box-shadow: 0 0 0 3px #83b3d3;
   }
 }
@@ -1942,6 +2037,8 @@ img {
 }
 
 .button-plus::after {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
@@ -1957,6 +2054,8 @@ img {
 }
 
 .modal-search-button {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
   grid-area: 4/1/5/-1;
   height: 60px;
   border-radius: 10px;
