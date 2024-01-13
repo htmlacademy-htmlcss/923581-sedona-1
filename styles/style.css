@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -25,7 +18,6 @@
 *,
 *::before,
 *::after {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -253,6 +245,7 @@ img {
 /* для браузера Firefox: */
 .field[type="number"] {
   -moz-appearance: textfield;
+  -webkit-appearance: textfield;
   appearance: textfield;
 }
 /* ============================================ */
@@ -506,8 +499,7 @@ img {
 
 .navigation-button {
   padding: 8px 20px;
-  margin-top: 14px;
-  /* ? min-width переполнение ? */
+  margin: 14px 0;
   width: 160px;
 }
 
@@ -744,8 +736,6 @@ img {
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   right: -17px;
   width: 6px;
@@ -900,8 +890,6 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -1722,14 +1710,10 @@ img {
 .modal-close-button::before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
 .modal-close-button::after {
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -1742,9 +1726,9 @@ img {
 .modal-search-form {
   display: -ms-grid;
   display: grid;
-  row-gap: 23px;
-  -ms-grid-columns: auto (110px) [4];
-  grid-template-columns: auto repeat(4, 110px);
+  gap: 23px 83px;
+  -ms-grid-columns: 1fr 83px 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .modal-search-title {
@@ -1756,13 +1740,16 @@ img {
   padding: 12px 0;
 }
 
+.label-kids {
+  padding-left: 5px;
+}
+
+.field-group-date {
+  position: relative;
+}
+
 .form-label {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-area: 3/3/4/-2;
-  margin-left: auto;
   padding-right: 47px;
-  padding-left: 20px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1770,59 +1757,31 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .field-group {
   margin: 0;
   padding: 0;
   position: relative;
-}
-
-.field-group-in {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-area: 1/2/2/-1;
-}
-
-.field-group-out {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-area: 2/2/3/-1;
-}
-
-.label-adults {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 3/1/4/2;
-}
-
-.adults {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 3/2/4/3;
-}
-
-.kids {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-area: 3/-2/4/-1;
+  grid-column: 1/-1;
+  border: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 15px 440px;
+  grid-template-columns: 1fr 440px;
 }
 
 .tooltip {
   margin-left: 11px;
+  position: relative;
 }
 .tooltip-toggle {
   width: 26px;
   height: 26px;
   border: none;
   background-color: transparent;
+  color: #82b3d3;
+  fill: currentColor;
   padding: 0;
   margin: 0;
   display: block;
@@ -1830,15 +1789,7 @@ img {
   cursor: pointer;
 }
 
-.tooltip-icon {
-  width: 100%;
-  height: 100%;
-  color: #83b3d3;
-  fill: currentColor;
-  display: block;
-}
-
-.tooltip-toggle:hover .tooltip-icon {
+.tooltip-toggle:hover {
   color: #68a2ca;
 }
 
@@ -1847,13 +1798,13 @@ img {
   display: block;
 }
 
-.tooltip-toggle:focus-visible .tooltip-icon {
+.tooltip-toggle:focus-visible {
   color: #68a2ca;
   outline: none;
 }
 
 @supports not selector(:focus-visible) {
-  .tooltip-toggle:focus .tooltip-icon {
+  .tooltip-toggle:focus {
     color: #68a2ca;
     outline: none;
   }
@@ -1866,9 +1817,11 @@ img {
   font-size: 16px;
   line-height: 20px;
   margin: 0;
-  top: 100%;
-  margin-top: 4px;
-  left: -36px;
+  margin-top: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   border-radius: 10px;
   background-color: #333;
   -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
@@ -1890,14 +1843,12 @@ img {
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
 .search-form-field {
   width: 440px;
-  padding: 10px 50px 8px 20px;
+  padding: 10px 50px 9px 20px;
 }
 
 .search-form-calendar {
@@ -1911,20 +1862,24 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
-  width: 60px;
+  height: 42px;
+  width: 54px;
   color: #000000;
   fill: currentColor;
-  top: 0;
-  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 3px;
   outline: none;
+  border: none;
 }
 
 .search-form-calendar:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.search-form-calendar:focus-visible .search-form-svg {
+.search-form-calendar:focus-visible svg {
   outline: none;
   -webkit-box-shadow: 0 0 0 3px #83b3d3;
   box-shadow: 0 0 0 3px #83b3d3;
@@ -1933,7 +1888,7 @@ img {
 }
 
 @supports not selector(:focus-visible) {
-  .search-form-calendar:focus .search-form-svg {
+  .search-form-calendar:focus svg {
     outline: none;
     -webkit-box-shadow: 0 0 0 3px #83b3d3;
     box-shadow: 0 0 0 3px #83b3d3;
@@ -1951,6 +1906,7 @@ img {
   font-size: 16px;
   padding-left: 20px;
   margin-top: 4px;
+  grid-column: 2/-1;
 }
 
 .past {
@@ -1958,24 +1914,28 @@ img {
 }
 
 .field-group-persons {
+  margin: 0;
+  padding: 0;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -ms-grid;
+  display: grid;
+  border: none;
+  -ms-grid-columns: 1fr 110px;
+  grid-template-columns: 1fr 110px;
+}
+
+.quantity-persons {
+  position: relative;
 }
 
 .quantity-persons-field {
-  padding-bottom: 10px;
   text-align: center;
   line-height: 20px;
 }
 
 .quantity-button {
   position: absolute;
-  height: 44px;
+  height: 42px;
   width: 30px;
   background-color: #f2f2f2ff;
   border: none;
@@ -1983,30 +1943,36 @@ img {
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateY(-50%);
   padding: 0;
   cursor: pointer;
   outline: none;
 }
 
-.button-focus {
-  display: block;
+.quantity-button span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 20px;
   width: 20px;
-  background-color: #f2f2f2ff;
+  background-color: transparent;
   border-radius: 4px;
 }
 
-.quantity-button:focus-visible .button-focus {
+.quantity-button:focus-visible span {
   outline: none;
   -webkit-box-shadow: 0 0 0 3px #83b3d3;
   box-shadow: 0 0 0 3px #83b3d3;
 }
 
 @supports not selector(:focus-visible) {
-  .quantity-button:focus .button-focus {
+  .quantity-button:focus span {
     outline: none;
     -webkit-box-shadow: 0 0 0 3px #83b3d3;
     box-shadow: 0 0 0 3px #83b3d3;
@@ -2018,14 +1984,12 @@ img {
   padding-left: 8px;
 }
 
-.button-minus::before {
+.button-minus span::before {
   position: absolute;
   width: 14px;
   height: 2px;
   background-color: rgba(117, 97, 87, 0.3);
   content: "";
-  left: 11px;
-  top: 21px;
 }
 
 .button-plus {
@@ -2033,40 +1997,34 @@ img {
   padding-left: 2px;
 }
 
-.button-plus::before,
-.button-plus::after {
+.button-plus span::before,
+.button-plus span::after {
   position: absolute;
   width: 14px;
   height: 2px;
   background-color: rgba(117, 97, 87, 0.3);
   content: "";
-  right: 11px;
-  top: 21px;
 }
 
-.button-plus::after {
+.button-plus span::after {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.quantity-button:hover::before,
-.quantity-button:hover::after {
+.quantity-button:hover span::before,
+.quantity-button:hover span::after {
   background-color: #000000;
 }
 
-.quantity-button:active::before,
-.quantity-button:active::after,
-.quantity-button:active::before {
+.quantity-button:active span::before,
+.quantity-button:active span::after,
+.quantity-button:active span::before {
   background-color: rgba(117, 97, 87, 0.3);
 }
 
 .modal-search-button {
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 1;
-  grid-area: 4/1/5/-1;
+  grid-column: 1/-1;
   height: 60px;
   border-radius: 10px;
   font-size: 20px;
