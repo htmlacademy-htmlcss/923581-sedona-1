@@ -230,7 +230,7 @@
         <section class="modal-content">
           <h2 class="modal-title page-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="field-group field-group-in">
+            <fieldset class="field-group">
               <legend class="visually-hidden">Дата заезда</legend>
               <label class="modal-search-title" for="check-in">Дата заезда:</label>
               <span class="field-group-input">
@@ -258,7 +258,7 @@
                 <span class="input-caption past">Мы не можем отправить вас в прошлое.</span>
               </span>
             </fieldset>
-            <fieldset class="field-group field-group-out">
+            <fieldset class="field-group">
               <legend class="visually-hidden">Дата заезда</legend>
               <label class="modal-search-title" for="check-out">Дата выезда:</label>
               <span class="field-group-input">
@@ -286,21 +286,23 @@
                 <span class="input-caption">На эти даты есть свободные номера. Пока есть.</span>
               </span>
             </fieldset>
-            <fieldset class="field-group-persons adults">
+            <fieldset class="field-group field-group-adults">
               <legend class="visually-hidden">Взрослые</legend>
               <label class="modal-search-title label-adults" for="quantity">Взрослые:</label>
-              <div class="quantity-persons">
-                <input class="quantity-persons-field field" id="quantity" name="Взрослые:" type="number" value="2" placeholder="2">
-                <button class="button-minus quantity-button" type="button" aria-label="Уменьшить">
-                  <span></span>
-                </button>
-                <button class="button-plus quantity-button" type="button" aria-label="Увеличить">
-                  <span></span>
-                </button>
-              </div>
+              <span class="quantity-persons">
+                <span class="quantity-persons-cell">
+                  <input class="quantity-persons-field field" id="quantity" name="Взрослые:" type="number" value="2" placeholder="2">
+                  <button class="button-minus quantity-button" type="button" aria-label="Уменьшить">
+                    <span></span>
+                  </button>
+                  <button class="button-plus quantity-button" type="button" aria-label="Увеличить">
+                    <span></span>
+                  </button>
+                </span>
+              </span>
             </fieldset>
 
-            <fieldset class="field-group-persons kids">
+            <fieldset class="field-group field-group-kids">
               <legend class="visually-hidden">Дети</legend>
               <span class="form-label">
                 <label class="modal-search-title label-kids" for="quantity-kids">Дети:</label>
@@ -315,15 +317,17 @@
                   <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                 </span>
               </span>
-              <div class="quantity-persons">
-                <input class="quantity-persons-field field" id="quantity-kids" name="Дети:" type="number" value="2" placeholder="2">
-                <button class="button-minus quantity-button" type="button" aria-label="Уменьшить">
-                  <span></span>
-                </button>
-                <button class="button-plus quantity-button" type="button" aria-label="Увеличить">
-                  <span></span>
-                </button>
-              </div>
+              <span class="quantity-persons">
+                <span class="quantity-persons-cell">
+                  <input class="quantity-persons-field field" id="quantity-kids" name="Дети:" type="number" value="2" placeholder="2">
+                  <button class="button-minus quantity-button" type="button" aria-label="Уменьшить">
+                    <span></span>
+                  </button>
+                  <button class="button-plus quantity-button" type="button" aria-label="Увеличить">
+                    <span></span>
+                  </button>
+                </span>
+              </span>
             </fieldset>
             <button class="modal-search-button button button-light" type="submit">Найти</button>
 
