@@ -230,12 +230,12 @@
         <section class="modal-content">
           <h2 class="modal-title page-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="field-group">
+            <fieldset class="field-group date">
               <legend class="visually-hidden">Дата заезда</legend>
               <label class="modal-search-title" for="check-in">Дата заезда:</label>
               <span class="field-group-input">
                 <span class="field-group-date">
-                  <input class="search-form-field field" id="check-in" name="Дата заезда:" type="text" value="27 апреля 2020" placeholder="27 апреля 2020">
+                  <input class="search-form-field field" id="check-in" name="Дата заезда:" type="text" value="27 апреля 2020" placeholder="Укажите дату заезда">
                   <button class="search-form-calendar" type="button">
                     <span class="visually-hidden">Выбрать дату.</span>
                     <svg aria-hidden="true" focusable="false" width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -258,12 +258,12 @@
                 <span class="input-caption past">Мы не можем отправить вас в прошлое.</span>
               </span>
             </fieldset>
-            <fieldset class="field-group">
+            <fieldset class="field-group date">
               <legend class="visually-hidden">Дата заезда</legend>
               <label class="modal-search-title" for="check-out">Дата выезда:</label>
               <span class="field-group-input">
                 <span class="field-group-date">
-                  <input class="search-form-field field" id="check-out" name="Дата выезда:" type="text" value="1 сентября 2023" placeholder="1 сентября 2023">
+                  <input class="search-form-field field" id="check-out" name="Дата выезда:" type="text" value="1 сентября 2023" placeholder="Укажите дату выезда">
                   <button class="search-form-calendar" type="button">
                     <span class="visually-hidden">Выбрать дату.</span>
                     <svg aria-hidden="true" focusable="false" width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -286,12 +286,12 @@
                 <span class="input-caption">На эти даты есть свободные номера. Пока есть.</span>
               </span>
             </fieldset>
-            <fieldset class="field-group field-group-adults">
+            <fieldset class="field-group">
               <legend class="visually-hidden">Взрослые</legend>
               <label class="modal-search-title label-adults" for="quantity">Взрослые:</label>
               <span class="quantity-persons">
                 <span class="quantity-persons-cell">
-                  <input class="quantity-persons-field field" id="quantity" name="Взрослые:" type="number" value="2" placeholder="2">
+                  <input class="quantity-persons-field field" id="quantity" name="Взрослые:" type="number" value="2" placeholder="0">
                   <button class="button-minus quantity-button" type="button" aria-label="Уменьшить">
                     <span></span>
                   </button>
@@ -302,7 +302,7 @@
               </span>
             </fieldset>
 
-            <fieldset class="field-group field-group-kids">
+            <fieldset class="field-group">
               <legend class="visually-hidden">Дети</legend>
               <span class="form-label">
                 <label class="modal-search-title label-kids" for="quantity-kids">Дети:</label>
@@ -319,7 +319,7 @@
               </span>
               <span class="quantity-persons">
                 <span class="quantity-persons-cell">
-                  <input class="quantity-persons-field field" id="quantity-kids" name="Дети:" type="number" value="2" placeholder="2">
+                  <input class="quantity-persons-field field" id="quantity-kids" name="Дети:" type="number" value="2" placeholder="0">
                   <button class="button-minus quantity-button" type="button" aria-label="Уменьшить">
                     <span></span>
                   </button>
