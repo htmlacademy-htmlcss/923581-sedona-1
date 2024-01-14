@@ -752,21 +752,10 @@ img {
   line-height: 21px;
   text-decoration: none;
   color: #ffffff;
-  outline: none;
 }
 
 .breadcrumbs-link:hover {
   opacity: 0.6;
-}
-
-.breadcrumbs-link:not(.breadcrumbs-link-current):focus-visible {
-  opacity: 0.6;
-}
-
-@supports not selector(:focus-visible) {
-  .breadcrumbs-link:not(.breadcrumbs-link-current):focus {
-    opacity: 0.6;
-  }
 }
 
 .breadcrumbs-link:active {
@@ -1769,7 +1758,6 @@ img {
   margin: 0;
   padding: 0;
   position: relative;
-  grid-column: 1/-1;
   border: none;
   display: -ms-grid;
   display: grid;
@@ -1778,14 +1766,8 @@ img {
   gap: 0 17px;
 }
 
-.field-group-adults {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-}
-
-.field-group-kids {
-  grid-column: 2/-1;
+.date {
+  grid-column: 1/-1;
 }
 
 .tooltip {
