@@ -235,7 +235,7 @@
               <label class="modal-search-title" for="check-in">Дата заезда:</label>
               <span class="field-group-input">
                 <span class="field-group-date">
-                  <input class="search-form-field field" id="check-in" name="Дата заезда:" type="text" value="27 апреля 2020" placeholder="Укажите дату заезда">
+                  <input class="search-form-field field" id="check-in" name="Дата заезда:" type="text" value="27 апреля 2020" placeholder="Укажите дату">
                   <button class="search-form-calendar" type="button">
                     <span class="visually-hidden">Выбрать дату.</span>
                     <svg aria-hidden="true" focusable="false" width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -263,7 +263,7 @@
               <label class="modal-search-title" for="check-out">Дата выезда:</label>
               <span class="field-group-input">
                 <span class="field-group-date">
-                  <input class="search-form-field field" id="check-out" name="Дата выезда:" type="text" value="1 сентября 2023" placeholder="Укажите дату выезда">
+                  <input class="search-form-field field" id="check-out" name="Дата выезда:" type="text" value="1 сентября 2023" placeholder="Укажите дату">
                   <button class="search-form-calendar" type="button">
                     <span class="visually-hidden">Выбрать дату.</span>
                     <svg aria-hidden="true" focusable="false" width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -307,14 +307,14 @@
               <span class="form-label">
                 <label class="modal-search-title label-kids" for="quantity-kids">Дети:</label>
                 <span class="tooltip">
-                  <button class="tooltip-toggle" type="button">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
                     <span class="visually-hidden">Уточняющая информация</span>
                     <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 26 26">
                       <circle cx="13" cy="13" r="13" />
                       <path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd" />
                     </svg>
                   </button>
-                  <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  <p class="tooltip-text" id="tooltip-label-date" role="tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
                 </span>
               </span>
               <span class="quantity-persons">
