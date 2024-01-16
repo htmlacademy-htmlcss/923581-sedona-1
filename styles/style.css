@@ -186,10 +186,6 @@ img {
   border-radius: 4px;
 }
 
-.field:hover {
-  background-color: #e6e6e6;
-}
-
 .field:focus-visible {
   outline: none;
   -webkit-box-shadow: 0 0 0 3px #83b3d3;
@@ -1190,18 +1186,13 @@ img {
   display: grid;
   -ms-grid-columns: 1fr 20px 1fr;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px 20px;
+  row-gap: 16px;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
   -ms-flex-line-pack: start;
   align-content: start;
-}
-
-.hotel-card:focus-within,
-.hotel-card:hover {
-  -webkit-box-shadow: 0 0 3px 3px #e5e3e3;
-  box-shadow: 0 0 3px 3px #e5e3e3;
+  z-index: 2;
 }
 
 .hotel-card .button {
@@ -1214,6 +1205,27 @@ img {
   text-decoration: none;
   grid-column: 1/-1;
   color: #000000;
+}
+
+.hotel-card-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  padding: 20px;
+  margin: -20px;
+}
+
+.hotel-card-link::before {
+  content: "";
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .hotel-card-link:focus-visible,
@@ -1230,10 +1242,28 @@ img {
   }
 }
 
+.hotel-card-link:focus-visible::before,
+.hotel-card-link:hover::before {
+  -webkit-box-shadow: 0 0 3px 3px #e5e3e3;
+  box-shadow: 0 0 3px 3px #e5e3e3;
+}
+
+@supports not selector(:focus-visible) {
+  .hotel-card-link:focus::before,
+  .hotel-card-link:hover::before {
+    -webkit-box-shadow: 0 0 3px 3px #e5e3e3;
+    box-shadow: 0 0 3px 3px #e5e3e3;
+  }
+}
+
 .hotel-card-link:active {
   opacity: 0.3;
 }
 
+.hotel-card-link:active::before {
+  -webkit-box-shadow: 0 0 1px 1px #e5e3e3;
+  box-shadow: 0 0 1px 1px #e5e3e3;
+}
 .hotel-card-image {
   display: block;
   width: 100%;
@@ -1283,7 +1313,7 @@ img {
 }
 
 .hotel-card-stars-item {
-  display: block;
+  display: inline-block;
   background-image: url("../img/svg/star.svg");
   background-repeat: no-repeat;
   width: 18px;
@@ -1381,6 +1411,18 @@ img {
 @supports not selector(:focus-visible) {
   .pagination-link:not(.pagination-link-dots, .pagination-link-current):focus {
     background-color: #68a2ca;
+    outline: none;
+  }
+}
+
+.pagination-link-current:focus-visible {
+  border: 2px solid #000000;
+  outline: none;
+}
+
+@supports not selector(:focus-visible) {
+  .pagination-link-current:focus {
+    border: 2px solid #000000;
     outline: none;
   }
 }
@@ -1955,7 +1997,7 @@ img {
   position: absolute;
   height: 42px;
   width: 30px;
-  background-color: transparent;
+  background-color: #f2f2f2ff;
   border: none;
   border-radius: 4px;
   top: 50%;
