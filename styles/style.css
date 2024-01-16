@@ -841,6 +841,8 @@ img {
   background-color: #fff;
   width: 20px;
   height: 20px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .control-input:focus-visible {
@@ -897,6 +899,7 @@ img {
 .control-text {
   line-height: 23px;
   padding-left: 16px;
+  word-break: break-word;
 }
 
 /* ============ Движки ============ */
