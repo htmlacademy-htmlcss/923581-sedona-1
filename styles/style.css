@@ -807,6 +807,10 @@ img {
   padding: 0;
 }
 
+.catalog-filter-group-checkbox {
+  max-width: 160px;
+}
+
 .control-item {
   outline: none;
 }
@@ -1061,6 +1065,7 @@ img {
   margin-right: auto;
   margin-bottom: 0;
   padding-left: 1px;
+  max-width: 500px;
 }
 
 .outcome-select {
@@ -1214,7 +1219,7 @@ img {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 20px 1fr;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 140px);
   gap: 16px 20px;
   padding: 20px;
   margin: -20px;
@@ -1296,6 +1301,7 @@ img {
 
 .catalog-text {
   margin: 0;
+  word-wrap: break-word;
 }
 
 .hotel-card-price {
@@ -1337,6 +1343,7 @@ img {
   border-radius: 4px;
   padding: 8px 22px 8px 23px;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .button-favorite-current {
