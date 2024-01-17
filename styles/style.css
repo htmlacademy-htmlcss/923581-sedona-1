@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: > 0.5%,last 2 versions
+*/
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -19,7 +26,6 @@
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -747,9 +753,6 @@ img {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   right: -17px;
   width: 6px;
@@ -898,9 +901,6 @@ img {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -976,11 +976,13 @@ img {
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
 }
+
 .range-progress {
   position: absolute;
   height: 4px;
   background-color: #ffffff;
 }
+
 .range-toggle {
   position: absolute;
   width: 20px;
@@ -1029,6 +1031,7 @@ img {
 .toggle-min {
   left: 0;
 }
+
 .toggle-max {
   right: 0;
 }
@@ -1112,6 +1115,7 @@ img {
     outline: none;
   }
 }
+
 .outcome-select:disabled {
   opacity: 0.3;
 }
@@ -1276,6 +1280,7 @@ img {
   -webkit-box-shadow: 0 0 1px 1px #e5e3e3;
   box-shadow: 0 0 1px 1px #e5e3e3;
 }
+
 .hotel-card-image {
   display: block;
   width: 100%;
@@ -1460,6 +1465,7 @@ img {
   border-color: #ffffff;
   letter-spacing: 1px;
 }
+
 .pagination-link-dots:hover {
   background-color: #f2f2f2;
   border-color: #f2f2f2;
@@ -1489,7 +1495,7 @@ img {
 .subscribe-index {
   background-image: url("../img/background-subscribe.jpg");
   background-size: cover;
-  background-color: #5c84ab;
+  background-color: #82b3d3;
   background-repeat: no-repeat;
   color: #ffffff;
 }
@@ -1712,6 +1718,7 @@ img {
 .modal-search {
   width: 717px;
 }
+
 .modal-close-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1771,17 +1778,11 @@ img {
 
 .modal-close-button::before {
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
 .modal-close-button::after {
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -1843,6 +1844,7 @@ img {
   margin-left: 11px;
   position: relative;
 }
+
 .tooltip-toggle {
   width: 26px;
   height: 26px;
@@ -1888,9 +1890,6 @@ img {
   margin-top: 15px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   transform: translateX(-50%);
   border-radius: 10px;
   background-color: #333333;
@@ -1912,9 +1911,6 @@ img {
   top: -9px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -1940,9 +1936,6 @@ img {
   fill: currentcolor;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   transform: translateY(-50%);
   right: 3px;
   outline: none;
@@ -2017,9 +2010,6 @@ img {
   border-radius: 4px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   padding: 0;
   cursor: pointer;
@@ -2085,9 +2075,6 @@ img {
 
 .button-plus span::after {
   -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
