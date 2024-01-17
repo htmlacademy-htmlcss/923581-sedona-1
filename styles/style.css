@@ -29,6 +29,7 @@ html {
 
 body {
   height: 100%;
+  min-width: 1280px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -336,7 +337,7 @@ img {
   margin-bottom: -6px;
   outline: none;
   color: #83b3d3;
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 .page-header-logo:hover {
@@ -460,7 +461,7 @@ img {
   -ms-flex-align: center;
   align-items: center;
   color: #000000;
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 .navigation-user-link:hover {
@@ -492,17 +493,19 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 20px;
-  min-height: 20px;
+  min-width: 20px;
+  max-width: 40px;
+  height: 20px;
   font-size: 10px;
   line-height: 10px;
   padding: 2px;
   text-align: center;
   color: #ffffff;
   background-color: #7db54f;
-  border-radius: 50%;
+  border-radius: 10px;
   top: 11px;
   left: 20px;
+  overflow: hidden;
 }
 
 .navigation-button {
@@ -704,7 +707,7 @@ img {
 /* ============ Страница каталога ============ */
 .inner-header {
   padding: 35px 70px 67px;
-  background-image: url(../img/background-inner.jpg);
+  background-image: url("../img/background-inner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -796,7 +799,7 @@ img {
   margin: 0;
   padding: 0;
   border: none;
-  max-width: 191px;
+  max-width: 170px;
 }
 
 .catalog-filter-title {
@@ -843,7 +846,7 @@ img {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: #fff;
+  background-color: #ffffff;
   width: 20px;
   height: 20px;
   -ms-flex-negative: 0;
@@ -872,7 +875,7 @@ img {
   border-radius: 4px;
 }
 
-.control-input[type="checkbox"]:checked:after {
+.control-input[type="checkbox"]:checked::after {
   position: absolute;
   content: "";
   background-image: url("../img/svg/tick.svg");
@@ -885,7 +888,7 @@ img {
   border-radius: 50%;
 }
 
-.control-input[type="radio"]:checked:after {
+.control-input[type="radio"]:checked::after {
   position: absolute;
   content: "";
   background-color: #3f5e72;
@@ -941,6 +944,7 @@ img {
   bottom: 0;
   padding: 11px 20px;
   z-index: 10;
+  overflow: hidden;
 }
 
 .price-input {
@@ -1031,14 +1035,15 @@ img {
 
 .catalog-filter-group-buttons {
   text-align: center;
+  padding-top: 56px;
 }
 
 .catalog-filter-group-buttons button {
   width: 100%;
 }
 
-.filter-cubmit {
-  margin: 56px 0 29px;
+.catalog-filter-group-buttons button:not(:last-child) {
+  margin-bottom: 29px;
 }
 
 /* ============ Каталог гостиниц ============ */
@@ -1193,8 +1198,6 @@ img {
   padding: 20px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 1fr;
-  grid-template-columns: repeat(2, 1fr);
   row-gap: 16px;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -1342,9 +1345,8 @@ img {
   text-transform: uppercase;
   background-color: #f2f2f2;
   border-radius: 4px;
-  padding: 8px 22px 8px 23px;
+  padding: 9px 8px 8px 10px;
   text-align: center;
-  word-wrap: break-word;
 }
 
 .button-favorite-current {
@@ -1408,6 +1410,7 @@ img {
   border-radius: 4px;
   text-decoration: none;
   text-align: center;
+  padding: 4px;
 }
 
 .pagination-link:not(.pagination-link-dots, .pagination-link-current):hover {
@@ -1580,7 +1583,7 @@ img {
   height: 40px;
   outline: none;
   color: #83b3d3;
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 .social-link:hover {
@@ -1625,6 +1628,7 @@ img {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 700px;
 }
 
 .page-footer-phone:hover {
@@ -1653,7 +1657,7 @@ img {
   height: 33px;
   margin-top: 8px;
   color: #000000;
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 .page-footer-copyright:hover {
@@ -1845,7 +1849,7 @@ img {
   border: none;
   background-color: transparent;
   color: #82b3d3;
-  fill: currentColor;
+  fill: currentcolor;
   padding: 0;
   margin: 0;
   display: block;
@@ -1889,7 +1893,7 @@ img {
   -moz-transform: translateX(-50%);
   transform: translateX(-50%);
   border-radius: 10px;
-  background-color: #333;
+  background-color: #333333;
   -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   width: 256px;
@@ -1933,7 +1937,7 @@ img {
   height: 42px;
   width: 54px;
   color: #000000;
-  fill: currentColor;
+  fill: currentcolor;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
