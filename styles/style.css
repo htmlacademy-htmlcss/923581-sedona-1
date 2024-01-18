@@ -78,7 +78,7 @@ img {
 .button {
   display: inline-block;
   margin: 0;
-  padding: 8px 50px;
+  padding: 8px 20px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -514,8 +514,11 @@ img {
   overflow: hidden;
 }
 
+.navigation-button-wrapper {
+  max-width: 160px;
+}
+
 .navigation-button {
-  padding: 8px 20px;
   margin: 14px 0;
   width: 160px;
 }
@@ -611,7 +614,7 @@ img {
 }
 
 .advantages-text {
-  padding: 113px 85px 102px;
+  padding: 113px 80px 102px;
 }
 
 .card-title {
@@ -688,7 +691,7 @@ img {
 }
 
 .services-text {
-  padding: 183px 85px 80px 85px;
+  padding: 183px 80px 80px;
 }
 
 /* ============ Поиск гостиниц ============ */
@@ -812,10 +815,6 @@ img {
   text-transform: capitalize;
   margin-bottom: 32px;
   padding: 0;
-}
-
-.catalog-filter-group-checkbox {
-  max-width: 160px;
 }
 
 .control-item {
@@ -1042,7 +1041,7 @@ img {
 }
 
 .catalog-filter-group-buttons button {
-  width: 100%;
+  width: 191px;
 }
 
 .catalog-filter-group-buttons button:not(:last-child) {
