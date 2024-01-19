@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
-* Browsers: > 0.5%,last 2 versions
+* Browsers: last 4 versions
 */
 
 @font-face {
@@ -50,7 +50,8 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* Скрытые элементы */
@@ -761,7 +762,8 @@ img {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
   right: -17px;
   width: 6px;
   height: 10px;
@@ -905,7 +907,8 @@ img {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
 }
 
 .control-text {
@@ -1130,7 +1133,9 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   max-width: 340px;
 }
 
@@ -1788,12 +1793,14 @@ img {
 
 .modal-close-button::before {
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
 }
 
 .modal-close-button::after {
   -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
 }
 
 .modal-title {
@@ -1900,7 +1907,8 @@ img {
   margin-top: 15px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
   border-radius: 10px;
   background-color: #333333;
   -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
@@ -1921,7 +1929,8 @@ img {
   top: -9px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
 }
 
 .search-form-field {
@@ -1946,7 +1955,8 @@ img {
   fill: currentcolor;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
   right: 3px;
   outline: none;
   border: none;
@@ -2020,7 +2030,8 @@ img {
   border-radius: 4px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
   padding: 0;
   cursor: pointer;
   outline: none;
@@ -2085,7 +2096,8 @@ img {
 
 .button-plus span::after {
   -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
 }
 
 .quantity-button:hover span::before,
