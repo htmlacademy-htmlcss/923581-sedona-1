@@ -50,6 +50,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 /* Скрытые элементы */
@@ -446,7 +447,6 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: 20px;
   max-width: 176px;
 }
 
@@ -515,11 +515,12 @@ img {
 }
 
 .navigation-button-wrapper {
-  max-width: 160px;
+  max-width: 180px;
+  padding-top: 14px;
 }
 
 .navigation-button {
-  margin: 14px 0;
+  margin: 0 0 14px 20px;
   width: 160px;
 }
 
@@ -642,6 +643,10 @@ img {
 .card-text {
   margin: 0;
   line-height: 21px;
+}
+
+.advantages-image {
+  width: 800px;
 }
 
 .advantages-image img {
@@ -1038,19 +1043,20 @@ img {
 .catalog-filter-group-buttons {
   text-align: center;
   padding-top: 56px;
+  max-width: 191px;
 }
 
-.catalog-filter-group-buttons button {
-  width: 191px;
+.catalog-filter-group-buttons .button {
+  width: 100%;
 }
 
-.catalog-filter-group-buttons button:not(:last-child) {
+.catalog-filter-group-buttons .button:not(:last-child) {
   margin-bottom: 29px;
 }
 
 /* ============ Каталог гостиниц ============ */
 .catalog {
-  padding: 49px 69px 60px;
+  padding: 50px 69px 60px;
 }
 
 /* ============ Результаты отбора ============ */
@@ -1063,9 +1069,7 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  margin-right: -8px;
 }
 
 .outcome-subtitle {
@@ -1073,6 +1077,7 @@ img {
   margin-right: auto;
   margin-bottom: 0;
   padding-left: 1px;
+  padding-top: 7px;
   max-width: 500px;
 }
 
@@ -1088,10 +1093,10 @@ img {
   border-radius: 4px;
   border: 2px solid #e5e5e5;
   cursor: pointer;
-  padding: 10px 40px 9px 19px;
+  padding: 9px 40px 9px 19px;
   background-image: url("../img/svg/arrow-down.svg");
   background-repeat: no-repeat;
-  background-position: right 17px top 19px;
+  background-position: right 18px top 18px;
   /* убираем стрелочку у select */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1125,18 +1130,25 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 340px;
 }
 
-.view-item:not(:last-child) {
+.view-item {
+  margin-bottom: 8px;
   margin-right: 8px;
 }
+
+/* .view-item:not(:first-child) {
+  margin-left: 8px;
+} */
 
 .view-link {
   display: block;
   width: 48px;
   height: 48px;
   background-repeat: no-repeat;
-  background-position: left 13px center;
+  background-position: 50% 50%;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
 }
@@ -1163,13 +1175,6 @@ img {
 
 .view-link-tile {
   background-image: url("../img/svg/view-tile.svg");
-  background-position: left 14px center;
-  margin-right: 1px;
-}
-
-.view-link-current {
-  pointer-events: none;
-  border-color: #000000;
 }
 
 .view-link-slide {
@@ -1180,13 +1185,18 @@ img {
   background-image: url("../img/svg/view-list.svg");
 }
 
+.view-link-current {
+  pointer-events: none;
+  border-color: #000000;
+}
+
 /* ============ Карточки гостиниц ============ */
 .catalog-hotels {
   border-bottom: 1px solid #e6e6e6;
 }
 
 .catalog-hotels-list {
-  padding: 40px 0;
+  padding: 32px 0 40px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 18px 1fr 18px 1fr;
@@ -1434,13 +1444,13 @@ img {
 }
 
 .pagination-link-current:focus-visible {
-  border: 2px solid #000000;
+  border-color: #000000;
   outline: none;
 }
 
 @supports not selector(:focus-visible) {
   .pagination-link-current:focus {
-    border: 2px solid #000000;
+    border-color: #000000;
     outline: none;
   }
 }
@@ -1472,6 +1482,7 @@ img {
 
 .pagination-link-dots:focus-visible {
   background-color: #f2f2f2;
+  border-color: #000000;
   outline: none;
 }
 
