@@ -535,6 +535,10 @@ img {
 .hero {
   position: relative;
   padding: 50px 70px 83px;
+  background-image: url("../img/background-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero::after {
@@ -832,10 +836,6 @@ img {
   margin-bottom: 16px;
 }
 
-.control-item:hover {
-  opacity: 0.6;
-}
-
 .control-label {
   cursor: pointer;
   display: -webkit-box;
@@ -862,6 +862,11 @@ img {
   flex-shrink: 0;
 }
 
+.control-input:hover,
+.control-input:hover + .control-text {
+  opacity: 0.6;
+}
+
 .control-input:focus-visible {
   -webkit-box-shadow: 0 0 0 3px #83b3d3;
   box-shadow: 0 0 0 3px #83b3d3;
@@ -876,8 +881,15 @@ img {
   }
 }
 
-.control-item:active {
+.control-input:active,
+.control-input:active + .control-text {
   opacity: 0.3;
+}
+
+.control-input:disabled,
+.control-input:disabled + .control-text {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .control-input[type="checkbox"] {
