@@ -529,6 +529,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #82b3d3;
 }
 
 .hero::after {
