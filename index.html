@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link href="img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
     <link type="image/png" href="img/favicon/favicon-32x32.png" rel="icon" sizes="32x32">
-    <link type="image/png" href="img/favicon//favicon-16x16.png" rel="icon" sizes="16x16">
+    <link type="image/png" href="img/favicon/favicon-16x16.png" rel="icon" sizes="16x16">
     <link href="img/favicon/site.webmanifest" rel="manifest">
     <link href="img/favicon/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -79,7 +79,6 @@
       <main class="main">
         <section class="hero">
           <h1 class="hero-headline visually-hidden">Седона - городок в Аризоне.</h1>
-          <img class="hero-wallpaper background" src="img/background-hero.jpg" alt="Горный пейзаж" width="1200" height="485">
           <img class="hero-welcome" src="img/svg/welcome.svg" alt="Welcome to the gorgeous Sedona Because Grand Canyon sucks!" width="458" height="352">
         </section>
         <!-- Преимущества городка Седона -->
@@ -96,7 +95,7 @@
                 <p class="card-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <div class="advantages-image">
-                <img src="img/photo-1.jpg" alt="Фотография городка." width="800" height="385">
+                <img src="./img/photo-1.jpg" alt="Фотография городка." width="800" height="385">
               </div>
             </li>
             <li class="advantages-item">
@@ -123,7 +122,7 @@
                 <p class="card-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <div class="advantages-image">
-                <img src="img/photo-2.jpg" alt="Фотография моста дьявола." width="800" height="385">
+                <img src="./img/photo-2.jpg" alt="Фотография моста дьявола." width="800" height="385">
               </div>
             </li>
           </ul>
@@ -235,7 +234,7 @@
               <label class="modal-search-title" for="check-in">Дата заезда:</label>
               <span class="field-group-input">
                 <span class="field-group-date">
-                  <input class="search-form-field field" id="check-in" name="check-in-date" type="text" value="27 апреля 2020" placeholder="Укажите дату">
+                  <input class="search-form-field field" id="check-in" name="check-in-date" type="text" value="27 апреля 2020" placeholder="Укажите дату" required>
                   <button class="search-form-calendar" type="button">
                     <span class="visually-hidden">Выбрать дату.</span>
                     <svg aria-hidden="true" focusable="false" width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -263,7 +262,7 @@
               <label class="modal-search-title" for="check-out">Дата выезда:</label>
               <span class="field-group-input">
                 <span class="field-group-date">
-                  <input class="search-form-field field" id="check-out" name="check-out-date" type="text" value="1 сентября 2023" placeholder="Укажите дату">
+                  <input class="search-form-field field" id="check-out" name="check-out-date" type="text" value="1 сентября 2023" placeholder="Укажите дату" required>
                   <button class="search-form-calendar" type="button">
                     <span class="visually-hidden">Выбрать дату.</span>
                     <svg aria-hidden="true" focusable="false" width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -291,7 +290,7 @@
               <label class="modal-search-title label-adults" for="quantity">Взрослые:</label>
               <span class="quantity-persons">
                 <span class="quantity-persons-cell">
-                  <input class="quantity-persons-field field" id="quantity" name="adults" type="number" value="2" placeholder="0">
+                  <input class="quantity-persons-field field" id="quantity" name="adults" type="number" value="2" placeholder="0" required>
                   <button class="button-minus quantity-button" type="button" aria-label="Уменьшить">
                     <span></span>
                   </button>
@@ -318,7 +317,7 @@
               </span>
               <span class="quantity-persons">
                 <span class="quantity-persons-cell">
-                  <input class="quantity-persons-field field" id="quantity-kids" name="children" type="number" value="2" placeholder="0">
+                  <input class="quantity-persons-field field" id="quantity-kids" name="children" type="number" value="2" placeholder="0" required>
                   <button class="button-minus quantity-button" type="button" aria-label="Уменьшить">
                     <span></span>
                   </button>
